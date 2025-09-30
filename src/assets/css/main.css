@@ -1,0 +1,20 @@
+ .home-top-nav .navbar-item {
+    position: relative;
+ }
+ .home-top-nav .navbar-item:before {
+     content: "";
+    position: absolute;
+    background-color: #08c261;
+    width: 0;
+    height: 3px;
+    border-radius: 8px;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: width .3s;
+ }
+.home-top-nav .navbar-item:hover:before,
+.home-top-nav .navbar-item.active:before {
+    width: 30%;
+}
