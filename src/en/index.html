@@ -1,87 +1,1031 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-  <title>Home</title>
-  <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css"/>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/main.css">
-  <!-- <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css"/> -->
-</head>
-<body class="bg-main-white">
-  <!-- tob navbar  -->
-<nav class="home-top-nav">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
-    <div class=" w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  ">
-        <li>
-          <a href="#" class="block py-2 px-3 text-main-text bg-blue-700 rounded-sm md:bg-transparent md:p-0 navbar-item active" aria-current="page">About us</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-main-text rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 navbar-item md:p-0">Articles</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-main-text rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 navbar-item  md:p-0">Exhibition</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-main-text rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 navbar-item  md:p-0">Acceptance certificates
-</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-main-text rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 navbar-item  md:p-0">Contact us
-</a>
-        </li>
-      </ul>
-    </div>
-    <button type="button" class="text-white bg-main-green hover:bg-main-green/80 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-3 py-2 text-center ">Login / Create Account</button>
-
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-  </div>
-</nav>
-<!-- hero section -->
-  <header class="h-screen">
-<div id="indicators-carousel" class="relative w-full h-full" data-carousel="static">
-    <!-- Carousel wrapper -->
-    <div class="relative h-screen overflow-hidden ">
-         <!-- Item 1 -->
-        <div class="hidden duration-700 h-screen ease-in-out" data-carousel-item>
-  <div style="background-image:url('../assets/images/home/hero-image.png')" class="bg-center bg-cover w-full h-screen">
-    <div class="container mx-auto flex items-center h-screen ">
-      <div class="w-full md:w-1/2">
-        <div class="flex items-center">
-          <img src="../assets/icons/three-buble.png" width="50" alt="buble icon">
-          <h1 class="text-5xl font-bold text-main-white capitalize">Achieve your academic goals</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <!-- <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css"/> -->
+  </head>
+  <body class="bg-main-white h-[5000px]">
+    <!-- tob navbar  -->
+    <nav class="home-top-nav">
+      <div
+        class="max-w-screen-xl flex flex-wrap justify-center items-center lg:justify-between mx-auto py-2"
+      >
+        <div class="lg:w-auto w-full">
+          <ul
+          id="SubNavbar"
+            class="font-medium flex gap-2 justify-center p-4 lg:p-0 border border-gray-100 rounded-lg flex-wrap lg:space-x-8  lg:border-0"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-2 lg:text-main-text bg-main-green text-white rounded-sm lg:bg-transparent lg:p-0 navbar-item"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-2 lg:!text-main-text hover:bg-main-green lg:!bg-transparent hover:text-white rounded-sm navbar-item lg:p-0"
+                >Articles</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-2 lg:!text-main-text hover:bg-main-green lg:!bg-transparent hover:text-white rounded-sm navbar-item lg:p-0"
+                >Exhibition</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-2 lg:!text-main-text hover:bg-main-green lg:!bg-transparent hover:text-white rounded-sm navbar-item lg:p-0"
+                >Acceptance certificates</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-2 lg:!text-main-text hover:bg-main-green lg:!bg-transparent hover:text-white rounded-sm navbar-item lg:p-0"
+                >Contact us</a
+              >
+            </li>
+          </ul>
         </div>
-        <img src="../assets/icons/double-green-line.png" width="200" class="ms-32" alt="line icon">
-        <p class="text-main-green font-semibold text-xl">Join the university or college you want anywhere in the world. We provide you with all educational services, starting from enrollment and follow-up during the study period until you obtain the certificate.</p>
+
+        <button
+          type="button"
+          class="text-white bg-main-green hover:bg-main-green/80 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-3 py-2 text-center"
+        >
+          Login / Create Account
+        </button>
       </div>
-    </div>
-  </div>
-</div>
+    </nav>
+
+    <!-- hero section -->
+    <header class="h-screen hero-section relative">
+      <!-- main-navbar -->
+      <nav
+        class="home-top-nav absolute w-full top-0 left-0 z-50 transition-colors duration-500"
+        id="main-navbar"
+      >
+        <div
+          class="flex flex-wrap lg:flex-nowrap items-center justify-between lg:justify-start mx-auto p-4 z-50 gap-2 w-full"
+        >
+          <a href="">
+            <img src="../assets/images/home/logo.png" width="70" alt="" />
+          </a>
+          <div
+            id="navbar-custom"
+            class="transition-all  duration-500 ease-in-out max-h-0 overflow-x-auto  pb-3  md:max-h-none md:block md:w-auto w-full order-1 lg:order-none"
+          >
+            <ul
+              class="font-medium text-nowrap max-md:bg-white  flex flex-col  p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
+            >
+            <!-- Study Destination -->
+              <li>
+                <button
+                  id="studyDestinationDropdown"
+                  data-dropdown-toggle="studyDestinationsDropdownNavbar"
+                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white  md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                >
+                  Study destinations
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Study destinations Dropdown menu -->
+                <div
+                  id="studyDestinationsDropdownNavbar"
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm "
+                >
+                  <ul
+                    class="text-sm text-gray-700 main-dropdown-list"
+                    aria-labelledby="studyDestinationDropdown"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        >Study in Egypt</a
+                      >
+                    </li>
+                    <li aria-labelledby="studyDestinationDropdown" class="relative">
+                      <button
+                        id="EuropeDropdownButton"
+                        data-dropdown-toggle="EuropeDropdown"
+                        type="button"
+                        class="flex transition-colors  hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
+                      >
+                        Study in Europe
+                        <svg
+                          class="w-2.5 h-2.5 ms-2.5"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 10 6"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 4 4 4-4"
+                          />
+                        </svg>
+                      </button>
+                      <!-- Study in Europe Dropdown -->
+                      <div
+                        id="EuropeDropdown"
+                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm  mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                      >
+                        <ul
+                          class="text-sm text-gray-700 main-dropdown-list"
+                          aria-labelledby="EuropeDropdownButton"
+                        >
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Germany</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Turkey</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Cyprus</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Poland</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in the Czech Republic</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Georgia</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Hungary</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Latvia</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <!-- Study in Arabic World -->
+                    <li aria-labelledby="studyDestinationDropdown" class="relative">
+                      <button
+                        id="ArabicWorldDropdownButton"
+                        data-dropdown-toggle="ArabicWorldDropdown"
+                        type="button"
+                        class="flex transition-colors  hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
+                      >
+                        Study in arabic world
+                        <svg
+                          class="w-2.5 h-2.5 ms-2.5"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 10 6"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 4 4 4-4"
+                          />
+                        </svg>
+                      </button>
+                      <!-- Study in Europe Dropdown -->
+                      <div
+                        id="ArabicWorldDropdown"
+                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm  mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                      >
+                        <ul
+                          class="text-sm text-gray-700 main-dropdown-list"
+                          aria-labelledby="ArabicWorldDropdownButton"
+                        >
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Germany</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Turkey</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Cyprus</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Poland</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in the Czech Republic</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Georgia</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Hungary</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Latvia</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <!-- Study in Asia -->
+                    <li aria-labelledby="studyDestinationDropdown" class="relative">
+                      <button
+                        id="StudyAsiaDropdownButton"
+                        data-dropdown-toggle="StudyAsiaDropdown"
+                        type="button"
+                        class="flex transition-colors  hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
+                      >
+                        Study in Asia
+                        <svg
+                          class="w-2.5 h-2.5 ms-2.5"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 10 6"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 4 4 4-4"
+                          />
+                        </svg>
+                      </button>
+                      <!-- Study in Europe Dropdown -->
+                      <div
+                        id="StudyAsiaDropdown"
+                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm  mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                      >
+                        <ul
+                          class="text-sm text-gray-700 main-dropdown-list"
+                          aria-labelledby="StudyAsiaDropdownButton"
+                        >
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Germany</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Turkey</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Cyprus</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Poland</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in the Czech Republic</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Georgia</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Hungary</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Latvia</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </li>
+              <!-- Academic degrees -->
+              <li>
+                <button
+                  id="academicDegreeDropdown"
+                  data-dropdown-toggle="academicDegreeDropdownNavbar"
+                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white  md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                >
+                  Academic degrees
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Study destinations Dropdown menu -->
+                <div
+                  id="academicDegreeDropdownNavbar"
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm "
+                >
+                  <ul
+                    class="text-sm text-gray-700 main-dropdown-list"
+                    aria-labelledby="academicDegreeDropdown"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        >Study in Egypt</a
+                      >
+                    </li>
+                    <li aria-labelledby="academicDegreeDropdown" class="relative">
+                      <button
+                        id="EuropeTwoDropdownButton"
+                        data-dropdown-toggle="EuropeTwoDropdown"
+                        type="button"
+                        class="flex transition-colors  hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
+                      >
+                        Study in Europe - 2
+                        <svg
+                          class="w-2.5 h-2.5 ms-2.5"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 10 6"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 4 4 4-4"
+                          />
+                        </svg>
+                      </button>
+                      <!-- Study in Europe Dropdown -->
+                      <div
+                        id="EuropeTwoDropdown"
+                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm  mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                      >
+                        <ul
+                          class="text-sm text-gray-700 main-dropdown-list"
+                          aria-labelledby="EuropeTwoDropdownButton"
+                        >
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Germany</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Turkey</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Cyprus</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Poland</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in the Czech Republic</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Georgia</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Hungary</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Latvia</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Academic specializations -->
+              <li>
+                <button
+                  id="AcademicSpecializationsDropdown"
+                  data-dropdown-toggle="AcademicSpecializationsDropdownNavbar"
+                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white  md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                >
+                  Academic specializations
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Study destinations Dropdown menu -->
+                <div
+                  id="AcademicSpecializationsDropdownNavbar"
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm "
+                >
+                  <ul
+                    class="text-sm text-gray-700 main-dropdown-list"
+                    aria-labelledby="AcademicSpecializationsDropdown"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        >Study in Egypt</a
+                      >
+                    </li>
+                    <li aria-labelledby="AcademicSpecializationsDropdown" class="relative">
+                      <button
+                        id="EuropeThreeDropdownButton"
+                        data-dropdown-toggle="EuropeThreeDropdown"
+                        type="button"
+                        class="flex transition-colors  hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
+                      >
+                        Study in Europe - 3
+                        <svg
+                          class="w-2.5 h-2.5 ms-2.5"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 10 6"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 4 4 4-4"
+                          />
+                        </svg>
+                      </button>
+                      <!-- Study in Europe 3 Dropdown -->
+                      <div
+                        id="EuropeThreeDropdown"
+                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm  mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                      >
+                        <ul
+                          class="text-sm text-gray-700 main-dropdown-list"
+                          aria-labelledby="EuropeTreeDropdownButton"
+                        >
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Germany</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Turkey</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Cyprus</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Poland</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in the Czech Republic</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Georgia</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Hungary</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Latvia</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Study by country -->
+              <li>
+                <button
+                  id="StudyByCountryDropdown"
+                  data-dropdown-toggle="StudyByCountryDropdownNavbar"
+                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white  md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                >
+                  Study by country
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Study destinations Dropdown menu -->
+                <div
+                  id="StudyByCountryDropdownNavbar"
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm "
+                >
+                  <ul
+                    class="text-sm text-gray-700 main-dropdown-list"
+                    aria-labelledby="StudyByCountryDropdown"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        >Egypt</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        >UAE</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        >Turkey</a
+                      >
+                    </li>
+                    
+                  </ul>
+                </div>
+              </li>
+              <!-- Arab students -->
+              <li>
+                <button
+                  id="ArabStudentsDropdown"
+                  data-dropdown-toggle="ArabStudentsDropdownNavbar"
+                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white  md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                >
+                  Arab students
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Study destinations Dropdown menu -->
+                <div
+                  id="ArabStudentsDropdownNavbar"
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm "
+                >
+                  <ul
+                    class="text-sm text-gray-700 main-dropdown-list"
+                    aria-labelledby="ArabStudentsDropdown"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        >Study in Egypt</a
+                      >
+                    </li>
+                    <li aria-labelledby="ArabStudentsDropdown" class="relative">
+                      <button
+                        id="EuropeFourDropdownButton"
+                        data-dropdown-toggle="EuropeFourDropdown"
+                        type="button"
+                        class="flex transition-colors  hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
+                      >
+                        Study in Europe - 4
+                        <svg
+                          class="w-2.5 h-2.5 ms-2.5"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 10 6"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 4 4 4-4"
+                          />
+                        </svg>
+                      </button>
+                      <!-- Study in Europe 3 Dropdown -->
+                      <div
+                        id="EuropeFourDropdown"
+                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm  mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                      >
+                        <ul
+                          class="text-sm text-gray-700 main-dropdown-list"
+                          aria-labelledby="EuropeFourDropdownButton"
+                        >
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Germany</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Turkey</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Cyprus</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Poland</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in the Czech Republic</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Georgia</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Hungary</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                              >Study in Latvia</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- About Us -->
+              <li>
+                <a
+                  href="#"
+                  class="block max-lg:text-main-green py-2 px-3 text-main-white  rounded-sm md:bg-transparent md:p-0"
+                  >About us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <button
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white cursor-pointer hover:text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 mobile-btn"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+            id="customNavBtn"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <div
+        id="indicators-carousel"
+        class="relative w-full h-full"
+        data-carousel="static"
+      >
+        <!-- Carousel wrapper -->
+        <div class="relative h-screen overflow-hidden">
+          <!-- Item 1 -->
+          <div
+            class="hidden duration-700 h-screen ease-in-out"
+            data-carousel-item
+          >
+            <div
+              style="
+                background-image: url('../assets/images/home/hero-image.png');
+              "
+              class="bg-center bg-cover w-full h-screen"
+            >
+              <div
+                class="container mx-auto flex items-center h-screen justify-center md:justify-start"
+              >
+                <div class="w-full lg:w-1/2 text-center lg:text-start">
+                  <div class="flex items-center content-center">
+                    <img
+                      src="../assets/icons/three-buble.png"
+                      width="40"
+                      alt="buble icon"
+                      class="self-start ms-4 lg:ms-2"
+                    />
+                    <h1 class="text-4xl font-bold text-main-white capitalize">
+                      Achieve your academic goals
+                    </h1>
+                  </div>
+                  <img
+                    src="../assets/icons/double-green-line.png"
+                    width="200"
+                    class="m-auto lg:ms-32 mt-3"
+                    alt="line icon"
+                  />
+                  <p class="text-main-green font-semibold text-xl">
+                    Join the university or college you want anywhere in the
+                    world. We provide you with all educational services,
+                    starting from enrollment and follow-up during the study
+                    period until you obtain the certificate.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- Item  -->
-          <div class="hidden duration-700 h-screen ease-in-out" data-carousel-item>
-  <div style="background-image:url('../assets/images/home/hero-image-2.png')" class="bg-center bg-cover w-full h-screen"></div>
-</div>
-    </div>
-    <!-- Slider indicators -->
-    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-        <button type="button" class="w-3 h-3 rounded-full bg-main-green" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-    </div>
-    <!-- Slider controls -->
-</div>
+          <div
+            class="hidden duration-700 h-screen ease-in-out"
+            data-carousel-item
+          >
+            <div
+              style="
+                background-image: url('../assets/images/home/hero-image-2.png');
+              "
+              class="bg-center bg-cover w-full h-screen"
+            >
+          <div
+                class="container mx-auto flex items-center h-screen justify-center md:justify-start"
+              >
+                <div class="w-full lg:w-1/2 text-center lg:text-start">
+                  <div class="flex items-center content-center">
+                    <img
+                      src="../assets/icons/three-buble.png"
+                      width="40"
+                      alt="buble icon"
+                      class="self-start ms-4 lg:ms-2"
+                    />
+                    <h1 class="text-4xl font-bold text-main-white capitalize">
+                      Achieve your academic goals
+                    </h1>
+                  </div>
+                  <img
+                    src="../assets/icons/double-green-line.png"
+                    width="200"
+                    class="m-auto lg:ms-32 mt-3"
+                    alt="line icon"
+                  />
+                  <p class="text-main-green font-semibold text-xl">
+                    Join the university or college you want anywhere in the
+                    world. We provide you with all educational services,
+                    starting from enrollment and follow-up during the study
+                    period until you obtain the certificate.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slider indicators -->
+        <div
+          class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 "
+        >
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full indicator-btn"
+            aria-current="true"
+            aria-label="Slide 1"
+            data-carousel-slide-to="0"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full indicator-btn"
+            aria-current="false"
+            aria-label="Slide 2"
+            data-carousel-slide-to="1"
+          ></button>
+        </div>
+        <!-- Slider controls -->
+      </div>
+    </header>
 
-  </header>
-
-  <!-- Swiper.js -->
-  <!-- <script src="../vendors/swiper/swiper-bundle.min.js"></script> -->
-  <script src="../vendors/flowbite/flowbite.min.js"></script>
-  <script src="../assets/js/main.js" type="module">
-  </script>
-</body>
+    <!-- Swiper.js -->
+    <!-- <script src="../vendors/swiper/swiper-bundle.min.js"></script> -->
+    <script src="../vendors/flowbite/flowbite.min.js"></script>
+    <script src="../assets/js/main.js" type="module"></script>
+  </body>
 </html>
