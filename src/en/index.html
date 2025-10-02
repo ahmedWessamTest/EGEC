@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../assets/css/main.css" />
     <!-- <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css"/> -->
   </head>
-  <body class="bg-main-white h-[5000px]">
+  <body class="bg-main-white">
     <!-- tob navbar  -->
     <nav class="home-top-nav">
       <div
@@ -16,8 +16,8 @@
       >
         <div class="lg:w-auto w-full">
           <ul
-          id="SubNavbar"
-            class="font-medium flex gap-2 justify-center p-4 lg:p-0 border border-gray-100 rounded-lg flex-wrap lg:space-x-8  lg:border-0"
+            id="SubNavbar"
+            class="font-medium flex gap-2 justify-center p-4 lg:p-0 border border-gray-100 rounded-lg flex-wrap lg:space-x-8 lg:border-0"
           >
             <li>
               <a
@@ -67,7 +67,7 @@
     </nav>
 
     <!-- hero section -->
-    <header class="h-screen hero-section relative">
+    <header class="hero-section relative">
       <!-- main-navbar -->
       <nav
         class="home-top-nav absolute w-full top-0 left-0 z-50 transition-colors duration-500"
@@ -81,17 +81,17 @@
           </a>
           <div
             id="navbar-custom"
-            class="transition-all  duration-500 ease-in-out max-h-0 overflow-x-auto  pb-3  md:max-h-none md:block md:w-auto w-full order-1 lg:order-none"
+            class="transition-all duration-500 ease-in-out max-h-0 overflow-x-auto scroll-bar-style pb-3 md:max-h-none md:block md:w-auto w-full order-1 lg:order-none"
           >
             <ul
-              class="font-medium text-nowrap max-md:bg-white  flex flex-col  p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
+              class="font-medium text-nowrap max-md:bg-white flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
             >
-            <!-- Study Destination -->
+              <!-- Study Destination -->
               <li>
                 <button
                   id="studyDestinationDropdown"
                   data-dropdown-toggle="studyDestinationsDropdownNavbar"
-                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white  md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
                 >
                   Study destinations
                   <svg
@@ -113,7 +113,7 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="studyDestinationsDropdownNavbar"
-                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm "
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
@@ -122,16 +122,19 @@
                     <li>
                       <a
                         href="#"
-                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >Study in Egypt</a
                       >
                     </li>
-                    <li aria-labelledby="studyDestinationDropdown" class="relative">
+                    <li
+                      aria-labelledby="studyDestinationDropdown"
+                      class="relative"
+                    >
                       <button
                         id="EuropeDropdownButton"
                         data-dropdown-toggle="EuropeDropdown"
                         type="button"
-                        class="flex transition-colors  hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
+                        class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
                         Study in Europe
                         <svg
@@ -153,7 +156,7 @@
                       <!-- Study in Europe Dropdown -->
                       <div
                         id="EuropeDropdown"
-                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm  mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
                       >
                         <ul
                           class="text-sm text-gray-700 main-dropdown-list"
@@ -219,12 +222,15 @@
                       </div>
                     </li>
                     <!-- Study in Arabic World -->
-                    <li aria-labelledby="studyDestinationDropdown" class="relative">
+                    <li
+                      aria-labelledby="studyDestinationDropdown"
+                      class="relative"
+                    >
                       <button
                         id="ArabicWorldDropdownButton"
                         data-dropdown-toggle="ArabicWorldDropdown"
                         type="button"
-                        class="flex transition-colors  hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
+                        class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
                         Study in arabic world
                         <svg
@@ -246,7 +252,7 @@
                       <!-- Study in Europe Dropdown -->
                       <div
                         id="ArabicWorldDropdown"
-                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm  mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
                       >
                         <ul
                           class="text-sm text-gray-700 main-dropdown-list"
@@ -312,12 +318,15 @@
                       </div>
                     </li>
                     <!-- Study in Asia -->
-                    <li aria-labelledby="studyDestinationDropdown" class="relative">
+                    <li
+                      aria-labelledby="studyDestinationDropdown"
+                      class="relative"
+                    >
                       <button
                         id="StudyAsiaDropdownButton"
                         data-dropdown-toggle="StudyAsiaDropdown"
                         type="button"
-                        class="flex transition-colors  hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
+                        class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
                         Study in Asia
                         <svg
@@ -339,7 +348,7 @@
                       <!-- Study in Europe Dropdown -->
                       <div
                         id="StudyAsiaDropdown"
-                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm  mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
                       >
                         <ul
                           class="text-sm text-gray-700 main-dropdown-list"
@@ -404,7 +413,6 @@
                         </ul>
                       </div>
                     </li>
-                    
                   </ul>
                 </div>
               </li>
@@ -413,7 +421,7 @@
                 <button
                   id="academicDegreeDropdown"
                   data-dropdown-toggle="academicDegreeDropdownNavbar"
-                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white  md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
                 >
                   Academic degrees
                   <svg
@@ -435,7 +443,7 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="academicDegreeDropdownNavbar"
-                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm "
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
@@ -444,16 +452,19 @@
                     <li>
                       <a
                         href="#"
-                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >Study in Egypt</a
                       >
                     </li>
-                    <li aria-labelledby="academicDegreeDropdown" class="relative">
+                    <li
+                      aria-labelledby="academicDegreeDropdown"
+                      class="relative"
+                    >
                       <button
                         id="EuropeTwoDropdownButton"
                         data-dropdown-toggle="EuropeTwoDropdown"
                         type="button"
-                        class="flex transition-colors  hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
+                        class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
                         Study in Europe - 2
                         <svg
@@ -475,7 +486,7 @@
                       <!-- Study in Europe Dropdown -->
                       <div
                         id="EuropeTwoDropdown"
-                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm  mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
                       >
                         <ul
                           class="text-sm text-gray-700 main-dropdown-list"
@@ -548,7 +559,7 @@
                 <button
                   id="AcademicSpecializationsDropdown"
                   data-dropdown-toggle="AcademicSpecializationsDropdownNavbar"
-                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white  md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
                 >
                   Academic specializations
                   <svg
@@ -570,7 +581,7 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="AcademicSpecializationsDropdownNavbar"
-                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm "
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
@@ -579,16 +590,19 @@
                     <li>
                       <a
                         href="#"
-                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >Study in Egypt</a
                       >
                     </li>
-                    <li aria-labelledby="AcademicSpecializationsDropdown" class="relative">
+                    <li
+                      aria-labelledby="AcademicSpecializationsDropdown"
+                      class="relative"
+                    >
                       <button
                         id="EuropeThreeDropdownButton"
                         data-dropdown-toggle="EuropeThreeDropdown"
                         type="button"
-                        class="flex transition-colors  hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
+                        class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
                         Study in Europe - 3
                         <svg
@@ -610,7 +624,7 @@
                       <!-- Study in Europe 3 Dropdown -->
                       <div
                         id="EuropeThreeDropdown"
-                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm  mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
                       >
                         <ul
                           class="text-sm text-gray-700 main-dropdown-list"
@@ -683,7 +697,7 @@
                 <button
                   id="StudyByCountryDropdown"
                   data-dropdown-toggle="StudyByCountryDropdownNavbar"
-                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white  md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
                 >
                   Study by country
                   <svg
@@ -705,7 +719,7 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="StudyByCountryDropdownNavbar"
-                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm "
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
@@ -714,25 +728,24 @@
                     <li>
                       <a
                         href="#"
-                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >Egypt</a
                       >
                     </li>
                     <li>
                       <a
                         href="#"
-                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >UAE</a
                       >
                     </li>
                     <li>
                       <a
                         href="#"
-                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >Turkey</a
                       >
                     </li>
-                    
                   </ul>
                 </div>
               </li>
@@ -741,7 +754,7 @@
                 <button
                   id="ArabStudentsDropdown"
                   data-dropdown-toggle="ArabStudentsDropdownNavbar"
-                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white  md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
                 >
                   Arab students
                   <svg
@@ -763,7 +776,7 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="ArabStudentsDropdownNavbar"
-                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm "
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
@@ -772,7 +785,7 @@
                     <li>
                       <a
                         href="#"
-                        class="block px-4  py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >Study in Egypt</a
                       >
                     </li>
@@ -781,7 +794,7 @@
                         id="EuropeFourDropdownButton"
                         data-dropdown-toggle="EuropeFourDropdown"
                         type="button"
-                        class="flex transition-colors  hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
+                        class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
                         Study in Europe - 4
                         <svg
@@ -803,7 +816,7 @@
                       <!-- Study in Europe 3 Dropdown -->
                       <div
                         id="EuropeFourDropdown"
-                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm  mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
                       >
                         <ul
                           class="text-sm text-gray-700 main-dropdown-list"
@@ -875,7 +888,7 @@
               <li>
                 <a
                   href="#"
-                  class="block max-lg:text-main-green py-2 px-3 text-main-white  rounded-sm md:bg-transparent md:p-0"
+                  class="block max-lg:text-main-green py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
                   >About us</a
                 >
               </li>
@@ -935,11 +948,19 @@
                       src="../assets/icons/three-buble.png"
                       width="40"
                       alt="buble icon"
-                      class="self-start ms-4 lg:ms-2"
+                      class="self-start ms-4 lg:ms-2 hidden lg:block"
                     />
-                    <h1 class="text-4xl font-bold text-main-white capitalize">
+                    <h1
+                      class="text-4xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
+                    >
                       Achieve your academic goals
                     </h1>
+                    <img
+                      src="../assets/icons/exclamation-mark.png"
+                      class="ms-3 hidden lg:block"
+                      width="20"
+                      alt="exclamation mark icon"
+                    />
                   </div>
                   <img
                     src="../assets/icons/double-green-line.png"
@@ -968,7 +989,7 @@
               "
               class="bg-center bg-cover w-full h-screen"
             >
-          <div
+              <div
                 class="container mx-auto flex items-center h-screen justify-center md:justify-start"
               >
                 <div class="w-full lg:w-1/2 text-center lg:text-start">
@@ -977,11 +998,19 @@
                       src="../assets/icons/three-buble.png"
                       width="40"
                       alt="buble icon"
-                      class="self-start ms-4 lg:ms-2"
+                      class="self-start ms-4 lg:ms-2 hidden lg:block"
                     />
-                    <h1 class="text-4xl font-bold text-main-white capitalize">
+                    <h1
+                      class="text-4xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
+                    >
                       Achieve your academic goals
                     </h1>
+                    <img
+                      src="../assets/icons/exclamation-mark.png"
+                      class="ms-3 hidden lg:block"
+                      width="20"
+                      alt="exclamation mark icon"
+                    />
                   </div>
                   <img
                     src="../assets/icons/double-green-line.png"
@@ -1002,7 +1031,7 @@
         </div>
         <!-- Slider indicators -->
         <div
-          class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 "
+          class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3"
         >
           <button
             type="button"
@@ -1021,8 +1050,411 @@
         </div>
         <!-- Slider controls -->
       </div>
-    </header>
+      <!-- search bar -->
+      <nav
+        class="w-fit p-2 text-xl lg:translate-y-1/2 block lg:absolute mx-auto bottom-0 rouned lg:rounded-full shadow-2xl mt-3 left-0 right-0 z-30 bg-main-white"
+      >
+        <div
+          class="flex flex-col lg:flex-row items-center mx-auto p-4 z-50 gap-2 w-full"
+        >
+          <div class="m-0 md:max-h-none md:block md:w-auto w-full">
+            <ul
+              class="text-nowrap font-medium max-md:bg-white flex flex-col items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
+            >
+              <!-- Study by country -->
+              <!-- place dropdown -->
+              <li>
+                <button
+                  id="PlaceSearchDropdown"
+                  data-dropdown-toggle="PlaceSearchDropdownNavbar"
+                  class="flex flex-col items-center justify-between text-nowrap text-main-text w-full py-2 px-3 md:hover:bg-transparent cursor-pointer md:p-0 md:w-auto"
+                >
+                  Place
+                  <span class="text-sm text-gray-500">Search With Country</span>
+                </button>
+                <!-- Study destinations Dropdown menu -->
+                <div
+                  id="PlaceSearchDropdownNavbar"
+                  class="z-40 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                >
+                  <ul
+                    class="text-sm text-gray-700 main-dropdown-list"
+                    aria-labelledby="PlaceSearchDropdown"
+                    role="listbox"
+                  >
+                    <li>
+                      <button
+                        href="#"
+                        class="block w-full px-4 cursor-pointer py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                        role="option"
+                      >
+                        Egypt
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        href="#"
+                        class="block w-full px-4 cursor-pointer py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                        role="option"
+                      >
+                        UAE
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        role="option"
+                        href="#"
+                        class="block w-full px-4 cursor-pointer py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                      >
+                        Turkey
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Academic degrees dropdown -->
+              <li>
+                <button
+                  id="AcademicDegreesSearchDropdown"
+                  data-dropdown-toggle="AcademicDegreesSearchDropdownNavbar"
+                  class="flex flex-col items-center justify-between text-nowrap text-main-text w-full py-2 px-3 md:hover:bg-transparent cursor-pointer md:p-0 md:w-auto"
+                >
+                  Academic Degrees
+                  <span class="text-sm text-gray-500">Add Degree</span>
+                </button>
+                <!-- Study destinations Dropdown menu -->
+                <div
+                  id="AcademicDegreesSearchDropdownNavbar"
+                  class="z-40 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                >
+                  <ul
+                    class="text-sm text-gray-700 main-dropdown-list"
+                    aria-labelledby="AcademicDegreesSearchDropdown"
+                    role="listbox"
+                  >
+                    <li>
+                      <button
+                        href="#"
+                        class="block w-full px-4 cursor-pointer py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                        role="option"
+                      >
+                        Egypt
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        href="#"
+                        class="block w-full px-4 cursor-pointer py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                        role="option"
+                      >
+                        UAE
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        role="option"
+                        href="#"
+                        class="block w-full px-4 cursor-pointer py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                      >
+                        Turkey
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- The University dropdown -->
+              <li>
+                <button
+                  id="TheUniversitySearchDropdown"
+                  data-dropdown-toggle="TheUniversitySearchDropdownNavbar"
+                  class="flex flex-col items-center justify-between text-nowrap text-main-text w-full py-2 px-3 md:hover:bg-transparent cursor-pointer md:p-0 md:w-auto"
+                >
+                  The University
+                  <span class="text-sm text-gray-500">Add University</span>
+                </button>
+                <!-- Study destinations Dropdown menu -->
+                <div
+                  id="TheUniversitySearchDropdownNavbar"
+                  class="z-40 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                >
+                  <ul
+                    class="text-sm text-gray-700 main-dropdown-list"
+                    aria-labelledby="TheUniversitySearchDropdown"
+                  >
+                    <li>
+                      <button
+                        href="#"
+                        class="block w-full px-4 cursor-pointer py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                        role="option"
+                      >
+                        Egypt
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        href="#"
+                        class="block w-full px-4 cursor-pointer py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                        role="option"
+                      >
+                        UAE
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        role="option"
+                        href="#"
+                        class="block w-full px-4 cursor-pointer py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                      >
+                        Turkey
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- The Cost dropdown -->
+              <li>
+                <button
+                  id="CostSearchDropdown"
+                  data-dropdown-toggle="CostSearchDropdownNavbar"
+                  class="flex flex-col items-center justify-between text-nowrap text-main-text w-full py-2 px-3 md:hover:bg-transparent cursor-pointer md:p-0 md:w-auto"
+                >
+                  Cost
+                  <span class="text-sm text-gray-500">Add Cost</span>
+                </button>
+                <!-- Study destinations Dropdown menu -->
+                <div
+                  id="CostSearchDropdownNavbar"
+                  class="z-40 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                >
+                  <ul
+                    class="text-sm text-gray-700 main-dropdown-list"
+                    aria-labelledby="CostSearchDropdown"
+                  >
+                    <li>
+                      <button
+                        href="#"
+                        class="block w-full px-4 cursor-pointer py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                        role="option"
+                      >
+                        Egypt
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        href="#"
+                        class="block w-full px-4 cursor-pointer py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                        role="option"
+                      >
+                        UAE
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        role="option"
+                        href="#"
+                        class="block w-full px-4 cursor-pointer py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                      >
+                        Turkey
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Specialization DropDown -->
+              <li>
+                <button
+                  id="SpecializationDropdownSearch"
+                  data-dropdown-toggle="SpecializationDropdownSearchNavbar"
+                  class="flex flex-col items-center justify-between text-nowrap text-main-text w-full py-2 px-3 md:hover:bg-transparent cursor-pointer md:p-0 md:w-auto"
+                >
+                  Specialization
+                  <span class="text-sm text-gray-500">add Specialization</span>
+                </button>
+                <!-- Study destinations Dropdown menu -->
+                <div
+                  id="SpecializationDropdownSearchNavbar"
+                  class="z-40 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                >
+                  <ul
+                    class="text-sm text-gray-700 main-dropdown-list"
+                    aria-labelledby="SpecializationDropdownSearch"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                        >Egypt</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                        >UAE</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 transition-colors duration-500 hover:bg-main-text/90 text-main-text hover:text-main-white"
+                        >Turkey</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
 
+          <a
+            href=""
+            class="w-full p-2 lg:p-0 lg:w-11 lg:h-11 rounded-full bg-main-green flex items-center justify-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="fill-main-white"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <path
+                d="M 13.261719 14.867188 L 15.742188 17.347656 C 15.363281 18.070313 15.324219 18.789063 15.722656 19.1875 L 20.25 23.714844 C 20.820313 24.285156 22.0625 23.972656 23.015625 23.015625 C 23.972656 22.058594 24.285156 20.820313 23.714844 20.25 L 19.191406 15.722656 C 18.789063 15.324219 18.070313 15.363281 17.347656 15.738281 L 14.867188 13.261719 Z M 8.5 0 C 3.804688 0 0 3.804688 0 8.5 C 0 13.195313 3.804688 17 8.5 17 C 13.195313 17 17 13.195313 17 8.5 C 17 3.804688 13.195313 0 8.5 0 Z M 8.5 15 C 4.910156 15 2 12.089844 2 8.5 C 2 4.910156 4.910156 2 8.5 2 C 12.089844 2 15 4.910156 15 8.5 C 15 12.089844 12.089844 15 8.5 15 Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!-- Who We Are section -->
+    <section class="common-section">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-12 lg:space-x-10 space-y-5">
+          <div class="col-span-12 lg:col-span-5">
+            <img
+              src="../assets/images/home/who-we-are.webp"
+              class="opacity-30"
+              alt="who we are"
+            />
+          </div>
+          <div class="col-span-12 lg:col-span-7 font-bold space-y-3">
+            <h2 class="text-5xl text-main-text text-center lg:text-start">
+              Who We Are
+            </h2>
+            <img
+              src="../assets/icons/single-green-line.png"
+              width="200"
+              class="mx-auto lg:ms-1"
+              alt="single green line"
+            />
+            <div class="max-w-[500px] leading-relaxed text-justify space-y-3">
+              <p class="text-main-green text-2xl">
+                Egyptian Gulf Companies for Educational Services
+              </p>
+              <p class="text-main-text font-normal text-xl">
+                It aims to develop and qualify human resources and provide all
+                educational services to students inside and outside Egypt,
+                starting from student registration through the study period and
+                until obtaining a bachelor's degree, in addition to many student
+                services.
+              </p>
+            </div>
+            <a
+              class="text-sm lg:text-base flex w-fit cursor-pointer items-center md:gap-2 bg-main-green hover:bg-main-green/80 rounded-full py-1 px-3 text-main-white"
+            >
+              <span>Read More About EGEC</span>
+              <div class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="120"
+                  height="20"
+                  viewBox="0 0 120 20"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="rotate-180"
+                >
+                  <line x1="0" y1="10" x2="100" y2="10" />
+                  <polyline points="15,0 0,10 15,20" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Study by sector -->
+    <section class="relative">
+      <img src="../assets/icons/low-wave.png" class="absolute start-0 -top-5 z-10" width="300" alt="low wave vector">
+      <img src="../assets/icons/low-wave.png" class="absolute end-0 -bottom-25 z-10" width="300" alt="low wave vector">
+      <div class="container mx-auto relative">
+        <div
+          class="mx-auto py-20 rounded-4xl text-center bg-cover bg-center"
+          style="
+            background-image: url('../assets/images/home/study-by-sector.webp');
+          "
+        >
+          <h2 class="text-5xl font-bold text-main-white">Study By Sector</h2>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 mx-auto translate-y-1/2">
+          <ul
+            class="flex space-x-3 justify-start lg:justify-center items-center overflow-x-auto scrollbar-hide py-4 max-w-full px-4"
+          >
+            <li>
+              <a
+                class="p-10 block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_14px_3px_gray] text-main-text hover:text-main-white cursor-pointer font-medium"
+              >
+                Medicine
+              </a>
+            </li>
+            <li>
+              <a
+                class="p-10 block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_14px_3px_gray] text-main-text hover:text-main-white cursor-pointer font-medium"
+              >
+                Engineering
+              </a>
+            </li>
+            <li>
+              <a
+                class="p-10 block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_14px_3px_gray] text-main-text hover:text-main-white cursor-pointer font-medium"
+              >
+                Computer Science
+              </a>
+            </li>
+            <li>
+              <a
+                class="p-10 block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_14px_3px_gray] text-main-text hover:text-main-white cursor-pointer font-medium"
+              >
+                Law
+              </a>
+            </li>
+            <li>
+              <a
+                class="p-10 block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_14px_3px_gray] text-main-text hover:text-main-white cursor-pointer font-medium"
+              >
+                Business Management
+              </a>
+            </li>
+            <li>
+              <a
+                class="p-10 block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_14px_3px_gray] text-main-text hover:text-main-white cursor-pointer font-medium"
+              >
+                Humanities
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Study by country -->
+     <section class="common-section">
+      <div class="container">
+        
+      </div>
+     </section>
+<section class="common-section"></section>
     <!-- Swiper.js -->
     <!-- <script src="../vendors/swiper/swiper-bundle.min.js"></script> -->
     <script src="../vendors/flowbite/flowbite.min.js"></script>
