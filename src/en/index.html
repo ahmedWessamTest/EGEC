@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <!-- <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css"/> -->
+    <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css" />
   </head>
   <body class="bg-main-white">
     <!-- tob navbar  -->
@@ -76,7 +76,10 @@
         <div
           class="flex flex-wrap lg:flex-nowrap items-center justify-between lg:justify-start mx-auto p-4 z-50 gap-2 w-full"
         >
-          <a href="">
+          <a
+            href="#"
+            class="transition-colors duration-500 rounded-full p-1 navbar-logo"
+          >
             <img src="../assets/images/home/logo.png" width="70" alt="" />
           </a>
           <div
@@ -940,7 +943,7 @@
               class="bg-center bg-cover w-full h-screen"
             >
               <div
-                class="container mx-auto flex items-center h-screen justify-center md:justify-start"
+                class="container flex items-center h-screen justify-center md:justify-start"
               >
                 <div class="w-full lg:w-1/2 text-center lg:text-start">
                   <div class="flex items-center content-center">
@@ -990,7 +993,7 @@
               class="bg-center bg-cover w-full h-screen"
             >
               <div
-                class="container mx-auto flex items-center h-screen justify-center md:justify-start"
+                class="container flex items-center h-screen justify-center md:justify-start"
               >
                 <div class="w-full lg:w-1/2 text-center lg:text-start">
                   <div class="flex items-center content-center">
@@ -1327,13 +1330,14 @@
     </header>
     <!-- Who We Are section -->
     <section class="common-section">
-      <div class="container mx-auto">
+      <div class="container">
         <div class="grid grid-cols-12 lg:space-x-10 space-y-5">
           <div class="col-span-12 lg:col-span-5">
             <img
               src="../assets/images/home/who-we-are.webp"
               class="opacity-30"
               alt="who we are"
+              loading="lazy"
             />
           </div>
           <div class="col-span-12 lg:col-span-7 font-bold space-y-3">
@@ -1341,10 +1345,11 @@
               Who We Are
             </h2>
             <img
-              src="../assets/icons/single-green-line.png"
+              src="../assets/icons/single-line.png"
               width="200"
               class="mx-auto lg:ms-1"
               alt="single green line"
+              loading="lazy"
             />
             <div class="max-w-[500px] leading-relaxed text-justify space-y-3">
               <p class="text-main-green text-2xl">
@@ -1386,9 +1391,21 @@
     </section>
     <!-- Study by sector -->
     <section class="relative">
-      <img src="../assets/icons/low-wave.png" class="absolute start-0 -top-5 z-10" width="300" alt="low wave vector">
-      <img src="../assets/icons/low-wave.png" class="absolute end-0 -bottom-25 z-10" width="300" alt="low wave vector">
-      <div class="container mx-auto relative">
+      <img
+        src="../assets/icons/low-wave.png"
+        loading="lazy"
+        class="absolute start-0 -top-5 z-10"
+        width="300"
+        alt="low wave vector"
+      />
+      <img
+        src="../assets/icons/low-wave.png"
+        loading="lazy"
+        class="absolute end-0 -bottom-25 z-10"
+        width="300"
+        alt="low wave vector"
+      />
+      <div class="container relative">
         <div
           class="mx-auto py-20 rounded-4xl text-center bg-cover bg-center"
           style="
@@ -1449,92 +1466,743 @@
       </div>
     </section>
     <!-- Study by country -->
-     <section class="py-44 relative">
-      <span class="absolute hidden lg:block -start-0 -translate-x-1/2 -translate-y-7 bottom-0">
-        <img src="../assets/icons/green-dots.png" width="250" alt="green dots vector">
+    <section class="py-44 relative">
+      <span
+        class="absolute hidden lg:block -start-0 -translate-x-1/2 -translate-y-7 bottom-0"
+      >
+        <img
+          src="../assets/icons/green-dots.png"
+          loading="lazy"
+          width="250"
+          alt="green dots vector"
+        />
       </span>
-      <div class="container mx-auto">
+      <div class="container">
         <div class="grid grid-cols-1 lg:grid-cols-12 lg:space-x-7">
-          <div class="flex items-center justify-center py-4 lg:py-0 lg:col-span-4">
+          <div
+            class="flex items-center justify-center py-4 lg:py-0 lg:col-span-4"
+          >
             <div class="text-center lg:text-start">
               <h2 class="text-5xl font-bold text-main-text">
                 Study By Country
               </h2>
-              <span class=" text-gray-500 mt-3 block">He joined the university in...</span>
+              <span class="text-gray-500 mt-3 block"
+                >He joined the university in...</span
+              >
               <img
-              src="../assets/icons/single-green-line.png"
-              width="200"
-              class="mx-auto lg:ms-1 mt-2"
-              alt="single green line"
-            />
+                src="../assets/icons/single-green-line.png"
+                width="200"
+                class="mx-auto lg:ms-1 mt-2"
+                alt="single green line"
+                loading="lazy"
+              />
             </div>
           </div>
-        <div class="relative lg:col-span-8">
-          <div class="grid grid-cols-1 lg:grid-cols-2 rounded-3xl overflow-hidden z-20 relative ">
-            <a href="#" class="relative group">
-              <img loading="lazy" src="../assets/images/home/russia.webp" class="h-full w-full object-cover" alt="Study in Russia">
-              <div class=" transition-opacity duration-500 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 absolute inset-0">
-                <span class="text-main-white text-xl font-bold">Russia</span>
-              </div>
-            </a>
-            <a href="#" class="relative group">
-              <img loading="lazy" src="../assets/images/home/egypt.webp" class="h-full w-full object-cover" alt="Study in Egypt">
-              <div class=" transition-opacity duration-500 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 absolute inset-0">
-                <span class="text-main-white text-xl font-bold">Egypt</span>
-              </div>
-            </a>
-            <a href="#" class="relative group">
-              <img loading="lazy" src="../assets/images/home/emirates.webp" class="h-full w-full object-cover" alt="Study in UAE">
-              <div class=" transition-opacity duration-500 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 absolute inset-0">
-                <span class="text-main-white text-xl font-bold">UAE</span>
-              </div>
-            </a>
-            <a href="#" class="relative group">
-              <img loading="lazy" src="../assets/images/home/usa.webp" class="h-full w-full object-cover" alt="Study in USA">
-              <div class=" transition-opacity duration-500 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 absolute inset-0">
-                <span class="text-main-white text-xl font-bold">USA</span>
-              </div>
-            </a>
-            
+          <div class="relative lg:col-span-8">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 rounded-3xl overflow-hidden z-20 relative"
+            >
+              <a href="#" class="relative group">
+                <img
+                  loading="lazy"
+                  src="../assets/images/home/russia.webp"
+                  class="h-full w-full object-cover"
+                  alt="Study in Russia"
+                />
+                <div
+                  class="transition-opacity duration-500 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 absolute inset-0"
+                >
+                  <span class="text-main-white text-xl font-bold">Russia</span>
+                </div>
+              </a>
+              <a href="#" class="relative group">
+                <img
+                  loading="lazy"
+                  src="../assets/images/home/egypt.webp"
+                  class="h-full w-full object-cover"
+                  alt="Study in Egypt"
+                />
+                <div
+                  class="transition-opacity duration-500 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 absolute inset-0"
+                >
+                  <span class="text-main-white text-xl font-bold">Egypt</span>
+                </div>
+              </a>
+              <a href="#" class="relative group">
+                <img
+                  loading="lazy"
+                  src="../assets/images/home/emirates.webp"
+                  class="h-full w-full object-cover"
+                  alt="Study in UAE"
+                />
+                <div
+                  class="transition-opacity duration-500 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 absolute inset-0"
+                >
+                  <span class="text-main-white text-xl font-bold">UAE</span>
+                </div>
+              </a>
+              <a href="#" class="relative group">
+                <img
+                  loading="lazy"
+                  src="../assets/images/home/usa.webp"
+                  class="h-full w-full object-cover"
+                  alt="Study in USA"
+                />
+                <div
+                  class="transition-opacity duration-500 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 absolute inset-0"
+                >
+                  <span class="text-main-white text-xl font-bold">USA</span>
+                </div>
+              </a>
+            </div>
+            <span class="-top-[15%] -start-[15%] absolute hidden lg:block">
+              <img
+                src="../assets/icons/green-dots.png"
+                loading="lazy"
+                width="250"
+                alt="green dots vector"
+              />
+            </span>
           </div>
-          <span class="-top-[15%] -start-[15%] absolute hidden lg:block">
-            <img src="../assets/icons/green-dots.png" width="250" alt="green dots vector">
-          </span>
-        </div>
         </div>
       </div>
-     </section>
-     <!-- Counters -->
+    </section>
+    <!-- Counters -->
     <section>
-      <div class="container mx-auto">
+      <div class="container">
         <div
           class="bg-[linear-gradient(90deg,rgba(0,192,251,1)_0%,rgba(30,79,146,1)_100%)] py-10 rounded-4xl"
         >
-          <ul class="flex flex-col lg:flex-row text-main-white lg:space-x-8 space-y-8 lg:space-y-0  justify-center items-center text-center ">
+          <ul
+            class="flex flex-col lg:flex-row text-main-white lg:space-x-8 space-y-8 lg:space-y-0 justify-center items-center text-center"
+          >
             <li>
               <span class="text-4xl font-bold">+86</span>
-              <p class="text-md font-medium capitalize">employees around the Arab world</p>
+              <p class="text-md font-medium capitalize">
+                employees around the Arab world
+              </p>
             </li>
             <li>
               <span class="text-4xl font-bold">+86</span>
-              <p class="text-md font-medium capitalize">employees around the Arab world</p>
+              <p class="text-md font-medium capitalize">
+                employees around the Arab world
+              </p>
             </li>
             <li>
               <span class="text-4xl font-bold">+86</span>
-              <p class="text-md font-medium capitalize">employees around the Arab world</p>
+              <p class="text-md font-medium capitalize">
+                employees around the Arab world
+              </p>
             </li>
             <li>
               <span class="text-4xl font-bold">+86</span>
-              <p class="text-md font-medium capitalize">employees around the Arab world</p>
+              <p class="text-md font-medium capitalize">
+                employees around the Arab world
+              </p>
             </li>
-            
           </ul>
         </div>
       </div>
     </section>
-<section class="common-section"></section>
+    <!-- Steps To Join section -->
+    <section class="common-section">
+      <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-12 space-y-3 lg:space-y-0">
+          <div class="lg:col-span-5">
+            <div class="mb-7 w-fit relative mx-auto lg:mx-0">
+              <img
+                src="../assets/icons/down-arrow.png"
+                class="absolute -end-2 -bottom-3"
+                width="20"
+                alt=""
+              />
+              <h2
+                class="text-4xl font-bold text-main-text bg-main-white z-10 relative"
+              >
+                Steps To Join
+              </h2>
+              <img
+                src="../assets/icons/single-green-line.png"
+                width="150"
+                class="mt-3 mx-auto"
+                alt=""
+              />
+            </div>
+            <ul class="space-y-5">
+              <li
+                class="flex gap-2 items-center text-main-text text-lg font-medium"
+              >
+                <img
+                  src="../assets/icons/contact-EGEC-icon.png"
+                  width="30"
+                  alt="contact with EGEC icon"
+                />
+                <span> Contact EGEC </span>
+              </li>
+              <li
+                class="flex gap-2 items-center text-main-text text-lg font-medium"
+              >
+                <img
+                  src="../assets/icons/chat-with-us-icon.png"
+                  width="30"
+                  alt="chat with us icon"
+                />
+                <span> Talk to your online mentor </span>
+              </li>
+              <li
+                class="flex gap-2 items-center text-main-text text-lg font-medium"
+              >
+                <img
+                  src="../assets/icons/Suggestions-icon.png"
+                  width="30"
+                  alt="Suggesting suitable universities icon"
+                />
+                <span> Suggesting suitable universities </span>
+              </li>
+              <li
+                class="flex gap-2 items-center text-main-text text-lg font-medium"
+              >
+                <img
+                  src="../assets/icons/paper-icon.png"
+                  width="30"
+                  alt="We receive your papers icon"
+                />
+                <span>
+                  We receive your papers and complete all procedures.
+                </span>
+              </li>
+              <li
+                class="flex gap-2 items-center text-main-text text-lg font-medium"
+              >
+                <img
+                  src="../assets/icons/accepted-icon.png"
+                  width="30"
+                  alt="you have been accepted icon"
+                />
+                <span> Congratulations, you have been accepted. </span>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-7 relative">
+            <img
+              src="../assets/icons/liner-bubble.png"
+              width="30"
+              class="absolute top-[8%] start-[32%] z-20"
+              alt=""
+            />
+            <img
+              src="../assets/icons/dashed-circle.png"
+              class="hidden lg:block absolute -end-[12%] top-1/2 -translate-y-1/2 w-1/2"
+              alt="dashed circle icon"
+            />
+            <img
+              src="../assets/images/home/Steps-to-join.png"
+              class="rounded-4xl z-10 relative object-cover"
+              alt="Steps to join"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our showroom section -->
+    <section class="common-section !pb-0">
+      <div class="container">
+        <div class="w-fit mx-auto">
+          <h2 class="text-4xl text-main-text text-center font-bold">
+            Our Showroom
+          </h2>
+          <img
+            src="../assets/icons/single-green-line.png"
+            class="w-[120%] mt-2"
+            alt="line"
+          />
+        </div>
+        <div class="relative">
+          <img
+            src="../assets/icons/three-lines-vertical.png"
+            class="relative -scale-x-[1] start-0 top-3"
+            width="150"
+            alt=""
+          />
+          <div
+            class="grid grid-cols-1 lg:grid-cols-3 mt-6 lg:space-x-4 space-y-4 lg:space-y-0"
+          >
+            <div>
+              <a
+                href="#"
+                class="block group rounded-4xl overflow-hidden shadow-2xl bg-main-white hover:bg-gray-200 transition-all duration-300"
+              >
+                <div class="relative flex items-center justify-center">
+                  <img
+                    src="../assets/images/shared/Professional-business-administration.png"
+                    alt="video poster"
+                  />
+                  <img
+                    src="../assets/icons/play-video.png"
+                    width="70"
+                    class="transition-opacity duration-500 absolute opacity-0 group-hover:opacity-100"
+                    alt="play video icon"
+                  />
+                </div>
+                <div class="px-2 pt-2 pb-10 flex items-center justify-between">
+                  <h3 class="text-main-text font-bold">
+                    Professional in business administration
+                  </h3>
+                  <p class="text-main-gray flex items-center gap-1 text-sm">
+                    <span class="text-nowrap">2s 14m 2h</span
+                    ><img
+                      src="../assets/icons/time-icon.png"
+                      loading="lazy"
+                      width="13"
+                      alt="created date icon"
+                    />
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a
+                href="#"
+                class="block group rounded-4xl overflow-hidden shadow-2xl bg-main-white hover:bg-gray-200 transition-all duration-300"
+              >
+                <div class="relative flex items-center justify-center">
+                  <img
+                    src="../assets/images/shared/Professional-business-administration.png"
+                    alt="video poster"
+                  />
+                  <img
+                    src="../assets/icons/play-video.png"
+                    width="70"
+                    class="transition-opacity duration-500 absolute opacity-0 group-hover:opacity-100"
+                    alt="play video icon"
+                  />
+                </div>
+                <div class="px-2 pt-2 pb-10 flex items-center justify-between">
+                  <h3 class="text-main-text font-bold">
+                    Professional in business administration
+                  </h3>
+                  <p class="text-main-gray flex items-center gap-1 text-sm">
+                    <span class="text-nowrap">2s 14m 2h</span
+                    ><img
+                      src="../assets/icons/time-icon.png"
+                      loading="lazy"
+                      width="13"
+                      alt="created date icon"
+                    />
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a
+                href="#"
+                class="block group rounded-4xl overflow-hidden shadow-2xl bg-main-white hover:bg-gray-200 transition-all duration-300"
+              >
+                <div class="relative flex items-center justify-center">
+                  <img
+                    src="../assets/images/shared/Professional-business-administration.png"
+                    alt="video poster"
+                  />
+                  <img
+                    src="../assets/icons/play-video.png"
+                    width="70"
+                    class="transition-opacity duration-500 absolute opacity-0 group-hover:opacity-100"
+                    alt="play video icon"
+                  />
+                </div>
+                <div class="px-2 pt-2 pb-10 flex items-center justify-between">
+                  <h3 class="text-main-text font-bold">
+                    Professional in business administration
+                  </h3>
+                  <p class="text-main-gray flex items-center gap-1 text-sm">
+                    <span class="text-nowrap">2s 14m 2h</span
+                    ><img
+                      src="../assets/icons/time-icon.png"
+                      loading="lazy"
+                      width="13"
+                      alt="created date icon"
+                    />
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section
+      class="common-section bg-cover bg-center -mt-10"
+      style="background-image: url('../assets/images/home/testimonials-bg.png')"
+    >
+      <div class="w-fit mx-auto font-bold text-center relative">
+        <img
+          src="../assets/icons/testimonials-icon.png"
+          class="absolute start-[8%] -top-[35%] -scale-x-[1]"
+          width="50"
+          alt="testimonials icon"
+        />
+        <h2 class="text-main-white text-4xl">Testimonials</h2>
+        <img
+          src="../assets/icons/single-green-line.png"
+          class="w-[120%] mt-3"
+          alt="line"
+        />
+      </div>
+      <!-- Swiper container -->
+      <div class="container">
+        <div class="swiper mySwiper w-full mt-10">
+          <div class="swiper-wrapper">
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div class="relative py-4">
+                <img
+                  class="absolute start-0 top-0 z-10"
+                  src="../assets/icons/quotation.png"
+                  width="30"
+                  alt="quotation"
+                />
+                <p
+                  class="text-main-white line-clamp-4 backdrop-blur-md rounded-4xl p-6"
+                >
+                  I advise any student who wants to study at the Egyptian
+                  University to deal with the Egyptian Gulf Company for
+                  Educational Services, and I thank them for what they.
+                </p>
+                <h5 class="text-center text-sm text-main-green mt-1 font-bold">
+                  abdullah suliman
+                </h5>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="swiper-slide">
+              <div class="relative py-4">
+                <img
+                  class="absolute start-0 top-0 z-10"
+                  src="../assets/icons/quotation.png"
+                  width="30"
+                  alt="quotation"
+                />
+                <p
+                  class="text-main-white line-clamp-4 backdrop-blur-md rounded-4xl p-6"
+                >
+                  I advise any student who wants to study at the Egyptian
+                  University to deal with the Egyptian Gulf Company for
+                  Educational Services, and I thank them for what they.
+                </p>
+                <h5 class="text-center text-sm text-main-green mt-1 font-bold">
+                  abdullah suliman
+                </h5>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="swiper-slide">
+              <div class="relative py-4">
+                <img
+                  class="absolute start-0 top-0 z-10"
+                  src="../assets/icons/quotation.png"
+                  width="30"
+                  alt="quotation"
+                />
+                <p
+                  class="text-main-white line-clamp-4 backdrop-blur-md rounded-4xl p-6"
+                >
+                  I advise any student who wants to study at the Egyptian
+                  University to deal with the Egyptian Gulf Company for
+                  Educational Services, and I thank them for what they.
+                </p>
+                <h5 class="text-center text-sm text-main-green mt-1 font-bold">
+                  abdullah suliman
+                </h5>
+              </div>
+            </div>
+
+            <!-- أضف كروت تانية بنفس الشكل -->
+          </div>
+
+          <!-- Pagination (الدوائر) -->
+          <div class="swiper-pagination !relative"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Latest educational articles -->
+    <section class="common-section">
+      <div class="w-fit mx-auto font-bold text-center relative">
+        <img
+          src="../assets/icons/three-buble.png"
+          class="absolute -end-8 top-0 -scale-x-[1]"
+          width="30"
+          alt="testimonials icon"
+        />
+        <h2 class="text-main-text text-4xl">Latest educational articles</h2>
+        <img
+          src="../assets/icons/single-green-line.png"
+          class="w-3/4 mx-auto mt-3"
+          alt="line"
+        />
+      </div>
+      <div class="mx-auto !max-w-3xl px-3.5 mt-10">
+        <div class="grid gap-10 grid-cols-1 lg:grid-cols-2">
+          <div>
+            <div>
+              <img
+                src="../assets/images/home/study-in-cairo.png"
+                loading="lazy"
+                alt="cairo university"
+                class="object-cover"
+              />
+            </div>
+            <div class="flex justify-between mt-2">
+              <div>
+                <h3 class="text-main-green text-xl font-semibold">
+                  Study at Cairo University
+                </h3>
+                <p class="text-main-gray font-semibold line-clamp-3 pe-6">
+                  From the great citadel of science, from between the walls of
+                  the ancient Cairo University, from between the sides of the
+                  altar of the Faculty of Medicine, Cairo University
+                </p>
+                <a href="#" class="text-main-green flex items-center group">
+                  <span class="font-semibold"> more </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="90"
+                    height="20"
+                    viewBox="0 0 120 20"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="rotate-180 stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
+                  >
+                    <line x1="0" y1="10" x2="100" y2="10" />
+                    <polyline points="15,0 0,10 15,20" />
+                  </svg>
+                </a>
+              </div>
+              <div>
+                <span
+                  class="block w-14 h-14 rounded-tl-2xl bg-main-green text-main-white text-center font-bold content-center"
+                  >20</span
+                >
+                <span
+                  class="block w-14 h-14 bg-main-text text-main-white text-center font-bold content-center"
+                  >AUG</span
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="../assets/images/home/study-in-cairo.png"
+                loading="lazy"
+                alt="cairo university"
+                class="object-cover"
+              />
+            </div>
+            <div class="flex justify-between mt-2">
+              <div>
+                <h3 class="text-main-green text-xl font-semibold">
+                  Study at Cairo University
+                </h3>
+                <p class="text-main-gray font-semibold line-clamp-3 pe-6">
+                  From the great citadel of science, from between the walls of
+                  the ancient Cairo University, from between the sides of the
+                  altar of the Faculty of Medicine, Cairo University
+                </p>
+                <a href="#" class="text-main-green flex items-center group">
+                  <span class="font-semibold"> more </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="90"
+                    height="20"
+                    viewBox="0 0 120 20"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="rotate-180 stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
+                  >
+                    <line x1="0" y1="10" x2="100" y2="10" />
+                    <polyline points="15,0 0,10 15,20" />
+                  </svg>
+                </a>
+              </div>
+              <div>
+                <span
+                  class="block w-14 h-14 rounded-tl-2xl bg-main-green text-main-white text-center font-bold content-center"
+                  >20</span
+                >
+                <span
+                  class="block w-14 h-14 bg-main-text text-main-white text-center font-bold content-center"
+                  >AUG</span
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="../assets/images/home/study-in-cairo.png"
+                loading="lazy"
+                alt="cairo university"
+                class="object-cover"
+              />
+            </div>
+            <div class="flex justify-between mt-2">
+              <div>
+                <h3 class="text-main-green text-xl font-semibold">
+                  Study at Cairo University
+                </h3>
+                <p class="text-main-gray font-semibold line-clamp-3 pe-6">
+                  From the great citadel of science, from between the walls of
+                  the ancient Cairo University, from between the sides of the
+                  altar of the Faculty of Medicine, Cairo University
+                </p>
+                <a href="#" class="text-main-green flex items-center group">
+                  <span class="font-semibold"> more </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="90"
+                    height="20"
+                    viewBox="0 0 120 20"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="rotate-180 stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
+                  >
+                    <line x1="0" y1="10" x2="100" y2="10" />
+                    <polyline points="15,0 0,10 15,20" />
+                  </svg>
+                </a>
+              </div>
+              <div>
+                <span
+                  class="block w-14 h-14 rounded-tl-2xl bg-main-green text-main-white text-center font-bold content-center"
+                  >20</span
+                >
+                <span
+                  class="block w-14 h-14 bg-main-text text-main-white text-center font-bold content-center"
+                  >AUG</span
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="../assets/images/home/study-in-cairo.png"
+                loading="lazy"
+                alt="cairo university"
+                class="object-cover"
+              />
+            </div>
+            <div class="flex justify-between mt-2">
+              <div>
+                <h3 class="text-main-green text-xl font-semibold">
+                  Study at Cairo University
+                </h3>
+                <p class="text-main-gray font-semibold line-clamp-3 pe-6">
+                  From the great citadel of science, from between the walls of
+                  the ancient Cairo University, from between the sides of the
+                  altar of the Faculty of Medicine, Cairo University
+                </p>
+                <a href="#" class="text-main-green flex items-center group">
+                  <span class="font-semibold"> more </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="90"
+                    height="20"
+                    viewBox="0 0 120 20"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="rotate-180 stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
+                  >
+                    <line x1="0" y1="10" x2="100" y2="10" />
+                    <polyline points="15,0 0,10 15,20" />
+                  </svg>
+                </a>
+              </div>
+              <div>
+                <span
+                  class="block w-14 h-14 rounded-tl-2xl bg-main-green text-main-white text-center font-bold content-center"
+                  >20</span
+                >
+                <span
+                  class="block w-14 h-14 bg-main-text text-main-white text-center font-bold content-center"
+                  >AUG</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="bg-main-text py-2 px-10 text-main-white mx-auto block mt-4 rounded-full cursor-pointer hover:bg-main-text/80 transition-colors duration-500"
+      >
+        Show More
+      </button>
+    </section>
+    <!-- footer -->
+    <footer
+      class="bg-cover bg-center common-section !pt-0"
+      style="background-image: url('../assets/images/shared/footer-bg.webp')"
+    >
+      <h2
+        class="w-fit p-4 font-bold capitalize text-main-white text-xl rounded-full bg-main-green mx-auto -translate-y-1/2"
+      >
+        Get the education you aspire to with EGEC
+      </h2>
+      <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <div>
+            <div>
+              <h3 class="text-2xl font-bold text-main-green">About EGEC</h3>
+              <img
+                src="../assets/icons/dots-line-green.png"
+                loading="lazy"
+                alt="dots line"
+                width="150"
+                class="my-3"
+              />
+            </div>
+
+            <p class="text-main-white text-xl">
+              We provide you with all educational services, starting from
+              enrollment and follow-up during the study period until you obtain
+              the certificate.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-main-green">Hot Links</h3>
+            <img
+              src="../assets/icons/dots-line-green.png"
+              loading="lazy"
+              alt="dots line"
+              width="150"
+              class="my-3"
+            />
+            <ul class="text-main-white text-xl">
+              <li class="hover:text-main-white/80 transition-colors duration-500"><a href="#">Home</a></li>
+              <li class="hover:text-main-white/80 transition-colors duration-500"><a href="#">About Us Articles</a></li>
+              <li class="hover:text-main-white/80 transition-colors duration-500"><a href="#">Photo gallery</a></li>
+              <li class="hover:text-main-white/80 transition-colors duration-500"><a href="#">Study abroad</a></li>
+              <li class="hover:text-main-white/80 transition-colors duration-500"><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Swiper.js -->
-    <!-- <script src="../vendors/swiper/swiper-bundle.min.js"></script> -->
+    <script src="../vendors/swiper/swiper-bundle.min.js"></script>
     <script src="../vendors/flowbite/flowbite.min.js"></script>
     <script src="../assets/js/main.js" type="module"></script>
   </body>

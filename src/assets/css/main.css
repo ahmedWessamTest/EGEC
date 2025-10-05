@@ -89,3 +89,6 @@ color: var(--color-main-green) !important;
 .navbar-scrolled .mobile-btn {
     color: var(--color-main-green);
 }
+.navbar-scrolled .navbar-logo {
+  background-color: var(--color-main-gray);
+}

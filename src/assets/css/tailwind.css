@@ -3,9 +3,16 @@
     --color-main-text:#1c4e90;
     --color-main-green:#08c261;
     --color-main-white:#fefefe;
+    --color-main-gray:#a5a5a5;
     --spacing-section-padding: 80px;
     --spacing-main-container-padding:15px;
 }
 .dropdown-menu {
   @apply z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0;
 }
+@layer base {
+  .container {
+    @apply mx-auto !max-w-6xl;
+  }
+}
+

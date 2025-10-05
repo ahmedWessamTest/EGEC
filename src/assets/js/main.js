@@ -3,7 +3,46 @@ const navMenu = document.getElementById("navbar-custom");
 const mainNavBtn = document.getElementById("customNavBtn")
 const mainNavbar = document.getElementById("main-navbar");
 let navbarOffset = mainNavbar.getBoundingClientRect().top + window.scrollY;
+const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1, // عدد الكروت في الموبايل
+    spaceBetween: 20, // المسافة بين الكروت
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+
 // functions
+const initTestimonialsCarousel = () => {
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1, // عدد الكروت في الموبايل
+    spaceBetween: 20, // المسافة بين الكروت
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+}
 const openNavbar = ()=>{
 if (navMenu.classList.contains("max-h-0")) {
     navMenu.classList.remove("max-h-0");
@@ -48,3 +87,5 @@ subNavbarItem.forEach(link => {
 const elementPositionFromTop = (element) => {
   return element.getBoundingClientRect().top + window.scrollY
 }
+// When Start
+initTestimonialsCarousel();
