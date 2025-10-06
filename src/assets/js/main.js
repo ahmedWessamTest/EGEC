@@ -91,9 +91,10 @@ const handleNavbarScroll = () => {
 const setActiveNavbarItem = () => {
   const currentPath = location.hash || location.pathname;
   const subNavbarItems = document.querySelectorAll('#SubNavbar .navbar-item');
+  actualCurrentPath = `./${currentPath.split('/').at(-1)}`
   
   subNavbarItems.forEach(item => {
-    const isActive = item.getAttribute("href") === currentPath;
+    const isActive = item.getAttribute("href") === actualCurrentPath;
     item.classList.toggle(CONFIG.CLASSES.ACTIVE, isActive);
   });
 };

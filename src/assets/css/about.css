@@ -1,0 +1,25 @@
+.swiper-pagination {
+  display: flex ;
+  justify-content: center;
+  gap: 10px;
+}
+
+.swiper-pagination-bullet {
+  width: 35px !important;
+  height: 35px !important;
+  background: transparent !important;
+  border: 2px solid var(--color-main-text);
+  color: var(--color-main-text) !important;
+  opacity: 100% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold !important;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-main-text) !important;
+  color: var(--color-main-white) !important;
+  transform: scale(1.1);
+}
