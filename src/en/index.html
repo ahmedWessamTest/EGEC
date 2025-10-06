@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <!-- <link rel="canonical" href="https://yourdomain.com/en/index.html"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="canonical" href="https://yourdomain.com/en/index.html"> -->
     <title>Home</title>
     <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
@@ -78,7 +78,9 @@
         class="bg-white rounded-2xl shadow-2xl p-6 w-[90%] max-w-sm text-center animate-slide-up"
       >
         <h2 class="text-2xl font-bold text-gray-900 mb-2">Register now</h2>
-        <p class="text-gray-600 mb-4">The responsible employee will contact you</p>
+        <p class="text-gray-600 mb-4">
+          The responsible employee will contact you
+        </p>
 
         <div class="space-y-3">
           <button
@@ -1001,8 +1003,69 @@
                   >About us</a
                 >
               </li>
+              <!-- language dropdown -->
+              <li>
+                <div
+                  class="flex mt-3 lg:mt-0 items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse"
+                >
+                  <button
+                    type="button"
+                    data-dropdown-toggle="language-dropdown-menu"
+                    class="inline-flex items-center text-main-green font-medium justify-center text-sm lg:text-main-white rounded-lg cursor-pointer"
+                  >
+                    <svg
+                      class="w-5 h-5 rounded-full me-3"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 3900 3900"
+                    >
+                      <path fill="#b22234" d="M0 0h7410v3900H0z" />
+                      <path
+                        d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0"
+                        stroke="#fff"
+                        stroke-width="300"
+                      />
+                      <path fill="#3c3b6e" d="M0 0h2964v2100H0z" />
+                      <g fill="#fff">
+                        <path
+                          d="M247 90l70.5 217.1-184.7-134.2h228.3L176.5 307.1z"
+                        />
+                      </g>
+                    </svg>
+                    English (US)
+                  </button>
+
+                  <!-- Dropdown -->
+                  <div
+                    class="z-50 hidden overflow-hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                    id="language-dropdown-menu"
+                  >
+                    <ul class="font-medium" role="none">
+                      <!-- Arabic -->
+                      <li>
+                        <a
+                          href="../ar/index.html"
+                          class="block px-4 py-2 text-sm text-main-green hover:bg-main-green hover:!text-main-white"
+                          role="menuitem"
+                        >
+                          <div class="inline-flex items-center">
+                            <img
+                              src="https://flagcdn.com/w20/eg.png"
+                              alt="Egypt flag"
+                              class="w-4 h-4 rounded-full me-2"
+                              loading="lazy"
+                            />
+                            العربية (مصر)
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
+          <!-- language dropdown -->
 
           <button
             type="button"
