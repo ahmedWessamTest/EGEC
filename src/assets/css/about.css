@@ -1,12 +1,13 @@
-.swiper-pagination {
+.our-mission-pagination,
+.about-pagination {
   display: flex ;
-  justify-content: center;
+  justify-content: center ;
+}
+.about-pagination {
   gap: 10px;
 }
-
-.swiper-pagination-bullet {
-  width: 35px !important;
-  height: 35px !important;
+.our-mission-pagination .swiper-pagination-bullet,
+.about-pagination .swiper-pagination-bullet {
   background: transparent !important;
   border: 2px solid var(--color-main-text);
   color: var(--color-main-text) !important;
@@ -17,8 +18,12 @@
   font-weight: bold !important;
   cursor: pointer;
 }
-
-.swiper-pagination-bullet-active {
+.about-pagination .swiper-pagination-bullet {
+width: 35px !important;
+  height: 35px !important;
+}
+.our-mission-pagination .swiper-pagination-bullet-active,
+.about-pagination .swiper-pagination-bullet-active {
   background: var(--color-main-text) !important;
   color: var(--color-main-white) !important;
   transform: scale(1.1);

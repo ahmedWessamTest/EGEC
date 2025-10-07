@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,10 +71,11 @@
         aria-label="Open Register Menu"
       >
         <img
-          src="../assets/images/shared/sidnav-btn-en.webp"
+          src="../assets/images/shared/sidnav-btn.webp"
           width="70"
           alt="Register here"
           class="drop-shadow-lg"
+          loading="lazy"
         />
       </button>
     </aside>
@@ -86,10 +87,8 @@
       <div
         class="bg-white rounded-2xl shadow-2xl p-6 w-[90%] max-w-sm text-center animate-slide-up"
       >
-        <h2 class="text-2xl font-bold text-gray-900 mb-2">Register now</h2>
-        <p class="text-gray-600 mb-4">
-          The responsible employee will contact you
-        </p>
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">سجل الآن</h2>
+        <p class="text-gray-600 mb-4">سيتصل بك الموظف المسؤول</p>
 
         <div class="space-y-3">
           <button
@@ -98,7 +97,7 @@
               background-image: url('../assets/images/home/hero-image.webp');
             "
           >
-            Bachelor's degree
+            درجه البكالوريوس
           </button>
           <button
             style="
@@ -106,7 +105,7 @@
             "
             class="w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
           >
-            Master's degree
+            درجه الماجستير
           </button>
           <button
             style="
@@ -114,7 +113,7 @@
             "
             class="w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
           >
-            Doctorate
+            درجه الدكتوراه
           </button>
         </div>
 
@@ -122,7 +121,7 @@
           id="closeMenuBtn"
           class="mt-5 w-full border cursor-pointer border-gray-800 py-2 rounded-lg hover:bg-gray-800 hover:text-white transition-all duration-300"
         >
-          Close
+          إغلاق
         </button>
       </div>
     </div>
@@ -134,41 +133,41 @@
         <div class="lg:w-auto w-full">
           <ul
             id="SubNavbar"
-            class="font-medium flex gap-2 justify-center p-4 lg:p-0 border border-gray-100 rounded-lg flex-wrap lg:space-x-8 lg:border-0"
+            class="font-medium flex gap-2 justify-center p-4 lg:p-0 border border-gray-100 rounded-lg flex-wrap lg:space-x-8 rtl:space-x-reverse lg:border-0"
           >
             <li>
               <a
                 href="./about.html"
                 class="block py-2 px-2 lg:text-main-text bg-main-green text-white rounded-sm lg:bg-transparent lg:p-0 navbar-item"
-                >About us</a
+                >من نحن</a
               >
             </li>
             <li>
               <a
                 href="#"
                 class="block py-2 px-2 lg:!text-main-text hover:bg-main-green lg:!bg-transparent hover:text-white rounded-sm navbar-item lg:p-0"
-                >Articles</a
+                >المقالات</a
               >
             </li>
             <li>
               <a
                 href="#"
                 class="block py-2 px-2 lg:!text-main-text hover:bg-main-green lg:!bg-transparent hover:text-white rounded-sm navbar-item lg:p-0"
-                >Exhibition</a
+                >المعرض</a
               >
             </li>
             <li>
               <a
                 href="#"
                 class="block py-2 px-2 lg:!text-main-text hover:bg-main-green lg:!bg-transparent hover:text-white rounded-sm navbar-item lg:p-0"
-                >Acceptance certificates</a
+                >شهادات القبول</a
               >
             </li>
             <li>
               <a
                 href="#"
                 class="block py-2 px-2 lg:!text-main-text hover:bg-main-green lg:!bg-transparent hover:text-white rounded-sm navbar-item lg:p-0"
-                >Contact us</a
+                >اتصل بنا</a
               >
             </li>
           </ul>
@@ -178,11 +177,10 @@
           type="button"
           class="text-white bg-main-green hover:bg-main-green/80 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-3 py-2 text-center"
         >
-          Login / Create Account
+          تسجيل الدخول / انشاء حساب
         </button>
       </div>
     </nav>
-
     <!-- hero section -->
     <header class="hero-section relative">
       <!-- main-navbar -->
@@ -191,7 +189,7 @@
         id="main-navbar"
       >
         <div
-          class="flex flex-wrap lg:flex-nowrap items-center justify-between lg:justify-start mx-auto p-4 z-50 gap-2 w-full"
+          class="flex flex-wrap lg:flex-nowrap justify-between lg:justify-start items-center mx-auto p-4 z-50 gap-2 w-full"
         >
           <a
             href="./index.html"
@@ -201,19 +199,19 @@
           </a>
           <div
             id="navbar-custom"
-            class="transition-all duration-500 ease-in-out max-h-0 overflow-x-auto scroll-bar-style pb-3 md:max-h-none md:block md:w-auto w-full order-1 lg:order-none"
+            class="transition-all duration-500 ease-in-out max-h-0 overflow-x-auto scroll-bar-style md:max-h-none md:block md:w-auto w-full order-1 lg:order-none"
           >
             <ul
-              class="font-medium text-nowrap max-md:bg-white flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
+              class="font-medium max-md:bg-white flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
             >
-              <!-- Study Destination -->
+              <!-- الوجهات الدراسيه -->
               <li>
                 <button
                   id="studyDestinationDropdown"
                   data-dropdown-toggle="studyDestinationsDropdownNavbar"
-                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex text-sm items-center justify-between max-md:text-main-green text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
                 >
-                  Study destinations
+                  الوجهات الدراسية
                   <svg
                     class="w-2.5 h-2.5 ms-2.5"
                     aria-hidden="true"
@@ -243,7 +241,7 @@
                       <a
                         href="#"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                        >Study in Egypt</a
+                        >ادرس في مصر</a
                       >
                     </li>
                     <li
@@ -256,7 +254,7 @@
                         type="button"
                         class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
-                        Study in Europe
+                        ادرس في اوروبا
                         <svg
                           class="w-2.5 h-2.5 ms-2.5"
                           aria-hidden="true"
@@ -286,62 +284,62 @@
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Germany</a
+                              >ادرس في المانيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Turkey</a
+                              >ادرس في تركيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Cyprus</a
+                              >ادرس في قبرص</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Poland</a
+                              >ادرس في بولندا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in the Czech Republic</a
+                              >ادرس في التشيك</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Georgia</a
+                              >ادرس في جورجيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Hungary</a
+                              >ادرس في المجر</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Latvia</a
+                              >ادرس في لاتفيا</a
                             >
                           </li>
                         </ul>
                       </div>
                     </li>
-                    <!-- Study in Arabic World -->
+                    <!-- ادرس في الوطن العربي -->
                     <li
                       aria-labelledby="studyDestinationDropdown"
                       class="relative"
@@ -352,7 +350,7 @@
                         type="button"
                         class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
-                        Study in arabic world
+                        درس في الوطن العربي
                         <svg
                           class="w-2.5 h-2.5 ms-2.5"
                           aria-hidden="true"
@@ -382,62 +380,62 @@
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Germany</a
+                              >ادرس في المانيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Turkey</a
+                              >ادرس في تركيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Cyprus</a
+                              >ادرس في قبرص</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Poland</a
+                              >ادرس في بولندا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in the Czech Republic</a
+                              >ادرس في التشيك</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Georgia</a
+                              >ادرس في جورجيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Hungary</a
+                              >ادرس في المجر</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Latvia</a
+                              >ادرس في لاتفيا</a
                             >
                           </li>
                         </ul>
                       </div>
                     </li>
-                    <!-- Study in Asia -->
+                    <!-- ادرس في اسيا -->
                     <li
                       aria-labelledby="studyDestinationDropdown"
                       class="relative"
@@ -448,7 +446,7 @@
                         type="button"
                         class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
-                        Study in Asia
+                        ادرس في اسيا
                         <svg
                           class="w-2.5 h-2.5 ms-2.5"
                           aria-hidden="true"
@@ -478,56 +476,56 @@
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Germany</a
+                              >ادرس في المانيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Turkey</a
+                              >ادرس في تركيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Cyprus</a
+                              >ادرس في قبرص</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Poland</a
+                              >ادرس في بولندا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in the Czech Republic</a
+                              >ادرس في التشيك</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Georgia</a
+                              >ادرس في جورجيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Hungary</a
+                              >ادرس في المجر</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Latvia</a
+                              >ادرس في لاتفيا</a
                             >
                           </li>
                         </ul>
@@ -536,14 +534,14 @@
                   </ul>
                 </div>
               </li>
-              <!-- Academic degrees -->
+              <!-- الدرجات العلميه -->
               <li>
                 <button
                   id="academicDegreeDropdown"
                   data-dropdown-toggle="academicDegreeDropdownNavbar"
-                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
                 >
-                  Academic degrees
+                  الدرجات العلميه
                   <svg
                     class="w-2.5 h-2.5 ms-2.5"
                     aria-hidden="true"
@@ -573,7 +571,7 @@
                       <a
                         href="#"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                        >Study in Egypt</a
+                        >ادرس في مصر</a
                       >
                     </li>
                     <li
@@ -586,7 +584,7 @@
                         type="button"
                         class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
-                        Study in Europe - 2
+                        ادرس في اوروبا - 2
                         <svg
                           class="w-2.5 h-2.5 ms-2.5"
                           aria-hidden="true"
@@ -616,56 +614,56 @@
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Germany</a
+                              >ادرس في المانيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Turkey</a
+                              >ادرس في تركيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Cyprus</a
+                              >ادرس في قبرص</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Poland</a
+                              >ادرس في بولندا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in the Czech Republic</a
+                              >ادرس في التشيك</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Georgia</a
+                              >ادرس في جورجيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Hungary</a
+                              >ادرس في المجر</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Latvia</a
+                              >ادرس في لاتفيا</a
                             >
                           </li>
                         </ul>
@@ -674,14 +672,14 @@
                   </ul>
                 </div>
               </li>
-              <!-- Academic specializations -->
+              <!-- التخصصات الدراسيه -->
               <li>
                 <button
                   id="AcademicSpecializationsDropdown"
                   data-dropdown-toggle="AcademicSpecializationsDropdownNavbar"
-                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
                 >
-                  Academic specializations
+                  التخصصات الدراسيه
                   <svg
                     class="w-2.5 h-2.5 ms-2.5"
                     aria-hidden="true"
@@ -711,7 +709,7 @@
                       <a
                         href="#"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                        >Study in Egypt</a
+                        >الدراسه في مصر</a
                       >
                     </li>
                     <li
@@ -724,7 +722,7 @@
                         type="button"
                         class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
-                        Study in Europe - 3
+                        الدراسه في اوروبا - 3
                         <svg
                           class="w-2.5 h-2.5 ms-2.5"
                           aria-hidden="true"
@@ -748,62 +746,62 @@
                       >
                         <ul
                           class="text-sm text-gray-700 main-dropdown-list"
-                          aria-labelledby="EuropeTreeDropdownButton"
+                          aria-labelledby="EuropeThreeDropdownButton"
                         >
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Germany</a
+                              >ادرس في المانيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Turkey</a
+                              >ادرس في تركيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Cyprus</a
+                              >ادرس في قبرص</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Poland</a
+                              >ادرس في بولندا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in the Czech Republic</a
+                              >ادرس في التشيك</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Georgia</a
+                              >ادرس في جورجيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Hungary</a
+                              >ادرس في المجر</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Latvia</a
+                              >ادرس في لاتفيا</a
                             >
                           </li>
                         </ul>
@@ -812,14 +810,14 @@
                   </ul>
                 </div>
               </li>
-              <!-- Study by country -->
+              <!-- ادرس حسب الدوله -->
               <li>
                 <button
                   id="StudyByCountryDropdown"
                   data-dropdown-toggle="StudyByCountryDropdownNavbar"
-                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
                 >
-                  Study by country
+                  ادرس حسب الدوله
                   <svg
                     class="w-2.5 h-2.5 ms-2.5"
                     aria-hidden="true"
@@ -849,34 +847,34 @@
                       <a
                         href="#"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                        >Egypt</a
+                        >مصر</a
                       >
                     </li>
                     <li>
                       <a
                         href="#"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                        >UAE</a
+                        >الامارات</a
                       >
                     </li>
                     <li>
                       <a
                         href="#"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                        >Turkey</a
+                        >تركيا</a
                       >
                     </li>
                   </ul>
                 </div>
               </li>
-              <!-- Arab students -->
+              <!-- الطلاب العرب -->
               <li>
                 <button
                   id="ArabStudentsDropdown"
                   data-dropdown-toggle="ArabStudentsDropdownNavbar"
-                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
                 >
-                  Arab students
+                  الطلاب العرب
                   <svg
                     class="w-2.5 h-2.5 ms-2.5"
                     aria-hidden="true"
@@ -906,7 +904,7 @@
                       <a
                         href="#"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                        >Study in Egypt</a
+                        >ادرس في مصر</a
                       >
                     </li>
                     <li aria-labelledby="ArabStudentsDropdown" class="relative">
@@ -916,7 +914,7 @@
                         type="button"
                         class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
-                        Study in Europe - 4
+                        ادرس في اوروبا
                         <svg
                           class="w-2.5 h-2.5 ms-2.5"
                           aria-hidden="true"
@@ -946,56 +944,56 @@
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Germany</a
+                              >ادرس في المانيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Turkey</a
+                              >ادرس في تركيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Cyprus</a
+                              >ادرس في قبرص</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Poland</a
+                              >ادرس في بولندا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in the Czech Republic</a
+                              >ادرس في التشيك</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Georgia</a
+                              >ادرس في جورجيا</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Hungary</a
+                              >ادرس في المجر</a
                             >
                           </li>
                           <li>
                             <a
                               href="#"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >Study in Latvia</a
+                              >ادرس في لاتفيا</a
                             >
                           </li>
                         </ul>
@@ -1004,15 +1002,22 @@
                   </ul>
                 </div>
               </li>
-              <!-- About Us -->
+              <!-- التعليم عن بعد -->
               <li>
                 <a
                   href="#"
-                  class="block max-lg:text-main-green py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
-                  >About us</a
+                  class="block max-md:text-main-green text-sm text-nowrap py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
+                  >التعليم عن بعد</a
                 >
               </li>
-              <!-- language dropdown -->
+              <!-- التسجيل في الجامعات -->
+              <li>
+                <a
+                  href="#"
+                  class="block max-md:text-main-green text-sm text-nowrap py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
+                  >التسجيل في الجامعات</a
+                >
+              </li>
               <li>
                 <div
                   class="flex mt-3 lg:mt-0 items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse"
@@ -1022,26 +1027,13 @@
                     data-dropdown-toggle="language-dropdown-menu"
                     class="inline-flex items-center text-main-green font-medium justify-center text-sm lg:text-main-white rounded-lg cursor-pointer"
                   >
-                    <svg
-                      class="w-5 h-5 rounded-full me-3"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 3900 3900"
-                    >
-                      <path fill="#b22234" d="M0 0h7410v3900H0z" />
-                      <path
-                        d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0"
-                        stroke="#fff"
-                        stroke-width="300"
-                      />
-                      <path fill="#3c3b6e" d="M0 0h2964v2100H0z" />
-                      <g fill="#fff">
-                        <path
-                          d="M247 90l70.5 217.1-184.7-134.2h228.3L176.5 307.1z"
-                        />
-                      </g>
-                    </svg>
-                    English (US)
+                    <img
+                      src="https://flagcdn.com/w20/eg.webp"
+                      alt="Egypt flag"
+                      class="w-4 h-4 rounded-full me-2"
+                      loading="lazy"
+                    />
+                    العربية (مصر)
                   </button>
 
                   <!-- Dropdown -->
@@ -1050,21 +1042,21 @@
                     id="language-dropdown-menu"
                   >
                     <ul class="font-medium" role="none">
-                      <!-- Arabic -->
+                      <!-- English -->
                       <li>
                         <a
-                          href="../ar/index.html"
+                          href="../en/about.html"
                           class="block px-4 py-2 text-sm text-main-green hover:bg-main-green hover:!text-main-white"
                           role="menuitem"
                         >
                           <div class="inline-flex items-center">
                             <img
-                              src="https://flagcdn.com/w20/eg.webp"
-                              alt="Egypt flag"
+                              src="https://flagcdn.com/w20/us.webp"
+                              alt="US flag"
                               class="w-4 h-4 rounded-full me-2"
                               loading="lazy"
                             />
-                            العربية (مصر)
+                            English (US)
                           </div>
                         </a>
                       </li>
@@ -1074,9 +1066,9 @@
               </li>
             </ul>
           </div>
-          <!-- language dropdown -->
 
           <button
+            data-collapse-toggle="navbar-custom"
             type="button"
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white cursor-pointer hover:text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 mobile-btn"
             aria-controls="navbar-default"
@@ -1126,9 +1118,9 @@
                       class="self-start ms-4 lg:ms-2 hidden lg:block"
                     />
                     <h1
-                      class="text-4xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
+                      class="text-5xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
                     >
-                      How We Are
+                      من نحن
                     </h1>
                     <img
                       src="../assets/icons/exclamation-mark.webp"
@@ -1175,16 +1167,17 @@
                       height="20"
                       viewBox="0 0 50 20"
                       fill="none"
+                      
                       stroke="white"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="rotate-180 stroke-main-green"
+                      class=" stroke-main-green"
                     >
                       <line x1="0" y1="10" x2="100" y2="10" />
                       <polyline points="15,0 0,10 15,20" />
                     </svg>
-                    <span class="font-medium text-main-green">About us</span>
+                    <span class="font-medium text-main-green">من نحن</span>
                   </div>
                 </div>
               </div>
@@ -1209,7 +1202,7 @@
               <div
                 class="flex items-center justify-center lg:justify-start gap-1"
               >
-                <h2 class="text-5xl text-main-text">Our Story</h2>
+                <h2 class="text-5xl text-main-text">قصتنا</h2>
                 <img
                   src="../assets/icons/double-exclamation-green.webp"
                   width="60"
@@ -1225,14 +1218,14 @@
               />
               <div class="max-w-[500px] leading-relaxed text-justify space-y-3">
                 <p class="text-main-green text-2xl">
-                  Egyptian Gulf Company for Educational Services
+                  الشركة المصرية الخليجية للخدمات التعليمية
                 </p>
                 <p class="text-main-text font-normal text-xl">
-                  It aims to develop and qualify human resources and provide all
-                  educational services to students inside and outside Egypt,
-                  starting from student registration through the study period
-                  and until obtaining a bachelor's degree, in addition to many
-                  student services.
+                  الشركة المصرية الخليجيه للخدمات التعليمية تهدف الي تنميه و
+                  تاهيل الموارد البشرية و تقديم كافة الحدمات التعليميه للطلبة
+                  داخل و خارج مصر بداء من تسجيل الطلبة مرورا بفترة الدراسة و حتي
+                  الحصول علي الباكلريوس او اليسانس بالاضافة العديد من الخدمات
+                  الطلابية
                 </p>
               </div>
             </div>
@@ -1240,22 +1233,31 @@
         </div>
       </section>
       <!-- why EGEC -->
-      <section class="common-section !pt-0">
-        <div class="w-fit mx-auto font-bold text-center relative">
+      <section class="common-section">
+        <div class="relative">
           <img
-            src="../assets/icons/question-mark.webp"
-            class="absolute end-[15%] -top-[35%] -scale-x-[1]"
-            width="50"
-            alt="testimonials icon"
+            src="../assets/icons/low-wave.webp"
             loading="lazy"
+            class="absolute hidden lg:block end-0 top-5 z-10"
+            width="300"
+            alt="low wave vector"
           />
-          <h2 class="text-main-text text-4xl">Why EGEC</h2>
-          <img
-            src="../assets/icons/single-green-line.webp"
-            class="w-[120%] mt-4"
-            alt="line"
-            loading="lazy"
-          />
+          <div class="w-fit mx-auto font-bold text-center relative">
+            <img
+              src="../assets/icons/question-mark.webp"
+              class="absolute end-[15%] -top-[35%] -scale-x-[1]"
+              width="50"
+              alt="testimonials icon"
+              loading="lazy"
+            />
+            <h2 class="text-main-text text-4xl">لماذا ايجيك</h2>
+            <img
+              src="../assets/icons/single-green-line.webp"
+              class="w-[120%] mt-4"
+              alt="line"
+              loading="lazy"
+            />
+          </div>
         </div>
         <!-- Swiper container -->
         <div class="container">
@@ -1266,9 +1268,9 @@
                 <div
                   class="p-6 border-2 rounded-4xl border-main-text min-h-[205px]"
                 >
-                  <h5 class="text-main-green font-bold text-xl">partners</h5>
+                  <h5 class="text-main-green font-bold text-xl">شركاء</h5>
                   <p class="text-main-text line-clamp-4 font-bold">
-                    Agents of major international universities
+                    وكلاء كبري الجامعات العالمية
                   </p>
                 </div>
               </div>
@@ -1278,11 +1280,11 @@
                   class="p-6 border-2 rounded-4xl border-main-text min-h-[205px]"
                 >
                   <h5 class="text-main-green font-bold text-xl">
-                    23 years of experience
+                    خبرة 23 عاما
                   </h5>
                   <p class="text-main-text line-clamp-4 font-bold">
-                    In the field of university admissions and educational
-                    tourism for students from Arab countries and Gulf countries
+                    في مجال القبولات الجامعية و السياحة التعليمية لطلاب دول
+                    الوطن العربي و دول الخليج
                   </p>
                 </div>
               </div>
@@ -1292,11 +1294,11 @@
                   class="p-6 border-2 rounded-4xl border-main-text min-h-[205px]"
                 >
                   <h5 class="text-main-green font-bold text-xl">
-                    Elite international education consultants
+                    نخبة من مستشري التعليم الدولي
                   </h5>
                   <p class="text-main-text line-clamp-4 font-bold">
-                    The most qualified academic advisors who have been specially
-                    trained by leading international educational experts.
+                    أكفا المرشدين الأكاديمين الذين تم تأهيلهم خصيصا علي يد كبار
+                    الخبراء التعليمين الدوليين
                   </p>
                 </div>
               </div>
@@ -1306,11 +1308,11 @@
                   class="p-6 border-2 rounded-4xl border-main-text min-h-[205px]"
                 >
                   <h5 class="text-main-green font-bold text-xl">
-                    Elite international education consultants
+                    نخبة من مستشري التعليم الدولي
                   </h5>
                   <p class="text-main-text line-clamp-4 font-bold">
-                    The most qualified academic advisors who have been specially
-                    trained by leading international educational experts.
+                    أكفا المرشدين الأكاديمين الذين تم تأهيلهم خصيصا علي يد كبار
+                    الخبراء التعليمين الدوليين
                   </p>
                 </div>
               </div>
@@ -1318,454 +1320,367 @@
               <!-- أضف كروت تانية بنفس الشكل -->
             </div>
 
-            <div class="swiper-pagination !relative mt-5"></div>
+            <div
+              class="swiper-pagination about-pagination !relative mt-5"
+            ></div>
           </div>
         </div>
       </section>
       <!-- Study abroad services -->
       <section class="py-10 bg-white">
-        <div class=" mx-auto grid grid-cols-1 lg:grid-cols-12">
-          <div
-            class="text-center lg:col-span-4"
-          >
-            <div>
-              <h2 class="text-3xl font-bold text-[#1e4f92]">
-                خدمات الدراسه في الخارج
-              </h2>
-              <span
-                class="text-main-green font-semibold"
-              >
-                خدمات متكامله
-              </span>
-              <img src="../assets/icons/single-green-line.webp" width="150" height="5" class="mx-auto" alt="line">
+        <div class="mx-auto grid grid-cols-1 lg:grid-cols-12">
+          <div class="text-center lg:col-span-4">
+            <h2 class="text-3xl font-bold text-[#1e4f92]">
+              خدمات الدراسة في الخارج
+            </h2>
+            <div class="my-2">
+              <span class="text-main-green font-semibold"> خدمات متكامله </span>
+              <img
+                src="../assets/icons/single-green-line.webp"
+                loading="lazy"
+                width="150"
+                height="5"
+                class="mx-auto mt-1"
+                alt="line"
+              />
             </div>
-
             <!-- Navigation Buttons -->
             <div class="flex gap-3 mt-4 lg:mt-0 justify-center">
               <button
                 class="studyPrev cursor-pointer bg-[#dbdbdb] hover:bg-gray-200 rounded-full p-3 shadow"
               >
-              <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="-19.04 0 75.804 75.804"
-        class="rotate-180"
-      >
-        <g
-          id="Group_65"
-          data-name="Group 65"
-          transform="translate(-831.568 -384.448)"
-        >
-          <path
-            id="Path_57"
-            data-name="Path 57"
-            d="M833.068,460.252a1.5,1.5,0,0,1-1.061-2.561l33.557-33.56a2.53,2.53,0,0,0,0-3.564l-33.557-33.558a1.5,1.5,0,0,1,2.122-2.121l33.556,33.558a5.53,5.53,0,0,1,0,7.807l-33.557,33.56A1.5,1.5,0,0,1,833.068,460.252Z"
-            fill="white"
-          />
-        </g>
-      </svg>
-                
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="-19.04 0 75.804 75.804"
+                >
+                  <g
+                    id="Group_65"
+                    data-name="Group 65"
+                    transform="translate(-831.568 -384.448)"
+                  >
+                    <path
+                      id="Path_57"
+                      data-name="Path 57"
+                      d="M833.068,460.252a1.5,1.5,0,0,1-1.061-2.561l33.557-33.56a2.53,2.53,0,0,0,0-3.564l-33.557-33.558a1.5,1.5,0,0,1,2.122-2.121l33.556,33.558a5.53,5.53,0,0,1,0,7.807l-33.557,33.56A1.5,1.5,0,0,1,833.068,460.252Z"
+                      fill="white"
+                    />
+                  </g>
+                </svg>
               </button>
               <button
                 class="studyNext cursor-pointer bg-[#dbdbdb] hover:bg-gray-200 rounded-full p-3 shadow"
               >
                 <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="-19.04 0 75.804 75.804"
-      >
-        <g
-          id="Group_65"
-          data-name="Group 65"
-          transform="translate(-831.568 -384.448)"
-        >
-          <path
-            id="Path_57"
-            data-name="Path 57"
-            d="M833.068,460.252a1.5,1.5,0,0,1-1.061-2.561l33.557-33.56a2.53,2.53,0,0,0,0-3.564l-33.557-33.558a1.5,1.5,0,0,1,2.122-2.121l33.556,33.558a5.53,5.53,0,0,1,0,7.807l-33.557,33.56A1.5,1.5,0,0,1,833.068,460.252Z"
-            fill="white"
-          />
-        </g>
-      </svg>
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="-19.04 0 75.804 75.804"
+                  class="rotate-180"
+                >
+                  <g
+                    id="Group_65"
+                    data-name="Group 65"
+                    transform="translate(-831.568 -384.448)"
+                  >
+                    <path
+                      id="Path_57"
+                      data-name="Path 57"
+                      d="M833.068,460.252a1.5,1.5,0,0,1-1.061-2.561l33.557-33.56a2.53,2.53,0,0,0,0-3.564l-33.557-33.558a1.5,1.5,0,0,1,2.122-2.121l33.556,33.558a5.53,5.53,0,0,1,0,7.807l-33.557,33.56A1.5,1.5,0,0,1,833.068,460.252Z"
+                      fill="white"
+                    />
+                  </g>
                 </svg>
               </button>
             </div>
           </div>
           <!-- Swiper -->
-           <div class="lg:col-span-8">
-            <div class="swiper studySwiper "
-              style="background: linear-gradient(to bottom, transparent 25%, var(--color-main-text) 25%, var(--color-main-text) 75%, transparent 75%);"
-
+          <div class="lg:col-span-8">
+            <div
+              class="swiper studySwiper"
+              style="
+                background: linear-gradient(
+                  to bottom,
+                  transparent 25%,
+                  var(--color-main-text) 25%,
+                  var(--color-main-text) 75%,
+                  transparent 75%
+                );
+              "
             >
-            <div class="swiper-wrapper py-4 ">
-              <!-- Card-->
-              <div class="swiper-slide">
-                <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
-                  <img
-                    src="../assets/images/about/study-abroad-services.webp"
-                    class="w-full h-48 object-cover"
-                    alt=""
-                  />
-                  <div class="p-4">
-                    <p class="text-main-text font-semibold text-center pb-3">
-                      توفير أفضل الخيارات الأكاديمية
-                    </p>
+              <div class="swiper-wrapper py-4">
+                <!-- Card-->
+                <div class="swiper-slide">
+                  <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
+                    <img
+                      src="../assets/images/about/study-abroad-services.webp"
+                      class="w-full h-48 object-cover"
+                      alt=""
+                    />
+                    <div class="p-4">
+                      <p class="text-main-text font-semibold text-center pb-3">
+                        توفير افضل الخيارات الاكاديمية
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card-->
+                <div class="swiper-slide">
+                  <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
+                    <img
+                      src="../assets/images/about/study-abroad-services.webp"
+                      class="w-full h-48 object-cover"
+                      alt=""
+                    />
+                    <div class="p-4">
+                      <p class="text-main-text font-semibold text-center pb-3">
+                        توفير افضل الخيارات الاكاديمية
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card-->
+                <div class="swiper-slide">
+                  <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
+                    <img
+                      src="../assets/images/about/study-abroad-services.webp"
+                      class="w-full h-48 object-cover"
+                      alt=""
+                    />
+                    <div class="p-4">
+                      <p class="text-main-text font-semibold text-center pb-3">
+                        توفير افضل الخيارات الاكاديمية
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card-->
+                <div class="swiper-slide">
+                  <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
+                    <img
+                      src="../assets/images/about/study-abroad-services.webp"
+                      class="w-full h-48 object-cover"
+                      alt=""
+                    />
+                    <div class="p-4">
+                      <p class="text-main-text font-semibold text-center pb-3">
+                        توفير افضل الخيارات الاكاديمية
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card-->
+                <div class="swiper-slide">
+                  <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
+                    <img
+                      src="../assets/images/about/study-abroad-services.webp"
+                      class="w-full h-48 object-cover"
+                      alt=""
+                    />
+                    <div class="p-4">
+                      <p class="text-main-text font-semibold text-center pb-3">
+                        توفير افضل الخيارات الاكاديمية
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Card-->
-              <div class="swiper-slide">
-                <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
-                  <img
-                    src="../assets/images/about/study-abroad-services.webp"
-                    class="w-full h-48 object-cover"
-                    alt=""
-                  />
-                  <div class="p-4">
-                    <p class="text-main-text font-semibold text-center pb-3">
-                      توفير أفضل الخيارات الأكاديمية
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- Card-->
-              <div class="swiper-slide">
-                <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
-                  <img
-                    src="../assets/images/about/study-abroad-services.webp"
-                    class="w-full h-48 object-cover"
-                    alt=""
-                  />
-                  <div class="p-4">
-                    <p class="text-main-text font-semibold text-center pb-3">
-                      توفير أفضل الخيارات الأكاديمية
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- Card-->
-              <div class="swiper-slide">
-                <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
-                  <img
-                    src="../assets/images/about/study-abroad-services.webp"
-                    class="w-full h-48 object-cover"
-                    alt=""
-                  />
-                  <div class="p-4">
-                    <p class="text-main-text font-semibold text-center pb-3">
-                      توفير أفضل الخيارات الأكاديمية
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- Card-->
-              <div class="swiper-slide">
-                <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
-                  <img
-                    src="../assets/images/about/study-abroad-services.webp"
-                    class="w-full h-48 object-cover"
-                    alt=""
-                  />
-                  <div class="p-4">
-                    <p class="text-main-text font-semibold text-center pb-3">
-                      توفير أفضل الخيارات الأكاديمية
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-             
             </div>
           </div>
-           </div>
-          
-          
         </div>
       </section>
-      <!-- Study by sector -->
-      <section class="relative">
+      <!-- Our mission -->
+      <section class="common-section bg-white">
+        <div class="container">
+          <div
+            class="mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-x-8"
+          >
+            <!-- Swiper -->
+            <div class="relative">
+              <img
+                loading="lazy"
+                src="../assets/icons/three-lines-vertical.webp"
+                width="100"
+                height="95"
+                class="absolute hidden lg:block -top-[10%] -start-[3%] -scale-x-[1]"
+                alt="icon"
+              />
+              <div class="swiper ourMissionSwiper relative">
+                <div class="swiper-wrapper py-4">
+                  <!-- Card-->
+                  <div class="swiper-slide">
+                    <div
+                      class="rounded-3xl overflow-hidden bg-white shadow-2xl"
+                    >
+                      <img
+                        src="../assets/images/about/our-mission.webp"
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="rounded-3xl overflow-hidden bg-white shadow-2xl"
+                    >
+                      <img
+                        src="../assets/images/about/our-mission.webp"
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="swiper-pagination our-mission-pagination !relative"
+                ></div>
+              </div>
+            </div>
+            <div class="text-center lg:text-start">
+              <div class="my-2">
+                <div id="ourMissionText"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- partners -->
+      <section class="partners">
+        <h2 class="text-4xl font-bold text-center text-[#1e4f92]">Partners</h2>
         <img
-          src="../assets/icons/low-wave.webp"
+          src="../assets/icons/single-green-line.webp"
           loading="lazy"
-          class="absolute start-0 -top-5 z-10"
-          width="300"
-          alt="low wave vector"
+          width="150"
+          height="5"
+          class="my-2 mx-auto"
+          alt="line"
         />
-        <img
-          src="../assets/icons/low-wave.webp"
-          loading="lazy"
-          class="absolute end-0 -bottom-25 z-10"
-          width="300"
-          alt="low wave vector"
-        />
+        <div class="container">
+          <div class="swiper partnersSwiper">
+            <div class="swiper-wrapper py-4">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <img
+                  width="80"
+                  src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png"
+                  class="object-cover filter grayscale mx-auto text-center"
+                  loading="lazy"
+                  alt="HTML5 Logo"
+                />
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <img
+                  width="80"
+                  src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png"
+                  class="object-cover filter grayscale mx-auto text-center"
+                  loading="lazy"
+                  alt="CSS3 Logo"
+                />
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <img
+                  width="80"
+                  src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+                  class="object-cover filter grayscale mx-auto text-center"
+                  loading="lazy"
+                  alt="JavaScript Logo"
+                />
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                <img
+                  width="80"
+                  src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png"
+                  class="object-cover filter grayscale mx-auto text-center"
+                  loading="lazy"
+                  alt="Bootstrap Logo"
+                />
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="swiper-slide">
+                <img
+                  width="80"
+                  src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"
+                  class="object-cover filter grayscale mx-auto text-center"
+                  loading="lazy"
+                  alt="React Logo"
+                />
+              </div>
+
+              <!-- Slide 6 -->
+              <div class="swiper-slide">
+                <img
+                  width="80"
+                  src="https://cdn-icons-png.flaticon.com/512/5968/5968676.png"
+                  class="object-cover filter grayscale mx-auto text-center"
+                  loading="lazy"
+                  alt="Tailwind CSS Logo"
+                />
+              </div>
+
+              <!-- Slide 7 -->
+              <div class="swiper-slide">
+                <img
+                  width="80"
+                  src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png"
+                  class="object-cover filter grayscale mx-auto text-center"
+                  loading="lazy"
+                  alt="GitHub Logo"
+                />
+              </div>
+            </div>
+
+            <div
+              class="swiper-pagination our-mission-pagination !relative"
+            ></div>
+          </div>
+        </div>
       </section>
       <!-- Counters -->
-      <section>
+      <section class="common-section">
         <div class="container">
           <div
             class="bg-[linear-gradient(90deg,rgba(0,192,251,1)_0%,rgba(30,79,146,1)_100%)] py-10 rounded-4xl"
           >
             <ul
-              class="flex flex-col lg:flex-row text-main-white lg:space-x-8 space-y-8 lg:space-y-0 justify-center items-center text-center"
+              class="flex flex-col lg:flex-row text-main-white lg:space-x-10 space-y-8 lg:space-y-0 justify-center items-center text-center"
             >
               <li>
-                <span class="text-4xl font-bold">+86</span>
-                <p class="text-sm font-medium capitalize">
-                  employees around the Arab world
+                <span class="text-4xl font-bold">4900+</span>
+                <p class="text-md font-medium capitalize">
+                  استفسارات طلاب سنويا
                 </p>
               </li>
               <li>
-                <span class="text-4xl font-bold">+86</span>
-                <p class="text-sm font-medium capitalize">
-                  employees around the Arab world
+                <span class="text-4xl font-bold">1800+</span>
+                <p class="text-md font-medium capitalize">
+                  انهاء و اجراءات و قبولات طلاب سنويا
                 </p>
               </li>
               <li>
-                <span class="text-4xl font-bold">+86</span>
-                <p class="text-sm font-medium capitalize">
-                  employees around the Arab world
+                <span class="text-4xl font-bold">293+</span>
+                <p class="text-md font-medium capitalize">
+                  مراجعه جامعه واجهة حكومية
                 </p>
               </li>
               <li>
-                <span class="text-4xl font-bold">+86</span>
-                <p class="text-sm font-medium capitalize">
-                  employees around the Arab world
+                <span class="text-4xl font-bold">86+</span>
+                <p class="text-md font-medium capitalize">
+                  موظف حول الوطن العربي
                 </p>
               </li>
             </ul>
           </div>
         </div>
-      </section>
-
-      <!-- Latest educational articles -->
-      <section class="common-section">
-        <div class="w-fit mx-auto font-bold text-center relative">
-          <img
-            src="../assets/icons/three-buble.webp"
-            class="absolute -end-8 top-0 -scale-x-[1]"
-            width="30"
-            alt="testimonials icon"
-            loading="lazy"
-          />
-          <h2 class="text-main-text text-4xl">Latest educational articles</h2>
-          <img
-            src="../assets/icons/single-green-line.webp"
-            class="w-3/4 mx-auto mt-3"
-            alt="line"
-            loading="lazy"
-          />
-        </div>
-        <div class="mx-auto !max-w-3xl px-3.5 mt-10">
-          <div class="grid gap-10 grid-cols-1 lg:grid-cols-2">
-            <div>
-              <div>
-                <img
-                  src="../assets/images/home/study-in-cairo.webp"
-                  loading="lazy"
-                  alt="cairo university"
-                  class="object-cover"
-                />
-              </div>
-              <div class="flex justify-between mt-2">
-                <div>
-                  <h3 class="text-main-green text-xl font-semibold">
-                    Study at Cairo University
-                  </h3>
-                  <p class="text-main-gray font-semibold line-clamp-3 pe-6">
-                    From the great citadel of science, from between the walls of
-                    the ancient Cairo University, from between the sides of the
-                    altar of the Faculty of Medicine, Cairo University
-                  </p>
-                  <a href="#" class="text-main-green flex items-center group">
-                    <span class="font-semibold"> more </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="90"
-                      height="20"
-                      viewBox="0 0 120 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="rotate-180 stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
-                  </a>
-                </div>
-                <div>
-                  <span
-                    class="block w-14 h-14 rounded-tl-2xl bg-main-green text-main-white text-center font-bold content-center"
-                    >20</span
-                  >
-                  <span
-                    class="block w-14 h-14 bg-main-text text-main-white text-center font-bold content-center"
-                    >AUG</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <img
-                  src="../assets/images/home/study-in-cairo.webp"
-                  loading="lazy"
-                  alt="cairo university"
-                  class="object-cover"
-                />
-              </div>
-              <div class="flex justify-between mt-2">
-                <div>
-                  <h3 class="text-main-green text-xl font-semibold">
-                    Study at Cairo University
-                  </h3>
-                  <p class="text-main-gray font-semibold line-clamp-3 pe-6">
-                    From the great citadel of science, from between the walls of
-                    the ancient Cairo University, from between the sides of the
-                    altar of the Faculty of Medicine, Cairo University
-                  </p>
-                  <a href="#" class="text-main-green flex items-center group">
-                    <span class="font-semibold"> more </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="90"
-                      height="20"
-                      viewBox="0 0 120 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="rotate-180 stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
-                  </a>
-                </div>
-                <div>
-                  <span
-                    class="block w-14 h-14 rounded-tl-2xl bg-main-green text-main-white text-center font-bold content-center"
-                    >20</span
-                  >
-                  <span
-                    class="block w-14 h-14 bg-main-text text-main-white text-center font-bold content-center"
-                    >AUG</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <img
-                  src="../assets/images/home/study-in-cairo.webp"
-                  loading="lazy"
-                  alt="cairo university"
-                  class="object-cover"
-                />
-              </div>
-              <div class="flex justify-between mt-2">
-                <div>
-                  <h3 class="text-main-green text-xl font-semibold">
-                    Study at Cairo University
-                  </h3>
-                  <p class="text-main-gray font-semibold line-clamp-3 pe-6">
-                    From the great citadel of science, from between the walls of
-                    the ancient Cairo University, from between the sides of the
-                    altar of the Faculty of Medicine, Cairo University
-                  </p>
-                  <a href="#" class="text-main-green flex items-center group">
-                    <span class="font-semibold"> more </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="90"
-                      height="20"
-                      viewBox="0 0 120 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="rotate-180 stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
-                  </a>
-                </div>
-                <div>
-                  <span
-                    class="block w-14 h-14 rounded-tl-2xl bg-main-green text-main-white text-center font-bold content-center"
-                    >20</span
-                  >
-                  <span
-                    class="block w-14 h-14 bg-main-text text-main-white text-center font-bold content-center"
-                    >AUG</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <img
-                  src="../assets/images/home/study-in-cairo.webp"
-                  loading="lazy"
-                  alt="cairo university"
-                  class="object-cover"
-                />
-              </div>
-              <div class="flex justify-between mt-2">
-                <div>
-                  <h3 class="text-main-green text-xl font-semibold">
-                    Study at Cairo University
-                  </h3>
-                  <p class="text-main-gray font-semibold line-clamp-3 pe-6">
-                    From the great citadel of science, from between the walls of
-                    the ancient Cairo University, from between the sides of the
-                    altar of the Faculty of Medicine, Cairo University
-                  </p>
-                  <a href="#" class="text-main-green flex items-center group">
-                    <span class="font-semibold"> more </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="90"
-                      height="20"
-                      viewBox="0 0 120 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="rotate-180 stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
-                  </a>
-                </div>
-                <div>
-                  <span
-                    class="block w-14 h-14 rounded-tl-2xl bg-main-green text-main-white text-center font-bold content-center"
-                    >20</span
-                  >
-                  <span
-                    class="block w-14 h-14 bg-main-text text-main-white text-center font-bold content-center"
-                    >AUG</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button
-          class="bg-main-text py-2 px-10 text-main-white mx-auto block mt-4 rounded-full cursor-pointer hover:bg-main-text/80 transition-colors duration-500"
-        >
-          Show More
-        </button>
       </section>
     </main>
     <!-- footer -->
@@ -1776,13 +1691,13 @@
       <h2
         class="w-fit px-10 py-6 font-bold capitalize text-main-white text-xl rounded-full bg-main-green mx-auto -translate-y-1/2"
       >
-        Get the education you aspire to with EGEC
+        احصل علي التعليم الذي تطمح اليه مع ايجيك
       </h2>
       <div class="container">
         <div class="grid grid-cols-1 lg:grid-cols-2">
           <div>
             <div>
-              <h3 class="text-2xl font-bold text-main-green">About EGEC</h3>
+              <h3 class="text-2xl font-bold text-main-green">عن ايجيك</h3>
               <img
                 src="../assets/icons/dots-line-green.webp"
                 loading="lazy"
@@ -1794,13 +1709,12 @@
             </div>
 
             <p class="text-main-white text-xl">
-              We provide you with all educational services, starting from
-              enrollment and follow-up during the study period until you obtain
-              the certificate.
+              نقدم لك كافة الحدمات التعليمية ابنداءا من الالتحاق و المتابعة خلال
+              فترة الدراسة و حتي حصولك علي الشهادة
             </p>
           </div>
           <div>
-            <h3 class="text-2xl font-bold text-main-green">Hot Links</h3>
+            <h3 class="text-2xl font-bold text-main-green">روابط سريعة</h3>
             <img
               src="../assets/icons/dots-line-green.webp"
               loading="lazy"
@@ -1813,27 +1727,27 @@
               <li
                 class="hover:text-main-white/80 transition-colors duration-500"
               >
-                <a href="#">Home</a>
+                <a href="#">الرئيسية</a>
               </li>
               <li
                 class="hover:text-main-white/80 transition-colors duration-500"
               >
-                <a href="#">About Us Articles</a>
+                <a href="#">من نحن المقالات</a>
               </li>
               <li
                 class="hover:text-main-white/80 transition-colors duration-500"
               >
-                <a href="#">Photo gallery</a>
+                <a href="#">معرض الصور</a>
               </li>
               <li
                 class="hover:text-main-white/80 transition-colors duration-500"
               >
-                <a href="#">Study abroad</a>
+                <a href="#">الدراسة بالخارج</a>
               </li>
               <li
                 class="hover:text-main-white/80 transition-colors duration-500"
               >
-                <a href="#">Privacy policy</a>
+                <a href="#">سياسة الخصوصية</a>
               </li>
             </ul>
           </div>
@@ -1859,7 +1773,7 @@
                 rel="noopener noreferrer"
                 class="transition-colors duration-500 group-hover:text-main-white/80"
               >
-                11 Haron, Dokki in Giza, Egypt
+                11 هارون, الدقي, الجيزة, مصر
               </a>
             </li>
 
@@ -2030,11 +1944,12 @@
         <div
           class="flex justify-center mt-6 text-main-white text-lg gap-1 items-end"
         >
-          <span>All rights reserved to</span>
+          <span>جميع الحقوق محفوظه ل </span>
           <img
             src="../assets/images/shared/digital-bond-logo.webp"
             width="30"
             alt="Digital Bond logo"
+            loading="lazy"
           />
         </div>
       </div>
