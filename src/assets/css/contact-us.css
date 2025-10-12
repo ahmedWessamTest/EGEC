@@ -1,0 +1,25 @@
+[data-tabs-target][aria-selected="true"] {
+    background-color: var(--color-main-text) !important;
+    background-color: var(--color-main-text) !important;
+  color: white; /* لون النص */
+}
+
+[data-tabs-target][aria-selected="false"] {
+    background-color: color-mix(in oklab, var(--color-main-gray) 50%, transparent);
+  color: var(--color-main-gray);
+}
+.iti--inline-dropdown,.iti {
+    width: 100% !important;
+}
+.iti__selected-country {
+    background-color: color-mix(in oklab, var(--color-main-text) 20%, transparent);
+    border-radius: calc(infinity * 1px) 0 0 calc(infinity * 1px);
+    padding-inline-end: .3125rem;
+
+}
+.iti__selected-dial-code {
+    color:var(--color-main-text);
+    font-weight: bold;
+    margin: 0;
+    font-size: 14px;
+}
