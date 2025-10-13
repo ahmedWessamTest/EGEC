@@ -35,6 +35,10 @@ html {
 .animate-slide-up {
   animation: slide-up 0.4s ease forwards;
 }
+.home-top-nav .navbar-item.active-nav-item {
+    background-color: var(--color-main-green);
+    color: var(--color-main-white);
+  }
 @media screen and (min-width: 1024px) {
   .home-top-nav .navbar-item {
     position: relative !important;
@@ -53,7 +57,7 @@ html {
     transition: width 0.3s;
   }
   .home-top-nav .navbar-item:hover:before,
-  .home-top-nav .navbar-item.active:before {
+  .home-top-nav .navbar-item.active-nav-item:before {
     width: 30% !important;
   }
 }
@@ -73,9 +77,14 @@ html {
 }
 @media screen and (min-width: 1024px) {
   .main-sub-dropdown {
+    transform: translateX(100%) !important;
+    inset: 0 auto auto 0 !important;
+  }
+  [dir="rtl"] .main-sub-dropdown {
     transform: translateX(-105%) !important;
     inset: 0 auto auto 0 !important;
   }
+   
 }
 .main-dropdown-list li:first-child :is(button, a) {
   border-top-right-radius: 8px;
@@ -117,7 +126,6 @@ html {
   background-color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 .navbar-scrolled ul li :is(a, button) {
   color: var(--color-main-green) !important;
 }
@@ -126,4 +134,30 @@ html {
 }
 .navbar-scrolled .navbar-logo {
   background-color: var(--color-main-gray);
+}
+/* custom navbar */
+.hero-section .nav-item.active {
+  
+}
+@media screen and (min-width: 1024px) {
+  .hero-section .nav-item {
+    position: relative !important;
+  }
+  .hero-section .nav-item:before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-main-green);
+    width: 0;
+    height: 3px;
+    border-radius: 8px;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: width 0.3s;
+  }
+  .hero-section .nav-item:hover:before,
+  .hero-section .nav-item.active-custom-item:before {
+    width: 30% !important;
+  }
 }

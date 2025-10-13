@@ -1,0 +1,61 @@
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  color: var(--color-main-text);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-top: .625rem;
+}
+.article-content h2 {
+    width: fit-content;
+    font-size: 1.75rem;
+}
+.article-content h2::after {
+  content: "";
+  display: block;
+  width: 70%; 
+  height: 10px;
+  margin: 4px auto 10px;
+  background-image: url('../icons/single-green-line.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.article-content p {
+  color: var(--color-main-text);
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.article-content ul,
+.article-content ol {
+  color: var(--color-main-text);
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.article-content ul {
+  list-style-type: none;
+}
+.article-content ul li {
+position: relative;
+}
+.article-content ul li::before {
+     content: "";
+  position: absolute;
+  inset-inline-start: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-image: url("../icons/bullets.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+.article-content ol {
+  list-style-type: decimal;
+}

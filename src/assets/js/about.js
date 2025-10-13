@@ -116,10 +116,11 @@ const initPartnersCarousel = () => {
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 100,
+    rewind: true,
     initialSlide: middleIndex,
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
     breakpoints: {
       768: { slidesPerView: 5 },

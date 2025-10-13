@@ -10,7 +10,7 @@ const CONFIG = {
   CLASSES: {
     NAVBAR_SCROLLED: 'navbar-scrolled',
     FIXED: 'fixed',
-    ACTIVE: 'active',
+    ACTIVE: 'active-nav-item',
     HIDDEN: '-start-10',
     VISIBLE: 'start-6',
     SIDENAV_HIDDEN: '-start-15',
