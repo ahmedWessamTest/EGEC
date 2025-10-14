@@ -1,5 +1,5 @@
 const isEn = location.href.includes("en");
-function getBackendHTML() {
+const getBackendHTML = () => {
   return isEn
     ? `
      <p>Cairo University is located in the heart of Greater Cairo and close to all important and vital locations.</p>
@@ -37,11 +37,84 @@ function getBackendHTML() {
                 <li>إدارة المنشآت الرياضية بالتعاون مع الاتحاد الدولي (كرة القدم - الفيفا) / كلية التجارة.</li>
             </ul>
   `;
-}
+};
 
-function renderArticle() {
+const renderArticle = () => {
   const container = document.getElementById("articleContent");
   container.innerHTML = getBackendHTML();
-}
+};
+const renderLowerContent = () => {
+  const container = document.getElementById("lowerArticleContent");
+  container.innerHTML = getBackendHTML();
+};
+const initPartnersCarousel = () => {
+  const slidesCount = document.querySelectorAll(
+    ".partnersSwiper .swiper-slide"
+  ).length;
+  const middleIndex = Math.floor(slidesCount / 2);
 
-renderArticle();
+  new Swiper(".partnersSwiper", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 50,
+    // rewind: true,
+    initialSlide: middleIndex,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+    },
+    breakpoints: {
+      768: { slidesPerView: 5 },
+      1024: { slidesPerView: 7 },
+    },
+    on: {
+      init: function () {
+        const active = this.slides[this.activeIndex].querySelector("img");
+        if (active) {
+          active.classList.remove("grayscale");
+          active.classList.add("scale-110");
+        }
+      },
+      slideChangeTransitionStart: function () {
+        this.slides.forEach((slide) => {
+          const img = slide.querySelector("img");
+          if (img) {
+            img.classList.add("grayscale");
+            img.classList.remove("scale-110");
+          }
+        });
+      },
+      slideChangeTransitionEnd: function () {
+        const active = this.slides[this.activeIndex].querySelector("img");
+        if (active) {
+          active.classList.remove("grayscale");
+          active.classList.add("scale-110");
+        }
+      },
+    },
+  });
+};
+const prominentGraduatesCarousel = () => {
+  new Swiper(".Prominent-graduates", {
+    slidesPerView: 1, 
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+    }
+  });
+};
+
+const initPage = () => {
+  renderArticle();
+  renderLowerContent();
+  initPartnersCarousel();
+  prominentGraduatesCarousel();
+};
+initPage();

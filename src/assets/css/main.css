@@ -1,3 +1,28 @@
+/* font */
+@font-face {
+  font-family: "Alexandria";
+  src: url("../font/static/Alexandria-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Alexandria";
+  src: url("../font/static/Alexandria-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Alexandria";
+  src: url("../font/static/Alexandria-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Alexandria", sans-serif;
+}
 /* skip focus */
 .skip-link {
   position: absolute;
@@ -160,4 +185,9 @@ html {
   .hero-section .nav-item.active-custom-item:before {
     width: 30% !important;
   }
+
+}
+footer .grid {
+  gap:10px;
+    font-size: 16px;
 }
