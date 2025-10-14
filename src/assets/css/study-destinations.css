@@ -56,7 +56,6 @@ position: relative;
   background-image: url("../icons/bullets.webp");
   background-size: contain;
   background-repeat: no-repeat;
-
 }
 .article-content ol {
   list-style-type: decimal;

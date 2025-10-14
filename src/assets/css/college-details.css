@@ -1,0 +1,24 @@
+.college-content li {
+    position: relative;
+}
+.college-content li::before {
+     content: "";
+  position: absolute;
+  inset-inline-start: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-image: url("../icons/bullets.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+ul li button[aria-selected="true"]
+{
+    background-color: var(--color-main-green) !important;
+    color: var(--color-main-white) !important;
+}
+ul li button[aria-selected="false"]
+{
+    color: var(--color-main-white) !important;
+}
