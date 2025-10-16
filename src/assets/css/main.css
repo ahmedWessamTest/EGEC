@@ -138,7 +138,22 @@ html {
     scrollbar-color: var(--color-main-green) #e5e7eb;
   }
 }
-
+/* shared style */
+.gray-bullets-list li {
+ position: relative;
+}
+.gray-bullets-list li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-image: url("../icons/bullets.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 /* section rules */
 .common-section {
   padding-block: var(--spacing-section-padding);

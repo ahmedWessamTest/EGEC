@@ -47,13 +47,13 @@ const renderLowerContent = () => {
   const container = document.getElementById("lowerArticleContent");
   container.innerHTML = getBackendHTML();
 };
-const initPartnersCarousel = () => {
+const initCollegeCarousel = () => {
   const slidesCount = document.querySelectorAll(
-    ".partnersSwiper .swiper-slide"
+    ".collageSwiper .swiper-slide"
   ).length;
   const middleIndex = Math.floor(slidesCount / 2);
 
-  new Swiper(".partnersSwiper", {
+  new Swiper(".collageSwiper", {
     slidesPerView: 1,
     centeredSlides: true,
     loop: true,
@@ -114,7 +114,7 @@ const prominentGraduatesCarousel = () => {
 const initPage = () => {
   renderArticle();
   renderLowerContent();
-  initPartnersCarousel();
+  initCollegeCarousel();
   prominentGraduatesCarousel();
 };
 initPage();
