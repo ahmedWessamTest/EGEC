@@ -1,11 +1,11 @@
 
   const initTestimonialsCarousel = () => {
   const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1, // عدد الكروت في الموبايل
-    spaceBetween: 20, // المسافة بين الكروت
+    slidesPerView: 1, 
+    spaceBetween: 20, 
     loop: true,
     autoplay: {
-      // delay: 5000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     pagination: {
