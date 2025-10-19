@@ -1,0 +1,15 @@
+.iti--inline-dropdown,.iti {
+    width: 100% !important;
+}
+.iti__selected-country {
+    background-color: color-mix(in oklab, var(--color-main-text) 20%, transparent);
+    border-radius: calc(infinity * 1px) 0 0 calc(infinity * 1px);
+    padding-inline-end: .3125rem;
+
+}
+.iti__selected-dial-code {
+    color:var(--color-main-text);
+    font-weight: bold;
+    margin: 0;
+    font-size: 14px;
+}
