@@ -7,7 +7,7 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Master's degree</title>
+    <title>doctorate degree</title>
     <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link
@@ -27,12 +27,12 @@
     <link
       rel="alternate"
       hreflang="en"
-      href="http://127.0.0.1:5500/src/en/master-form.html"
+      href="http://127.0.0.1:5500/src/en/doctorate-form.html"
     />
     <link
       rel="alternate"
       hreflang="ar"
-      href="http://127.0.0.1:5500/src/ar/master-form.html"
+      href="http://127.0.0.1:5500/src/ar/doctorate-form.html"
     />
   </head>
   <body class="bg-main-white">
@@ -1100,7 +1100,7 @@
                       <!-- Arabic -->
                       <li>
                         <a
-                          href="../ar/master-form.html"
+                          href="../ar/doctorate-form.html"
                           class="block px-4 py-2 text-sm text-main-green hover:bg-main-green hover:!text-main-white"
                           role="menuitem"
                         >
@@ -1170,7 +1170,7 @@
                     <h1
                       class="text-4xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
                     >
-                      Master's degree
+                      Doctorate
                     </h1>
                     <img src="../assets/icons/exclamation-mark.webp" class="ms-3
                     hidden lg:block" width="20" alt="exclamation mark icon" 
@@ -1187,20 +1187,15 @@
       </div>
     </header>
     <main>
-      <!-- master form -->
-      <section class="relative">
-        <img
-          src="../assets/icons/green-dots.webp"
-          class="absolute -start-40 top-3/4 -translate-y-1/2 hidden lg:block"
-          width="250"
-          alt="dots"
-        />
+      <!-- doctorate form -->
+      <section>
+        
         <div
           class="-mt-36 bg-white shadow-2xl rounded-4xl p-10 max-w-xl mx-auto mb-5 relative z-20"
         >
           <div class="text-center">
-            <h2 class="text-xl font-bold text-main-text">Get guaranteed acceptance with 23 years of experience in university admissions</h2>
-            <p class="text-main-gray">Study your master's degree at recommended Egyptian universities through international education consultants.</p>
+            <h2 class="text-xl font-bold text-main-text">Get guaranteed acceptance with 23 years of experience in university admissions!</h2>
+            <p class="text-main-gray">Study for a PhD at recommended Egyptian universities through international education consultants.</p>
             <img
               src="../assets/icons/single-green-line.webp"
               class="mt-2 mb-6 inline-block"
@@ -1208,10 +1203,10 @@
               alt="line"
             />
           </div>
-          <form id="masterForm" class="mt-5">
+          <form id="doctorateForm" class="mt-5">
             <div class="space-y-7">
               <!-- Name -->
-              <div class="relative">
+              <div >
                 <input
                   type="text"
                   id="nameInput"
@@ -1227,7 +1222,7 @@
               </div>
   
               <!-- Email -->
-              <div class="relative">
+              <div >
                 <input
                   type="email"
                   id="emailInput"
@@ -1243,7 +1238,7 @@
               </div>
   
               <!-- Phone -->
-              <div class="relative">
+              <div >
                 <input
                   type="tel"
                   id="phoneInput"
@@ -1259,7 +1254,7 @@
               </div>
 
                <!-- nationality -->
-              <div class="relative">
+              <div >
                 <input
                   type="text"
                   id="nationalityInput"
@@ -1274,7 +1269,7 @@
                 </small>
               </div>
                <!-- Bachelors Degree Major -->
-              <div class="relative">
+              <div >
                 <input
                   type="text"
                   id="BachelorsDegreeMajorInput"
@@ -1288,8 +1283,23 @@
                   Your Bachelors Degree Major is Required
                 </small>
               </div>
+               <!-- Master's Degree Major -->
+              <div >
+                <input
+                  type="text"
+                  id="mastersDegreeMajorInput"
+                  class="w-full p-3 border placeholder:text-main-gray border-none bg-gray-100 rounded-full focus:ring-2 focus:ring-main-green focus:border-main-green"
+                  placeholder="Master's Degree Major"
+                />
+                <small
+                  class="block min-h-[20px] text-red-500 text-sm opacity-0 transition-opacity duration-200"
+                  id="mastersDegreeMajorError"
+                >
+                  Your Master's Degree Major is Required
+                </small>
+              </div>
                <!-- Required specialization -->
-              <div class="relative">
+              <div >
                 <input
                   type="text"
                   id="requiredSpecializationInput"
@@ -1813,6 +1823,6 @@
     <script src="../vendors/flowbite/flowbite.min.js" defer></script>
     <script src="../assets/js/main.js" defer></script>
     <script src="../../node_modules/intl-tel-input/build/js/intlTelInput.min.js"></script>
-    <script src="../assets/js/master-form.js" defer></script>
+    <script src="../assets/js/doctorate-form.js" defer></script>
   </body>
 </html>
