@@ -7,7 +7,7 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link
@@ -22,12 +22,12 @@
     <link
       rel="alternate"
       hreflang="en"
-      href="http://127.0.0.1:5500/src/en/login.html"
+      href="http://127.0.0.1:5500/src/en/register.html"
     />
     <link
       rel="alternate"
       hreflang="ar"
-      href="http://127.0.0.1:5500/src/ar/login.html"
+      href="http://127.0.0.1:5500/src/ar/register.html"
     />
   </head>
   <body class="bg-main-white">
@@ -1095,7 +1095,7 @@
                       <!-- Arabic -->
                       <li>
                         <a
-                          href="../ar/login.html"
+                          href="../ar/register.html"
                           class="block px-4 py-2 text-sm text-main-green hover:bg-main-green hover:!text-main-white"
                           role="menuitem"
                         >
@@ -1165,7 +1165,7 @@
                     <h1
                       class="text-4xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
                     >
-                      Login In
+                      Register
                     </h1>
                     <img src="../assets/icons/exclamation-mark.webp" class="ms-3
                     hidden lg:block" width="20" alt="exclamation mark icon" /
@@ -1215,7 +1215,7 @@
                     </svg>
                     <span
                       class="text-xs lg:text-base font-medium text-main-green text-nowrap"
-                      >Login In</span
+                      >Register</span
                     >
                   </div>
                 </div>
@@ -1226,18 +1226,23 @@
       </div>
     </header>
     <main class="common-section relative">
-              <img src="../assets/icons/green-dots.webp" class="absolute -end-40 top-1/2 -translate-y-1/2 hidden lg:block" width="250" alt="dots">
-               <img
+      <img
+        src="../assets/icons/green-dots.webp"
+        class="absolute -end-40 top-1/2 -translate-y-1/2 hidden lg:block"
+        width="250"
+        alt="dots"
+      />
+       <img
         src="../assets/icons/green-dots.webp"
         class="absolute -start-40 top-3/4 -translate-y-1/2 hidden lg:block"
         width="250"
         alt="dots"
       />
       <div
-        class="mt-12 bg-white shadow-2xl rounded-4xl p-10  max-w-xl mx-auto mb-5"
+        class="mt-12 bg-white shadow-2xl rounded-4xl p-10 max-w-xl mx-auto mb-5"
       >
         <div class="text-center">
-          <h2 class="text-2xl font-bold text-main-text">Login to EGEC</h2>
+          <h2 class="text-2xl font-bold text-main-text">Register to EGEC</h2>
           <img
             src="../assets/icons/single-green-line.webp"
             class="mt-2 mb-6 inline-block"
@@ -1247,19 +1252,51 @@
         </div>
         <form id="loginForm" class="mt-5">
           <div class="space-y-7">
+            <!-- Name -->
+            <div class="relative">
+              <input
+                type="text"
+                id="nameInput"
+                class="w-full p-3 placeholder:text-main-gray border-0 border-b border-main-gray focus:ring-0 focus:border-b-main-green"
+                placeholder="Username"
+              />
+              <small
+                class="block min-h-[20px] text-red-500 text-sm opacity-0 transition-opacity duration-200"
+                id="nameError"
+              >
+                Please enter a valid username (min 3 characters)
+              </small>
+            </div>
+
             <!-- Email -->
             <div class="relative">
               <input
                 type="email"
                 id="emailInput"
-                class="w-full p-3 placeholder:text-main-gray border-0 border-b border-main-gray focus:ring-0 focus:border-b-main-green focus:shadow-2xs focus:shadow-main-green"
+                class="w-full p-3 placeholder:text-main-gray border-0 border-b border-main-gray focus:ring-0 focus:border-b-main-green"
                 placeholder="Email"
               />
               <small
-                class="text-red-500 text-sm absolute left-0 top-full opacity-0 transition-opacity duration-200"
+                class="block min-h-[20px] text-red-500 text-sm opacity-0 transition-opacity duration-200"
                 id="emailError"
               >
                 Please enter a valid email address
+              </small>
+            </div>
+
+            <!-- Phone -->
+            <div class="relative">
+              <input
+                type="tel"
+                id="phoneInput"
+                class="w-full p-3 placeholder:text-main-gray border-0 border-b border-main-gray focus:ring-0 focus:border-b-main-green"
+                placeholder="Phone"
+              />
+              <small
+                class="block min-h-[20px] text-red-500 text-sm opacity-0 transition-opacity duration-200"
+                id="phoneError"
+              >
+                Please enter a valid phone number
               </small>
             </div>
 
@@ -1268,14 +1305,50 @@
               <input
                 type="password"
                 id="passwordInput"
-                class="w-full p-3 placeholder:text-main-gray border-0 border-b border-main-gray focus:ring-0 focus:border-b-main-green focus:shadow-2xs focus:shadow-main-green"
+                class="w-full p-3 placeholder:text-main-gray border-0 border-b border-main-gray focus:ring-0 focus:border-b-main-green"
                 placeholder="Password"
               />
               <small
-                class="text-red-500 text-sm absolute left-0 top-full opacity-0 transition-opacity duration-200"
+                class="block min-h-[20px] text-red-500 text-sm opacity-0 transition-opacity duration-200"
                 id="passwordError"
               >
-                Please enter a valid password
+                Password must be 8+ chars, include a number, and an uppercase
+                letter
+              </small>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="relative">
+              <input
+                type="password"
+                id="rePasswordInput"
+                class="w-full p-3 placeholder:text-main-gray border-0 border-b border-main-gray focus:ring-0 focus:border-b-main-green"
+                placeholder="Confirm Password"
+              />
+              <small
+                class="block min-h-[20px] text-red-500 text-sm opacity-0 transition-opacity duration-200"
+                id="rePasswordError"
+              >
+                Passwords do not match
+              </small>
+            </div>
+
+            <!-- Academic degree -->
+            <div class="relative">
+              <select
+                id="degreeInput"
+                class="w-full p-3 placeholder:text-main-gray border-0 border-b border-main-gray focus:ring-0 focus:border-b-main-green"
+              >
+                <option selected disabled value="">Academic Degree</option>
+                <option value="Bachelor">Bachelor's</option>
+                <option value="Master">Master's</option>
+                <option value="PhD">Ph.D</option>
+              </select>
+              <small
+                class="block min-h-[20px] text-red-500 text-sm opacity-0 transition-opacity duration-200"
+                id="degreeError"
+              >
+                Please select your degree
               </small>
             </div>
 
@@ -1286,17 +1359,16 @@
                 id="submitBtn"
                 class="bg-main-text mx-auto text-main-white py-2 px-6 rounded-full font-semibold hover:bg-main-text/80 transition-colors flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span id="btnText">Login</span>
+                <span id="btnText">Register</span>
                 <span
                   id="loadingSpinner"
                   class="hidden w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"
                 ></span>
               </button>
+
               <p class="text-main-gray text-center text-sm mt-3">
-                New to EGEC?
-                <a href="./register.html" class="text-main-text"
-                  >Create an account from here</a
-                >
+                Do you have an account in EGEC?
+                <a href="./login.html" class="text-main-text">Login</a>
               </p>
             </div>
           </div>
@@ -1686,6 +1758,6 @@
     </footer>
     <script src="../vendors/flowbite/flowbite.min.js" defer></script>
     <script src="../assets/js/main.js" defer></script>
-    <script src="../assets/js/login.js" defer></script>
+    <script src="../assets/js/register.js" defer></script>
   </body>
 </html>

@@ -14,7 +14,7 @@ const CONFIG = {
     HIDDEN: '-start-10',
     VISIBLE: 'start-6',
     SIDENAV_HIDDEN: '-start-15',
-    SIDENAV_VISIBLE: 'start-2',
+    SIDENAV_VISIBLE: '-start-1',
     SIDEMENU_HIDDEN: '-start-full',
     SIDEMENU_VISIBLE: 'inset-0'
   }
