@@ -102,7 +102,7 @@
     <aside>
       <button
         id="sideMenuBtn"
-        class="fixed transition-all duration-500 -start-15 top-1/2 -translate-y-1/2 z-50 cursor-pointer hover:scale-110"
+        class="fixed hidden xl:block transition-all duration-500 -start-15 top-1/2 -translate-y-1/2 z-50 cursor-pointer hover:scale-110"
         aria-label="Open Register Menu"
       >
         <img
@@ -126,30 +126,33 @@
         <p class="text-gray-600 mb-4">سيتصل بك الموظف المسؤول</p>
 
         <div class="space-y-3">
-          <button
-            class="w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
+          <a
+            href="./bachelors-form.html"
+            class="block w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
             style="
               background-image: url('../assets/images/home/hero-image.webp');
             "
           >
-            درجه البكالوريوس
-          </button>
-          <button
+            درجة البكالوريوس
+          </a>
+          <a
+            href="./master-form.html"
             style="
               background-image: url('../assets/images/home/hero-image.webp');
             "
-            class="w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
+            class="block w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
           >
-            درجه الماجستير
-          </button>
-          <button
+            درجة الماجستير
+          </a>
+          <a
+            href="./doctorate-form.html"
             style="
               background-image: url('../assets/images/home/hero-image.webp');
             "
-            class="w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
+            class="block w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
           >
-            درجه الدكتوراه
-          </button>
+            درجوة الدكتوراه
+          </a>
         </div>
 
         <button
@@ -231,15 +234,15 @@
             href="./index.html"
             class="transition-colors duration-500 rounded-full p-1 navbar-logo"
           >
-            <img src="../assets/images/home/logo.webp" width="70" alt="" /
+            <img src="../assets/images/home/logo.webp" width="70" alt="" 
             loading="lazy">
           </a>
           <div
             id="navbar-custom"
-            class="transition-all duration-500 ease-in-out max-h-0 overflow-x-auto scroll-bar-style md:max-h-none md:block md:w-auto w-full order-1 lg:order-none"
+            class="transition-all duration-500 ease-in-out max-h-0 overflow-x-auto scroll-bar-style pb-3 md:max-h-none md:block md:w-auto w-full order-1 lg:order-none"
           >
             <ul
-              class="font-medium max-md:bg-white flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
+              class="font-medium text-nowrap max-md:bg-white flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
             >
               <!-- الوجهات الدراسيه -->
               <li>
@@ -876,7 +879,7 @@
                   id="StudyByCountryDropdownNavbar"
                   class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
-                 <ul
+                  <ul
                     class="text-sm text-gray-700 main-dropdown-list"
                     aria-labelledby="StudyByCountryDropdown"
                   >
@@ -904,7 +907,7 @@
                   </ul>
                 </div>
               </li>
-              <!-- الطلاب العرب -->
+              <!-- arab students -->
               <li>
                 <button
                   id="ArabStudentsDropdown"
@@ -1039,6 +1042,67 @@
                   </ul>
                 </div>
               </li>
+              <!-- Register From here -->
+              <li class="xl:hidden">
+                <button
+                  id="registerFromHereDropdown"
+                  data-dropdown-toggle="registerFromHereDropdownNavbar"
+                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                >
+                  سجل من هنا
+                  <svg
+                    class="w-2.5 h-2.5 ms-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <!-- Study destinations Dropdown menu -->
+                <div
+                  id="registerFromHereDropdownNavbar"
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                >
+                  <ul
+                    class="text-sm text-gray-700 main-dropdown-list"
+                    aria-labelledby="registerFromHereDropdown"
+                  >
+                    <li>
+                      <a
+                        href="./bachelors-form.html"
+                        class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                        
+                      >
+                        درجة البكالوريوس
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="./master-form.html"
+                        class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                      >
+                        درجة الماجستير
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="./doctorate-form.html"
+                        class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
+                      >
+                        الدكتوراه
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
               <!-- التعليم عن بعد -->
               <li>
                 <a
@@ -1057,12 +1121,12 @@
               </li>
               <li>
                 <div
-                  class="flex mt-3 lg:mt-0 items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse"
+                  class="flex lg:mt-0 items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse"
                 >
                   <button
                     type="button"
                     data-dropdown-toggle="language-dropdown-menu"
-                    class="inline-flex items-center text-main-green font-medium justify-center text-sm lg:text-main-white rounded-lg cursor-pointer"
+                  class="flex items-center text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
                   >
                     <img
                       src="https://flagcdn.com/w20/eg.webp"

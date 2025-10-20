@@ -206,3 +206,29 @@ footer .grid {
   gap:10px;
     font-size: 16px;
 }
+@media screen and (min-width:768px) {
+  #navbar-custom {
+    min-height: 30px;
+  }
+  #navbar-custom > ul > li > :is(button,a) {
+    position: relative !important;
+  }
+  #navbar-custom > ul > li > :is(button,a)::before {
+    content: "";
+      position: absolute;
+      background-color: var(--color-main-green);
+      width: 0;
+      height: 3px;
+      border-radius: 8px;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transition: width 0.3s;
+  }
+  #navbar-custom > ul > li > :is(button,a):hover::before,
+  #navbar-custom > ul > li > :is(button.active,a.active)::before
+   {
+      width: 30% !important;
+  }
+}
