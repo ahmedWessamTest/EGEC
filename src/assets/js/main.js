@@ -11,7 +11,7 @@ const CONFIG = {
     NAVBAR_SCROLLED: 'navbar-scrolled',
     FIXED: 'fixed',
     ACTIVE: 'active-nav-item',
-    HIDDEN: '-start-10',
+    HIDDEN: '-start-15',
     VISIBLE: 'start-6',
     SIDENAV_HIDDEN: '-start-15',
     SIDENAV_VISIBLE: '-start-1',

@@ -72,7 +72,7 @@
     <button
       id="scrollToTopBtn"
       aria-label="Scroll to top"
-      class="cursor-pointer fixed bottom-6 -start-10 z-50 bg-[#48586f] h-12 w-12 rounded-full flex items-center justify-center -rotate-90 transition-all duration-500 hover:bg-[#5c6e8c] hover:scale-110 shadow-lg"
+      class="cursor-pointer fixed bottom-6 -start-15 z-50 bg-[#48586f] h-12 w-12 rounded-full flex items-center justify-center -rotate-90 transition-all duration-500 hover:bg-[#5c6e8c] hover:scale-110 shadow-lg"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -1165,7 +1165,7 @@
               </li>
               <li>
                 <div
-                  class="flex lg:mt-0 items-center 2xl:order-2 space-x-1 2xl:space-x-0 rtl:space-x-reverse"
+                  class="flex  px-3 py-2 lg:mt-0 items-center 2xl:order-2 space-x-1 2xl:space-x-0 rtl:space-x-reverse"
                 >
                   <button
                     type="button"
@@ -1764,46 +1764,46 @@
             class="xl:absolute bottom-0 left-0 right-0 mx-auto xl:translate-y-1/2 -mt-10 xl:mt-0"
           >
             <ul
-              class="grid col-end-1 md:grid-cols-2 xl:grid-cols-6 text-center lg:px-10 gap-3 items-center px-4 [&_li_a]:transition-colors [&_li_a]:duration-300"
+              class="grid col-end-1 md:grid-cols-2 xl:grid-cols-6 text-center lg:px-10 gap-3 items-center px-4 [&_li_a]:transition-colors [&_li_a]:duration-300 [&_li_a]:h-26 [&_li_a]:content-center"
             >
               <li>
                 <a
-                  class="px-5 py-10 text-xl font-light block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
+                  class="px-5 py-10 text-xl font-light block rtl:whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
                 >
                   الطب
                 </a>
               </li>
               <li>
                 <a
-                  class="px-5 py-10 text-xl font-light block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
+                  class="px-5 py-10 text-xl font-light block rtl:whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
                 >
                   الهندسه
                 </a>
               </li>
               <li>
                 <a
-                  class="px-5 py-10 text-xl font-light block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
+                  class="px-5 py-10 text-xl font-light block rtl:whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
                 >
                   علوم الحاسب
                 </a>
               </li>
               <li>
                 <a
-                  class="px-5 py-10 text-xl font-light block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
+                  class="px-5 py-10 text-xl font-light block rtl:whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
                 >
                   الحقوق
                 </a>
               </li>
               <li>
                 <a
-                  class="px-5 py-10 text-xl font-light block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
+                  class="px-5 py-10 text-xl font-light block rtl:whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
                 >
                   اداره الأعمال
                 </a>
               </li>
               <li>
                 <a
-                  class="px-5 py-10 text-xl font-light block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
+                  class="px-5 py-10 text-xl font-light block rtl:whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
                   >العلوم الانسانية</a
                 >
               </li>
@@ -1813,16 +1813,13 @@
       </section>
       <!-- Study by country -->
       <section class="py-32 relative">
-        <span
-          class="absolute hidden lg:block -start-0 translate-x-1/2 -translate-y-7 bottom-0"
-        >
           <img
             src="../assets/icons/green-dots.webp"
             width="250"
+            class="absolute hidden lg:block -start-0 rtl:translate-x-1/2 -translate-x-1/2 -translate-y-7 bottom-0"
             alt="green dots vector"
             loading="lazy"
           />
-        </span>
         <div class="container">
           <div class="grid grid-cols-1 lg:grid-cols-12 lg:space-x-7">
             <div
@@ -1957,10 +1954,10 @@
         </div>
       </section>
       <!-- Steps To Join section -->
-      <section class="common-section !pb-0">
+      <section class="py-5 xl:py-0 xl:-mt-3">
         <div class="container">
-          <div class="grid grid-cols-1 lg:grid-cols-12 space-y-3 lg:space-y-0">
-            <div class="lg:col-span-5">
+          <div class="grid grid-cols-1 lg:grid-cols-12 space-y-3 lg:space-y-0 items-center lg:px-20">
+            <div class="lg:col-span-4">
               <div class="mb-7 w-fit relative mx-auto lg:mx-0">
                 <img
                   src="../assets/icons/down-arrow.webp"
@@ -2040,23 +2037,10 @@
                 </li>
               </ul>
             </div>
-            <div class="lg:col-span-7 relative">
-              <img
-                src="../assets/icons/liner-bubble.webp"
-                width="30"
-                class="absolute top-[8%] end-[32%] z-20"
-                alt="فقاعات"
-                loading="lazy"
-              />
-              <img
-                src="../assets/icons/dashed-circle.webp"
-                class="hidden lg:block absolute -end-[8%] top-1/2 -translate-y-1/2 w-1/2"
-                alt="dashed circle icon"
-                loading="lazy"
-              />
+            <div class="lg:col-span-8">
               <img
                 src="../assets/images/home/Steps-to-join.webp"
-                class="rounded-4xl z-10 relative object-cover"
+                class="rounded-4xl z-10 relative object-cover ltr:-scale-x-[1]"
                 alt="خطوات الالتحاق"
                 loading="lazy"
               />
@@ -2081,7 +2065,7 @@
           <div class="relative">
             <img
               src="../assets/icons/three-lines-vertical.webp"
-              class="hidden lg:block absolute start-0 -top-36"
+              class="hidden lg:block absolute start-0 -top-36 ltr:-scale-x-[1]"
               width="150"
               alt="icon"
               loading="lazy"
@@ -2239,7 +2223,7 @@
       </section>
       <!-- Testimonials -->
       <section
-        class="common-section bg-cover bg-center -mt-10"
+        class="common-section !pt-32 bg-cover bg-center -mt-10"
         style="
           background-image: url('../assets/images/home/testimonials-bg.webp');
         "
@@ -2248,7 +2232,7 @@
         <div class="w-fit mx-auto font-bold text-center relative">
           <img
             src="../assets/icons/testimonials-icon.webp"
-            class="absolute start-[20px] -top-[35%] "
+            class="absolute -start-[10%] rtl:start-[10%] -top-[35%] ltr:-scale-x-[1]"
             width="50"
             alt="testimonials icon"
             loading="lazy"
@@ -2256,7 +2240,7 @@
           <h2 class="text-main-white text-4xl">الاراء</h2>
           <img
             src="../assets/icons/single-green-line.webp"
-            class="mt-3"
+            class="mt-3 mx-auto"
             width="180"
             height="6"
             alt="خط"
@@ -2278,7 +2262,7 @@
                   />
                   <p
   class="text-main-white backdrop-blur-sm bg-blue-700/10 rounded-4xl px-6 py-12 
-         max-h-52 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-transparent scroll-bar-style"
+         max-h-52 ltr:max-h-54 overflow-y-auto scrollbar-thin  scrollbar-thumb-blue-600 scrollbar-track-transparent scroll-bar-style"
 >
   انصح اي طالب برغب في الدراسه بالجامعات المصريه المعمده ان
   يتعامل مع الشركة المصرية الخليجية للخدمات التعليمية و اشكرهم
@@ -2492,21 +2476,23 @@
                   </p>
                   <a href="#" class="text-main-green flex items-center group">
                     <span class="font-light">المزيد</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="90"
-                      height="20"
-                      viewBox="0 0 120 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
+                   <span class="ltr:rotate-180">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="90"
+                  height="20"
+                  viewBox="0 0 120 20"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="stroke-main-green mt-1 ltr:mb-1 ltr:mt-0 transition-transform duration-500 group-hover:translate-x-2"
+                >
+                  <line x1="0" y1="10" x2="100" y2="10" />
+                  <polyline points="15,0 0,10 15,20" />
+                </svg>
+              </span>
                   </a>
                 </div>
                 <div>
@@ -2542,21 +2528,23 @@
                   </p>
                   <a href="#" class="text-main-green flex items-center group">
                     <span class="font-light">المزيد</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="90"
-                      height="20"
-                      viewBox="0 0 120 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
+                   <span class="ltr:rotate-180">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="90"
+                  height="20"
+                  viewBox="0 0 120 20"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="stroke-main-green mt-1 ltr:mb-1 ltr:mt-0 transition-transform duration-500 group-hover:translate-x-2"
+                >
+                  <line x1="0" y1="10" x2="100" y2="10" />
+                  <polyline points="15,0 0,10 15,20" />
+                </svg>
+              </span>
                   </a>
                 </div>
                 <div>
@@ -2592,21 +2580,23 @@
                   </p>
                   <a href="#" class="text-main-green flex items-center group">
                     <span class="font-light">المزيد</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="90"
-                      height="20"
-                      viewBox="0 0 120 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
+                    <span class="ltr:rotate-180">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="90"
+                  height="20"
+                  viewBox="0 0 120 20"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="stroke-main-green mt-1 ltr:mb-1 ltr:mt-0 transition-transform duration-500 group-hover:translate-x-2"
+                >
+                  <line x1="0" y1="10" x2="100" y2="10" />
+                  <polyline points="15,0 0,10 15,20" />
+                </svg>
+              </span>
                   </a>
                 </div>
                 <div>
@@ -2642,21 +2632,23 @@
                   </p>
                   <a href="#" class="text-main-green flex items-center group">
                     <span class="font-light">المزيد</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="90"
-                      height="20"
-                      viewBox="0 0 120 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
+                    <span class="ltr:rotate-180">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="90"
+                  height="20"
+                  viewBox="0 0 120 20"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="stroke-main-green mt-1 ltr:mb-1 ltr:mt-0 transition-transform duration-500 group-hover:translate-x-2"
+                >
+                  <line x1="0" y1="10" x2="100" y2="10" />
+                  <polyline points="15,0 0,10 15,20" />
+                </svg>
+              </span>
                   </a>
                 </div>
                 <div>
