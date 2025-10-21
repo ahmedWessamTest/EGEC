@@ -463,6 +463,9 @@
   .-end-2 {
     inset-inline-end: calc(var(--spacing) * -2);
   }
+  .-end-5 {
+    inset-inline-end: calc(var(--spacing) * -5);
+  }
   .-end-8 {
     inset-inline-end: calc(var(--spacing) * -8);
   }
@@ -483,6 +486,9 @@
   }
   .end-0 {
     inset-inline-end: calc(var(--spacing) * 0);
+  }
+  .end-5 {
+    inset-inline-end: calc(var(--spacing) * 5);
   }
   .end-6 {
     inset-inline-end: calc(var(--spacing) * 6);
@@ -531,6 +537,9 @@
   }
   .top-5 {
     top: calc(var(--spacing) * 5);
+  }
+  .top-10 {
+    top: calc(var(--spacing) * 10);
   }
   .top-14 {
     top: calc(var(--spacing) * 14);
@@ -594,6 +603,9 @@
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
+  }
+  .-z-10 {
+    z-index: calc(10 * -1);
   }
   .z-10 {
     z-index: 10;
