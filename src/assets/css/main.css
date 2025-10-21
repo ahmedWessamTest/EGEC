@@ -179,10 +179,6 @@ html {
   color: var(--color-main-green);
 }
 /* custom navbar */
-footer .grid {
-  gap:10px;
-    font-size: 16px;
-}
 @media screen and (min-width:1536px) {
   #navbarCustom {
     min-height: 30px;
@@ -271,7 +267,7 @@ content: "";
 display: block;
 width: 175px;
 height: 7px;
-background-image: url("../icons/single-green-line.webp");
+background-image: url("../icons/single-line-gray.webp");
 background-size: cover;
 background-position: center;
 margin-top: 12px;

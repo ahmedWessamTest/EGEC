@@ -62,11 +62,13 @@ const replaceSrc = () => {
 }
 // Core Functions
 const closeLoadingScreen = ()=> {
+  document.body.style.overflow = 'hidden';
     const loadingScreen = document.getElementById('loadingScreen');
     
     // Hide loading screen when page is fully loaded
     window.addEventListener('load', function() {
         loadingScreen.classList.add('hidden');
+        document.body.style.overflow = '';
     });
 
     // Fallback: Hide loading screen after 3 seconds if load event doesn't fire
