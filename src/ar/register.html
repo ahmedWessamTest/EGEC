@@ -31,6 +31,14 @@
     />
   </head>
   <body class="bg-main-white">
+    <div id="loadingScreen">
+      <div>
+        <img src="../assets/images/home/logo.webp" width="100" alt="EGEC Logo" />
+    <div class="loader">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+      </div>
+</div>
     <a
       class="skip-link"
       href="#main-content"
@@ -227,8 +235,14 @@
             href="./index.html"
             class="transition-colors duration-500 rounded-full p-1 navbar-logo"
           >
-            <img src="../assets/images/home/logo.webp" width="70" alt="" 
-            loading="lazy">
+            <img
+            id="navLogo"
+            class="aspect-square"
+            width="60"
+            height="60"
+            src="../assets/images/home/logo.webp"
+              alt="شعار ايجيك"
+            />
           </a>
           <div
             id="navbar-custom"

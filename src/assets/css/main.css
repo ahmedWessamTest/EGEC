@@ -1,21 +1,28 @@
 /* font */
 @font-face {
   font-family: "Alexandria";
-  src: url("../font/static/Alexandria-Regular.ttf") format("ttf");
+  src: url("../font/static/Alexandria-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Alexandria";
+  src: url("../font/static/Alexandria-Regular.ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Alexandria";
-  src: url("../font/static/Alexandria-Bold.ttf") format("ttf");
+  src: url("../font/static/Alexandria-Bold.ttf");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Alexandria";
-  src: url("../font/static/Alexandria-SemiBold.ttf") format("ttf");
+  src: url("../font/static/Alexandria-SemiBold.ttf");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -81,10 +88,7 @@ html {
     margin: auto;
     transition: width 0.3s;
   }
-  .home-top-nav .navbar-item:hover:before,
-  .home-top-nav .navbar-item.active-nav-item:before {
-    width: 30% !important;
-  }
+  
 }
 .hero-section .indicator-btn {
   background-color: transparent !important;
@@ -174,46 +178,19 @@ html {
 .navbar-scrolled .mobile-btn {
   color: var(--color-main-green);
 }
-.navbar-scrolled .navbar-logo {
-  background-color: var(--color-main-gray);
-}
 /* custom navbar */
-
-@media screen and (min-width: 1024px) {
-  .hero-section .nav-item {
-    position: relative !important;
-  }
-  .hero-section .nav-item:before {
-    content: "";
-    position: absolute;
-    background-color: var(--color-main-green);
-    width: 0;
-    height: 3px;
-    border-radius: 8px;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transition: width 0.3s;
-  }
-  .hero-section .nav-item:hover:before,
-  .hero-section .nav-item.active-custom-item:before {
-    width: 30% !important;
-  }
-
-}
 footer .grid {
   gap:10px;
     font-size: 16px;
 }
-@media screen and (min-width:768px) {
-  #navbar-custom {
+@media screen and (min-width:1536px) {
+  #navbarCustom {
     min-height: 30px;
   }
-  #navbar-custom > ul > li > :is(button,a) {
+  #navbarCustom > ul > li > :is(button,a) {
     position: relative !important;
   }
-  #navbar-custom > ul > li > :is(button,a)::before {
+  #navbarCustom > ul > li > :is(button,a)::before {
     content: "";
       position: absolute;
       background-color: var(--color-main-green);
@@ -226,9 +203,76 @@ footer .grid {
       margin: auto;
       transition: width 0.3s;
   }
-  #navbar-custom > ul > li > :is(button,a):hover::before,
-  #navbar-custom > ul > li > :is(button.active,a.active)::before
+  #navbarCustom > ul > li > :is(button,a):hover::before,
+  #navbarCustom > ul > li > :is(button.active,a.active)::before
    {
       width: 30% !important;
   }
+}
+/* Loading Screen Styles */
+#loadingScreen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-main-green), #0f5132);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loadingScreen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#loadingScreen .loader {
+    margin-top: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+#loadingScreen .loader span {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: wave 1s ease-in-out infinite;
+}
+
+#loadingScreen .loader span:nth-child(1) {
+  animation-delay: 0s;
+}
+#loadingScreen .loader span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+#loadingScreen .loader span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+#loadingScreen .loader span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+#loadingScreen .loader span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-12px);
+    opacity: 1;
+  }
+}
+.sectors-list li::after {
+content: "";
+display: block;
+width: 175px;
+height: 7px;
+background-image: url("../icons/single-green-line.webp");
+background-size: cover;
+background-position: center;
+margin-top: 12px;
 }

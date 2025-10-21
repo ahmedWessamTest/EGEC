@@ -38,6 +38,15 @@
     <link rel="stylesheet" href="../assets/css/contact-us.css" />
   </head>
   <body class="bg-main-white">
+    <!-- Loading Screen -->
+    <div id="loadingScreen">
+      <div>
+        <img src="../assets/images/home/logo.webp" alt="EGEC Logo" />
+    <div class="loader">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+      </div>
+</div>
     <a
       class="skip-link"
       href="#main-content"
@@ -233,11 +242,12 @@
             class="transition-colors duration-500 rounded-full p-1 navbar-logo"
           >
             <img
-              src="../assets/images/home/logo.webp"
-              width="70"
-              alt="EGEC
-            logo"
-              loading="lazy"
+            id="navLogo"
+            class="aspect-square"
+            width="60"
+            height="60"
+            src="../assets/images/home/logo.webp"
+              alt="EGEC Logo"
             />
           </a>
           <div

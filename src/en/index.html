@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    
     <meta
       name="description"
       content="Put a brief description of this page (max 160 chars)."
@@ -36,6 +35,17 @@
     />
   </head>
   <body class="bg-main-white">
+    <!-- Loading Screen -->
+    <div id="loadingScreen">
+      <div>
+        <img src="../assets/images/home/logo.webp" alt="EGEC Logo" />
+    <div class="loader">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+      </div>
+</div>
+
+
     <!-- skip link -->
     <a class="skip-link" href="#main-content">Skip to content</a>
 
@@ -225,11 +235,12 @@
             class="transition-colors duration-500 rounded-full p-1 navbar-logo"
           >
             <img
-              src="../assets/images/home/logo.webp"
-              width="70"
-              alt="EGEC
-            logo"
-              loading="lazy"
+            id="navLogo"
+            class="aspect-square"
+            width="60"
+            height="60"
+            src="../assets/images/home/logo.webp"
+              alt="EGEC Logo"
             />
           </a>
           <div
@@ -1074,7 +1085,6 @@
                       <a
                         href="./bachelors-form.html"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                        
                       >
                         Bachelor's degree
                       </a>
@@ -1102,7 +1112,7 @@
               <li>
                 <a
                   href="./learning-remotely.html"
-                  class="block  py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
+                  class="block py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
                   >learning remotely</a
                 >
               </li>
@@ -1110,7 +1120,7 @@
               <li>
                 <a
                   href="./registration-in-universities.html"
-                  class="block  py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
+                  class="block py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
                   >Registration in universities</a
                 >
               </li>
@@ -1122,7 +1132,7 @@
                   <button
                     type="button"
                     data-dropdown-toggle="language-dropdown-menu"
-                  class="flex items-center text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                    class="flex items-center text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
                   >
                     <svg
                       class="w-5 h-5 rounded-full me-3"
@@ -1155,7 +1165,7 @@
                       <!-- Arabic -->
                       <li>
                         <a
-                          href="../ar/learning-remotely.html"
+                          href="../ar/index.html"
                           class="block px-4 py-2 text-sm text-main-green hover:bg-main-green hover:!text-main-white"
                           role="menuitem"
                         >
