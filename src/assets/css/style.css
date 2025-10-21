@@ -3285,6 +3285,13 @@
       }
     }
   }
+  .\32 xl\:\[\&_li_button\]\:\!text-main-white {
+    @media (width >= 96rem) {
+      & li button {
+        color: var(--color-main-white) !important;
+      }
+    }
+  }
   .\32 xl\:\[\&_li_button\]\:text-main-white {
     @media (width >= 96rem) {
       & li button {
@@ -3298,6 +3305,21 @@
       @supports (color: color-mix(in lab, red, red)) {
         color: color-mix(in oklab, var(--color-main-gray) 70%, transparent);
       }
+    }
+  }
+  .\[\&_li_ul_li_a\]\:\!text-main-green {
+    & li ul li a {
+      color: var(--color-main-green) !important;
+    }
+  }
+  .\[\&_li_ul_li_a\]\:text-main-green {
+    & li ul li a {
+      color: var(--color-main-green);
+    }
+  }
+  .\[\&_li_ul_li_button\]\:\!text-main-green {
+    & li ul li button {
+      color: var(--color-main-green) !important;
     }
   }
 }
