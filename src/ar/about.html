@@ -1344,9 +1344,10 @@
     <main>
       <!-- Our Story -->
       <section class="common-section !pt-8">
-        <div class="container">
+        <div class="container-sm">
           <div class="grid items-center grid-cols-12 lg:space-x-10 space-y-5">
-            <div class="col-span-12 lg:col-span-5">
+            <div class="col-span-1"></div>
+            <div class="col-span-12 lg:col-span-4">
               <img
                 src="../assets/images/about/our-story.webp"
                 alt="who we are"
@@ -1354,27 +1355,27 @@
                 loading="lazy"
               />
             </div>
-            <div class="col-span-12 lg:col-span-7 font-bold space-y-3">
+            <div class="col-span-12 lg:col-span-7 font-bold space-y-4">
               <div
-                class="flex items-baseline justify-center lg:justify-start gap-1"
+                class="flex items-baseline justify-center lg:justify-start gap-1 mb-0"
               >
                 <h2 class="text-title-size text-main-text">قصتنا</h2>
                 <img src="../assets/icons/double-exclamation-green.webp"
-                width="60" alt="icon" loading="lazy">
+                width="50" alt="icon" loading="lazy">
               </div>
               <img
                 src="../assets/icons/single-green-line.webp"
-                width="280"
-                class="mx-auto lg:ms-1"
+                width="200"
+                class="mx-auto lg:ms-1 mt-1 mb-5"
                 alt="single green line"
                 loading="lazy"
               />
               <div class=" leading-relaxed text-justify space-y-3">
-                <p class="text-main-green text-2xl">
+                <p class="text-main-green text-xl">
                   الشركة المصرية الخليجية للخدمات التعليمية
                 </p>
-                <p class="text-main-text font-light font-normal text-xl">
-                  الشركة المصرية الخليجيه للخدمات التعليمية تهدف الي تنميه و
+                <p class="text-main-text font-light  text-subtitle-size">
+                  الشـركـة الـمصريــة الخليجيه للخدمات التعليمية تهدف الي تنميه و
                   تاهيل الموارد البشرية و تقديم كافة الحدمات التعليميه للطلبة
                   داخل و خارج مصر بداء من تسجيل الطلبة مرورا بفترة الدراسة و حتي
                   الحصول علي الباكلريوس او اليسانس بالاضافة العديد من الخدمات
@@ -1386,7 +1387,7 @@
         </div>
       </section>
       <!-- why EGEC -->
-      <section class="common-section">
+      <section class="common-section ">
         <div class="relative">
           <img
             src="../assets/icons/low-wave.webp"
@@ -1398,7 +1399,7 @@
           <div class="w-fit mx-auto font-bold text-center relative">
             <img
               src="../assets/icons/question-mark.webp"
-              class="absolute end-[15%] -top-[35%] -scale-x-[1]"
+              class="absolute end-[29px] -top-[35%] "
               width="50"
               alt="testimonials icon"
               loading="lazy"
@@ -1413,81 +1414,87 @@
           </div>
         </div>
         <!-- Swiper container -->
-        <div class="container">
-          <div class="swiper mySwiper w-full mt-10">
-            <div class="swiper-wrapper">
-              <!-- Card -->
-              <div class="swiper-slide">
-                <div
-                  class="p-6 border-2 rounded-4xl border-main-text min-h-[205px]"
-                >
-                  <h5 class="text-main-green font-bold text-xl">شركاء</h5>
-                  <p class="text-main-text line-clamp-4 font-bold">
-                    وكلاء كبري الجامعات العالمية
-                  </p>
-                </div>
-              </div>
-              <!-- Card -->
-              <div class="swiper-slide">
-                <div
-                  class="p-6 border-2 rounded-4xl border-main-text min-h-[205px]"
-                >
-                  <h5 class="text-main-green font-bold text-xl">
-                    خبرة 23 عاما
-                  </h5>
-                  <p class="text-main-text line-clamp-4 font-bold">
-                    في مجال القبولات الجامعية و السياحة التعليمية لطلاب دول
-                    الوطن العربي و دول الخليج
-                  </p>
-                </div>
-              </div>
-              <!-- Card-->
-              <div class="swiper-slide">
-                <div
-                  class="p-6 border-2 rounded-4xl border-main-text min-h-[205px]"
-                >
-                  <h5 class="text-main-green font-bold text-xl">
-                    نخبة من مستشري التعليم الدولي
-                  </h5>
-                  <p class="text-main-text line-clamp-4 font-bold">
-                    أكفا المرشدين الأكاديمين الذين تم تأهيلهم خصيصا علي يد كبار
-                    الخبراء التعليمين الدوليين
-                  </p>
-                </div>
-              </div>
-              <!-- Card-->
-              <div class="swiper-slide">
-                <div
-                  class="p-6 border-2 rounded-4xl border-main-text min-h-[205px]"
-                >
-                  <h5 class="text-main-green font-bold text-xl">
-                    نخبة من مستشري التعليم الدولي
-                  </h5>
-                  <p class="text-main-text line-clamp-4 font-bold">
-                    أكفا المرشدين الأكاديمين الذين تم تأهيلهم خصيصا علي يد كبار
-                    الخبراء التعليمين الدوليين
-                  </p>
-                </div>
-              </div>
-
-              <!-- أضف كروت تانية بنفس الشكل -->
-            </div>
-
-            <div
-              class="swiper-pagination about-pagination !relative mt-5"
-            ></div>
-          </div>
-        </div>
+         <div class="relative">
+          <img src="../assets/icons/green-dots.webp" class="absolute -end-0 top-1/2 -translate-y-1/2 -translate-x-3/4 ltr:translate-x-3/4" width="200" alt="dots">
+           <div class="container">
+             <div class="swiper mySwiper w-full mt-10">
+               <div class="swiper-wrapper">
+                 <!-- Card -->
+                 <div class="swiper-slide">
+                   <div
+                     class="py-4 px-6 border-[3px] rounded-4xl border-main-text min-h-[180px]"
+                   >
+                     <h5 class="text-main-green text-xl">شركاء</h5>
+                     <p class="text-main-text text-lg mt-2 line-clamp-4">
+                       وكلاء كبري الجامعات العالمية
+                     </p>
+                   </div>
+                 </div>
+                 <!-- Card -->
+                 <div class="swiper-slide">
+                   <div
+                     class="py-4 px-6 border-[3px] rounded-4xl border-main-text min-h-[180px]"
+                   >
+                     <h5 class="text-main-green text-xl">
+                       خبرة 23 عاما
+                     </h5>
+                     <p class="text-main-text text-lg mt-2 line-clamp-4">
+                       في مجال القبولات الجامعية و السياحة التعليمية لطلاب دول
+                       الوطن العربي و دول الخليج
+                     </p>
+                   </div>
+                 </div>
+                 <!-- Card-->
+                 <div class="swiper-slide">
+                   <div
+                     class="py-4 px-6 border-[3px] rounded-4xl border-main-text min-h-[180px]"
+                   >
+                     <h5 class="text-main-green text-xl">
+                       نخبة من مستشري التعليم الدولي
+                     </h5>
+                     <p class="text-main-text text-lg mt-2 line-clamp-4">
+                       أكفا المرشدين الأكاديمين الذين تم تأهيلهم خصيصا علي يد كبار
+                       الخبراء التعليمين الدوليين
+                     </p>
+                   </div>
+                 </div>
+                 <!-- Card-->
+                 <div class="swiper-slide">
+                   <div
+                     class="py-4 px-6 border-[3px] rounded-4xl border-main-text min-h-[180px]"
+                   >
+                     <h5 class="text-main-green text-xl">
+                       نخبة من مستشري التعليم الدولي
+                     </h5>
+                     <p class="text-main-text text-lg mt-2 line-clamp-4">
+                       أكفا المرشدين الأكاديمين الذين تم تأهيلهم خصيصا علي يد كبار
+                       الخبراء التعليمين الدوليين
+                     </p>
+                   </div>
+                 </div>
+   
+                 <!-- أضف كروت تانية بنفس الشكل -->
+               </div>
+   
+               <div
+                 class="swiper-pagination about-pagination !relative mt-5"
+               ></div>
+             </div>
+           </div>
+         </div>
       </section>
       <!-- Study abroad services -->
       <section class="py-10 bg-white">
-        <div class="mx-auto grid grid-cols-1 lg:grid-cols-12">
+        <div class="mx-auto grid grid-cols-1 lg:grid-cols-12 items-center">
           <div class="text-center lg:col-span-4">
-            <h2 class="text-3xl font-bold text-[#1e4f92]">
-              خدمات الدراسة في الخارج
+            <h2 class="text-title-size font-bold text-[#1e4f92]">
+            خدمات الدراسـه
+              <span class="block">
+                فـــــي الـــــخـــــارج
+              </span>
             </h2>
             <div class="my-2">
-              <span class="text-main-green font-semibold"> خدمات متكامله </span>
+              <span class="text-main-green text-subtitle-size"> خدمات متكامله </span>
               <img
                 src="../assets/icons/single-green-line.webp"
                 loading="lazy"
@@ -1498,9 +1505,9 @@
               />
             </div>
             <!-- Navigation Buttons -->
-            <div class="flex gap-3 mt-4 lg:mt-0 justify-center">
+            <div class="flex gap-7 mt-4 lg:mt-0 justify-center">
               <button
-                class="studyPrev cursor-pointer bg-[#dbdbdb] hover:bg-gray-200 rounded-full p-3 shadow"
+                class="studyPrev cursor-pointer transition-colors duration-300 bg-[#dbdbdb] hover:bg-[#dbdbdb]/90 rounded-full p-3 shadow-[0_6px_15px_4px_rgba(0,0,0,0.2)]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1523,7 +1530,7 @@
                 </svg>
               </button>
               <button
-                class="studyNext cursor-pointer bg-[#dbdbdb] hover:bg-gray-200 rounded-full p-3 shadow"
+                class="studyNext cursor-pointer transition-colors duration-300 bg-[#dbdbdb] hover:bg-[#dbdbdb]/90 p-3 shadow-[0_6px_15px_4px_rgba(0,0,0,0.2)] rounded-full"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1555,21 +1562,21 @@
               style="
                 background: linear-gradient(
                   to bottom,
-                  transparent 25%,
-                  var(--color-main-text) 25%,
-                  var(--color-main-text) 75%,
-                  transparent 75%
+                  transparent 12%,
+                  var(--color-main-text) 12%,
+                  var(--color-main-text) 71%,
+                  transparent 71%
                 );
               "
             >
               <div class="swiper-wrapper py-4">
                 <!-- Card-->
                 <div class="swiper-slide">
-                  <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
+                  <div class="rounded-3xl overflow-hidden bg-white shadow-[0_27px_9px_-16px_rgba(0,0,0,0.25)]">
                     <img src="../assets/images/about/study-abroad-services.webp"
                     class="w-full h-48 object-cover" alt="" loading="lazy">
                     <div class="p-4">
-                      <p class="text-main-text font-semibold text-center pb-3">
+                      <p class="text-main-text  text-center pb-3">
                         توفير افضل الخيارات الاكاديمية
                       </p>
                     </div>
@@ -1577,11 +1584,11 @@
                 </div>
                 <!-- Card-->
                 <div class="swiper-slide">
-                  <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
+                  <div class="rounded-3xl overflow-hidden bg-white shadow-[0_27px_9px_-16px_rgba(0,0,0,0.25)]">
                     <img src="../assets/images/about/study-abroad-services.webp"
                     class="w-full h-48 object-cover" alt="" loading="lazy">
                     <div class="p-4">
-                      <p class="text-main-text font-semibold text-center pb-3">
+                      <p class="text-main-text  text-center pb-3">
                         توفير افضل الخيارات الاكاديمية
                       </p>
                     </div>
@@ -1589,11 +1596,11 @@
                 </div>
                 <!-- Card-->
                 <div class="swiper-slide">
-                  <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
+                  <div class="rounded-3xl overflow-hidden bg-white shadow-[0_27px_9px_-16px_rgba(0,0,0,0.25)]">
                     <img src="../assets/images/about/study-abroad-services.webp"
                     class="w-full h-48 object-cover" alt="" loading="lazy">
                     <div class="p-4">
-                      <p class="text-main-text font-semibold text-center pb-3">
+                      <p class="text-main-text  text-center pb-3">
                         توفير افضل الخيارات الاكاديمية
                       </p>
                     </div>
@@ -1601,11 +1608,11 @@
                 </div>
                 <!-- Card-->
                 <div class="swiper-slide">
-                  <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
+                  <div class="rounded-3xl overflow-hidden bg-white shadow-[0_27px_9px_-16px_rgba(0,0,0,0.25)]">
                     <img src="../assets/images/about/study-abroad-services.webp"
                     class="w-full h-48 object-cover" alt="" loading="lazy">
                     <div class="p-4">
-                      <p class="text-main-text font-semibold text-center pb-3">
+                      <p class="text-main-text  text-center pb-3">
                         توفير افضل الخيارات الاكاديمية
                       </p>
                     </div>
@@ -1613,16 +1620,29 @@
                 </div>
                 <!-- Card-->
                 <div class="swiper-slide">
-                  <div class="rounded-3xl overflow-hidden bg-white shadow-2xl">
+                  <div class="rounded-3xl overflow-hidden bg-white shadow-[0_27px_9px_-16px_rgba(0,0,0,0.25)]">
                     <img src="../assets/images/about/study-abroad-services.webp"
                     class="w-full h-48 object-cover" alt="" loading="lazy">
                     <div class="p-4">
-                      <p class="text-main-text font-semibold text-center pb-3">
+                      <p class="text-main-text  text-center pb-3">
                         توفير افضل الخيارات الاكاديمية
                       </p>
                     </div>
                   </div>
                 </div>
+                <!-- Card-->
+                <div class="swiper-slide">
+                  <div class="rounded-3xl overflow-hidden bg-white shadow-[0_27px_9px_-16px_rgba(0,0,0,0.25)]">
+                    <img src="../assets/images/about/study-abroad-services.webp"
+                    class="w-full h-48 object-cover" alt="" loading="lazy">
+                    <div class="p-4">
+                      <p class="text-main-text  text-center pb-3">
+                        توفير افضل الخيارات الاكاديمية
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -1639,9 +1659,9 @@
               <img
                 loading="lazy"
                 src="../assets/icons/three-lines-vertical.webp"
-                width="100"
+                width="150"
                 height="95"
-                class="absolute hidden lg:block -top-[10%] -start-[3%] -scale-x-[1]"
+                class="absolute hidden lg:block -top-[95px] -start-[3%] ltr:-scale-x-[1]"
                 alt="icon"
               />
               <div class="swiper ourMissionSwiper relative">
@@ -1649,11 +1669,11 @@
                   <!-- Card-->
                   <div class="swiper-slide">
                     <div
-                      class="rounded-3xl overflow-hidden bg-white shadow-2xl"
+                      class="rounded-3xl overflow-hidden bg-white"
                     >
                       <img
                         src="../assets/images/about/our-mission.webp"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover aspect-[9/12]"
                         loading="lazy"
                         alt=""
                       />
@@ -1661,11 +1681,11 @@
                   </div>
                   <div class="swiper-slide">
                     <div
-                      class="rounded-3xl overflow-hidden bg-white shadow-2xl"
+                      class="rounded-3xl overflow-hidden bg-white"
                     >
                       <img
                         src="../assets/images/about/our-mission.webp"
-                        class="w-full h-full object-cover"
+                        class="w-full h-full object-cover aspect-[9/12]"
                         loading="lazy"
                         alt=""
                       />

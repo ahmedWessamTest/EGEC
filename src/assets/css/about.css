@@ -8,8 +8,10 @@
 }
 .our-mission-pagination .swiper-pagination-bullet,
 .about-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
   background: transparent !important;
-  border: 2px solid var(--color-main-text);
+  border: 1px solid var(--color-main-text);
   color: var(--color-main-text) !important;
   opacity: 100% !important;
   display: flex !important;

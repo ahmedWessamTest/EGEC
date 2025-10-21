@@ -4,9 +4,10 @@
     --color-main-green:#08c261;
     --color-main-white:#fefefe;
     --color-main-gray:#a5a5a5;
-    --spacing-section-padding: 80px;
+    --spacing-section-padding: 60px;
     --spacing-main-container-padding:15px;
-    --text-title-size:3rem;
+    --text-title-size:2.25rem;
+    --text-subtitle-size:1.25rem;
 }
 .dropdown-menu {
   @apply z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0;
