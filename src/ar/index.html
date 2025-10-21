@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
-  
-    <meta
-      name="description"
-      content="Put a brief description of this page (max 160 chars)."
-    />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>الرئيسيه</title>
@@ -22,11 +16,24 @@
       <link rel="stylesheet" href="../assets/css/main.css" />
     </noscript>
     <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css" />
-
     <link rel="alternate" hreflang="en" href="/src/en/index.html" />
     <link rel="alternate" hreflang="ar" href="/src/ar/index.html" />
   </head>
   <body class="bg-main-white">
+    <!-- Loading Screen -->
+    <div id="loadingScreen">
+      <div>
+        <img
+          src="../assets/images/home/logo.webp"
+          width="100"
+          alt="EGEC Logo"
+        />
+        <div class="loader">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+
     <a
       class="skip-link"
       href="#main-content"
@@ -91,7 +98,7 @@
     <aside>
       <button
         id="sideMenuBtn"
-        class="fixed transition-all duration-500 -start-15 top-1/2 -translate-y-1/2 z-50 cursor-pointer hover:scale-110"
+        class="fixed hidden xl:block transition-all duration-500 -start-15 top-1/2 -translate-y-1/2 z-50 cursor-pointer hover:scale-110"
         aria-label="Open Register Menu"
       >
         <img
@@ -115,30 +122,33 @@
         <p class="text-gray-600 mb-4">سيتصل بك الموظف المسؤول</p>
 
         <div class="space-y-3">
-          <button
-            class="w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
+          <a
+            href="./bachelors-form.html"
+            class="block w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
             style="
               background-image: url('../assets/images/home/hero-image.webp');
             "
           >
-            درجه البكالوريوس
-          </button>
-          <button
+            درجة البكالوريوس
+          </a>
+          <a
+            href="./master-form.html"
             style="
               background-image: url('../assets/images/home/hero-image.webp');
             "
-            class="w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
+            class="block w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
           >
-            درجه الماجستير
-          </button>
-          <button
+            درجة الماجستير
+          </a>
+          <a
+            href="./doctorate-form.html"
             style="
               background-image: url('../assets/images/home/hero-image.webp');
             "
-            class="w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
+            class="block w-full bg-cover cursor-pointer bg-center rounded-lg py-3 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-lg"
           >
-            درجه الدكتوراه
-          </button>
+            درجوة الدكتوراه
+          </a>
         </div>
 
         <button
@@ -150,7 +160,7 @@
       </div>
     </div>
     <!-- tob navbar  -->
-    <nav class="home-top-nav" aria-label="Main navigation">
+    <nav class="home-top-nav hidden 2xl:block" aria-label="Main navigation">
       <div
         class="max-w-screen-xl flex flex-wrap justify-center items-center lg:justify-between mx-auto py-2"
       >
@@ -196,13 +206,21 @@
             </li>
           </ul>
         </div>
-
-        <button
-          type="button"
-          class="text-white bg-main-green hover:bg-main-green/80 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-3 py-2 text-center"
+        <a
+          href="./login.html"
+          class="text-white flex items-center gap-1 bg-main-green hover:bg-main-green/80 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-3 py-2 text-center"
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            width="20"
+          >
+            <path
+              d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"
+            />
+          </svg>
           تسجيل الدخول / انشاء حساب
-        </button>
+        </a>
       </div>
     </nav>
     <!-- hero section -->
@@ -214,28 +232,69 @@
         aria-label="Main navigation"
       >
         <div
-          class="flex flex-wrap lg:flex-nowrap justify-between lg:justify-start items-center mx-auto p-4 z-50 gap-2 w-full"
+          class="flex relative justify-between 2xl:justify-start items-center mx-auto py-4 z-50 space-x-5 w-full container"
         >
           <a
             href="./index.html"
-            class="transition-colors duration-500 rounded-full p-1 navbar-logo"
+            class="transition-colors duration-500 rounded-full navbar-logo"
           >
-            <img src="../assets/images/home/logo.webp" width="70" alt="" /
-            loading="lazy">
+            <img
+              id="navLogo"
+              class="aspect-square"
+              width="60"
+              height="60"
+              src="../assets/images/home/logo.webp"
+              alt="شعار ايجيك"
+            />
           </a>
           <div
-            id="navbar-custom"
-            class="transition-all duration-500 ease-in-out max-h-0 overflow-x-auto scroll-bar-style md:max-h-none md:block md:w-auto w-full order-1 lg:order-none"
+            id="navbarCustom"
+            class="absolute top-full start-0 w-full 2xl:relative hidden 2xl:block 2xl:w-auto order-1 2xl:order-none scroll-bar-style"
           >
             <ul
-              class="font-medium max-md:bg-white flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
+              class="font-medium 2xl:items-baseline [&_li_button]:text-xs [&_li_a]:text-xs [&_li_button]:text-main-green [&_li_a]:text-main-green 2xl:[&_li_button]:text-main-white 2xl:[&_li_a]:text-main-white text-nowrap max-2xl:bg-white flex flex-col p-4 2xl:p-0 rounded-lg 2xl:flex-row 2xl:space-x-8"
             >
+              <li class="2xl:hidden">
+                <a
+                  href="./about.html"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
+                  >من نحن</a
+                >
+              </li>
+              <li class="2xl:hidden">
+                <a
+                  href="./articles.html"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
+                  >المقالات</a
+                >
+              </li>
+              <li class="2xl:hidden">
+                <a
+                  href="./exhibition.html"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
+                  >المعرض</a
+                >
+              </li>
+              <li class="2xl:hidden">
+                <a
+                  href="./acceptance-certificates.html"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
+                  >شهادات القبول</a
+                >
+              </li>
+              <li class="2xl:hidden">
+                <a
+                  href="./contact-us.html"
+                  class="block nav-item text-sm text-nowrap py-2 px-3 text-main-white rounded-sm 2xl:bg-transparent 2xl:p-0"
+                  >اتصل بنا</a
+                >
+              </li>
               <!-- الوجهات الدراسيه -->
               <li>
                 <button
                   id="studyDestinationDropdown"
                   data-dropdown-toggle="studyDestinationsDropdownNavbar"
-                  class="flex nav-item text-sm items-center justify-between max-md:text-main-green text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex nav-item text-sm items-center justify-between text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                 >
                   الوجهات الدراسية
                   <svg
@@ -565,7 +624,7 @@
                 <button
                   id="academicDegreeDropdown"
                   data-dropdown-toggle="academicDegreeDropdownNavbar"
-                  class="flex nav-item items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex nav-item items-center justify-between text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                 >
                   الدرجات العلميه
                   <svg
@@ -703,7 +762,7 @@
                 <button
                   id="AcademicSpecializationsDropdown"
                   data-dropdown-toggle="AcademicSpecializationsDropdownNavbar"
-                  class="flex nav-item items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex nav-item items-center justify-between text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                 >
                   التخصصات الدراسيه
                   <svg
@@ -841,7 +900,7 @@
                 <button
                   id="StudyByCountryDropdown"
                   data-dropdown-toggle="StudyByCountryDropdownNavbar"
-                  class="flex nav-item items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex nav-item items-center justify-between text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                 >
                   ادرس حسب الدوله
                   <svg
@@ -898,7 +957,7 @@
                 <button
                   id="ArabStudentsDropdown"
                   data-dropdown-toggle="ArabStudentsDropdownNavbar"
-                  class="flex nav-item items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex nav-item items-center justify-between text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                 >
                   الطلاب العرب
                   <svg
@@ -1029,11 +1088,11 @@
                 </div>
               </li>
               <!-- Register From here -->
-              <li class="md:hidden">
+              <li class="2xl:hidden">
                 <button
                   id="registerFromHereDropdown"
                   data-dropdown-toggle="registerFromHereDropdownNavbar"
-                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                 >
                   سجل من هنا
                   <svg
@@ -1065,7 +1124,6 @@
                       <a
                         href="./bachelors-form.html"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                        
                       >
                         درجة البكالوريوس
                       </a>
@@ -1093,7 +1151,7 @@
               <li>
                 <a
                   href="./learning-remotely.html"
-                  class="block nav-item max-md:text-main-green text-sm text-nowrap py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
+                  class="text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                   >التعليم عن بعد</a
                 >
               </li>
@@ -1101,25 +1159,19 @@
               <li>
                 <a
                   href="./registration-in-universities.html"
-                  class="block nav-item max-md:text-main-green text-sm text-nowrap py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
+                  class="block nav-item text-sm text-nowrap py-2 px-3 text-main-white rounded-sm 2xl:bg-transparent 2xl:p-0"
                   >التسجيل في الجامعات</a
                 >
               </li>
               <li>
                 <div
-                  class="flex mt-3 lg:mt-0 items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse"
+                  class="flex lg:mt-0 items-center 2xl:order-2 space-x-1 2xl:space-x-0 rtl:space-x-reverse"
                 >
                   <button
                     type="button"
                     data-dropdown-toggle="language-dropdown-menu"
-                    class="inline-flex items-center text-main-green font-medium justify-center text-sm lg:text-main-white rounded-lg cursor-pointer"
+                    class="text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer md:p-0 md:w-auto"
                   >
-                    <img
-                      src="https://flagcdn.com/w20/eg.webp"
-                      alt="Egypt flag"
-                      class="w-4 h-4 rounded-full me-2"
-                      loading="lazy"
-                    />
                     العربية (مصر)
                   </button>
 
@@ -1136,20 +1188,29 @@
                           class="block px-4 py-2 text-sm text-main-green hover:bg-main-green hover:!text-main-white"
                           role="menuitem"
                         >
-                          <div class="inline-flex items-center">
-                            <img
-                              src="https://flagcdn.com/w20/us.webp"
-                              alt="US flag"
-                              class="w-4 h-4 rounded-full me-2"
-                              loading="lazy"
-                            />
-                            English (US)
-                          </div>
+                          English (US)
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
+              </li>
+              <li class="2xl:hidden">
+                <a
+                  href="./login.html"
+                  class="!text-white flex items-center gap-1 bg-main-green hover:bg-main-green/80 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-3 py-2 text-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    width="20"
+                  >
+                    <path
+                      d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"
+                    />
+                  </svg>
+                  تسجيل الدخول / انشاء حساب
+                </a>
               </li>
             </ul>
           </div>
@@ -1157,8 +1218,8 @@
           <button
             data-collapse-toggle="navbar-custom"
             type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white cursor-pointer hover:text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 mobile-btn"
-            aria-controls="navbar-default"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white cursor-pointer hover:text-black rounded-lg 2xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 mobile-btn"
+            aria-controls="navbar-custom"
             aria-expanded="false"
             id="customNavBtn"
           >
@@ -1184,41 +1245,56 @@
       <div
         id="indicators-carousel"
         class="relative w-full h-full"
-        data-carousel="static"
+        data-carousel="slide"
       >
         <!-- Carousel wrapper -->
-        <div class="relative h-screen overflow-hidden">
+        <div class="relative h-[80vh] overflow-hidden">
           <!-- Item 1 -->
           <div
-            class="hidden duration-700 h-screen ease-in-out"
+            class="hidden duration-700 h-full ease-in-out"
             data-carousel-item
           >
             <div
               style="
                 background-image: url('../assets/images/home/hero-image.webp');
               "
-              class="bg-center bg-cover w-full h-screen"
+              class="bg-center bg-cover w-full h-full"
             >
               <div
-                class="container flex items-center h-screen justify-center md:justify-start"
+                class="container-sm flex items-center h-full justify-center md:justify-start"
               >
-                <div class="w-full lg:w-3/4 text-center lg:text-start">
+                <div class="text-center w-fit lg:text-start">
                   <div class="flex items-center content-center">
-                    <img src="../assets/icons/three-buble.webp" width="45"
-                    alt="buble icon" class="self-start ms-4 lg:ms-2 hidden
-                    lg:block" loading="lazy">
+                    <img
+                      src="../assets/icons/three-buble.webp"
+                      width="45"
+                      alt="buble icon"
+                      class="self-start ms-4 lg:ms-3 hidden lg:block"
+                      loading="lazy"
+                    />
                     <h1
                       class="text-5xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
                     >
-                      حقق اهدافك الدراسيه الان
+                      حقق اهدافك الدراسية الان
                     </h1>
-                    <img src="../assets/icons/exclamation-mark.webp" class="ms-3
-                    hidden lg:block" width="25" alt="exclamation mark icon" /
-                    loading="lazy">
+                    <img
+                      src="../assets/icons/exclamation-mark.webp"
+                      class="ms-3 hidden lg:block"
+                      width="25"
+                      alt="exclamation mark icon"
+                      loading="lazy"
+                    />
                   </div>
-                  <img src="../assets/icons/double-green-line.webp" width="200"
-                  class="m-auto lg:ms-32 my-4" alt="line icon" loading="lazy">
-                  <p class="text-main-green font-semibold text-xl">
+                  <img
+                    src="../assets/icons/double-green-line.webp"
+                    width="300"
+                    class="m-auto mx-auto lg:-mt-2 lg:mb-1 my-4"
+                    alt="line icon"
+                    loading="lazy"
+                  />
+                  <p
+                    class="text-main-green lg:w-2xl leading-8 text-xl text-justify"
+                  >
                     التحق بالجامعه و الكليه التي تريد في اي مكان تريد بالعالم
                     نقد لك كافة الخدمات التعليميه ابتداء من الالتحاق و المتابعه
                     خلال فترة الدراسه و حتي حصولك هلي الشهادة
@@ -1229,40 +1305,50 @@
           </div>
           <!-- Item -2  -->
           <div
-            class="hidden duration-700 h-screen ease-in-out"
+            class="hidden duration-700 h-full ease-in-out"
             data-carousel-item
           >
             <div
               style="
                 background-image: url('../assets/images/home/hero-image-2.webp');
               "
-              class="bg-center bg-cover w-full h-screen"
+              class="bg-center bg-cover w-full h-full"
             >
               <div
-                class="container flex items-center h-screen justify-center md:justify-start"
+                class="container-sm flex items-center h-full justify-center md:justify-start"
               >
-                <div class="w-full lg:w-3/4 text-center lg:text-start">
-                  <div class="flex items-center content-center">
-                    <img src="../assets/icons/three-buble.webp" width="45"
-                    alt="buble icon" class="self-start ms-4 lg:ms-2 hidden
-                    lg:block" loading="lazy">
+                <div class="w-full lg:w-3xl text-center lg:text-start">
+                  <div class="flex items-center content-center w-fit">
+                    <img
+                      src="../assets/icons/three-buble.webp"
+                      width="45"
+                      alt="buble icon"
+                      class="self-start ms-4 lg:ms-2 hidden lg:block"
+                      loading="lazy"
+                    />
                     <h1
                       class="text-5xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
                     >
-                      حقق اهدافك الدراسيه الان
+                      حقق اهدافك الدراسة الان
                     </h1>
-                    <img src="../assets/icons/exclamation-mark.webp" class="ms-3
-                    hidden lg:block" width="25" alt="exclamation mark icon" /
-                    loading="lazy">
+                    <img
+                      src="../assets/icons/exclamation-mark.webp"
+                      class="ms-3 hidden lg:block"
+                      width="25"
+                      alt="exclamation mark icon"
+                      loading="lazy"
+                    />
                   </div>
                   <img
                     src="../assets/icons/double-green-line.webp"
-                    width="200"
-                    class="m-auto lg:ms-32 my-4"
+                    width="300"
+                    class="m-auto mx-auto lg:-mt-2 lg:mb-1 my-4"
                     alt="line icon"
                     loading="lazy"
                   />
-                  <p class="text-main-green font-semibold text-xl">
+                  <p
+                    class="text-main-green lg:w-2xl leading-8 text-xl text-justify"
+                  >
                     التحق بالجامعه و الكليه التي تريد في اي مكان تريد بالعالم
                     نقد لك كافة الخدمات التعليميه ابتداء من الالتحاق و المتابعه
                     خلال فترة الدراسه و حتي حصولك هلي الشهادة
@@ -1299,20 +1385,18 @@
         aria-label="Main navigation"
       >
         <div
-          class="flex flex-col lg:flex-row items-center mx-auto p-4 z-50 gap-2 w-full"
+          class="flex flex-col lg:flex-row items-center mx-auto p-4 z-50 gap-10 w-full"
         >
-          <div
-          class="m-0 md:max-h-none md:block md:w-auto w-full"
-          >
+          <div class="m-0 md:max-h-none md:block md:w-auto w-full">
             <ul
-              class="text-nowrap font-medium max-lg:bg-white flex flex-col items-center p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0"
+              class="lg:divide-x-2 divide-main-gray/70 text-nowrap font-medium max-lg:bg-white flex flex-col items-center p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:flex-row lg:[&_li_button]:px-8 [&_li_button_span]:text-main-gray/70 lg:mt-0 lg:border-0"
             >
               <!-- place dropdown -->
               <li>
                 <button
                   id="PlaceSearchDropdown"
                   data-dropdown-toggle="PlaceSearchDropdownNavbar"
-                  class="flex flex-col items-center justify-between text-nowrap text-main-text w-full py-2 px-3 lg:hover:bg-transparent cursor-pointer lg:p-0 lg:w-auto"
+                  class="flex lg:!pe-14 flex-col items-center lg:items-start justify-between text-nowrap text-main-text w-full py-2 px-3 lg:hover:bg-transparent cursor-pointer lg:p-0 lg:w-auto"
                 >
                   المكان
                   <span class="text-sm text-gray-500">ابحث عن الدوله</span>
@@ -1558,7 +1642,7 @@
 
           <a
             href=""
-            class="w-full p-2 lg:p-0 lg:w-11 lg:h-11 rounded-full bg-main-green flex items-center justify-center"
+            class="w-full p-2 lg:p-0 lg:w-14 lg:h-14 rounded-full bg-main-green flex items-center justify-center"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1577,33 +1661,38 @@
     </header>
     <main>
       <!-- who we are section -->
-      <section class="common-section">
-        <div class="container">
-          <div class="grid grid-cols-12 lg:space-x-10 space-y-5">
-            <div class="col-span-12 lg:col-span-5">
+      <section class="!pt-28">
+        <div class="container-sm">
+          <div class="grid grid-cols-12 lg:space-x-10 space-y-5 items-center">
+            <div class="col-span-2"></div>
+            <div class="col-span-12 lg:col-span-4">
               <img
                 src="../assets/images/home/who-we-are.webp"
-                class="opacity-30"
+                class="opacity-30 aspect-[9/12]"
                 alt="من نحن"
                 loading="lazy"
               />
             </div>
-            <div class="col-span-12 lg:col-span-7 font-bold space-y-3">
-              <h2 class="text-5xl text-main-text text-center lg:text-start">
-                من نحن
-              </h2>
-              <img
-                src="../assets/icons/single-line.webp"
-                width="200"
-                class="mx-auto lg:ms-1"
-                alt="single green line"
-                loading="lazy"
-              />
+            <div class="col-span-12 lg:col-span-5 font-bold space-y-3">
+              <div class="w-fit">
+                <h2
+                  class="text-5xl extend-text text-main-text text-center lg:text-start"
+                >
+                  مــــن نــــحــــن
+                </h2>
+                <img
+                  src="../assets/icons/single-line.webp"
+                  width="250"
+                  class="mx-auto mt-4"
+                  alt="single green line"
+                  loading="lazy"
+                />
+              </div>
               <div
                 class="font-bold max-w-[500px] leading-relaxed text-justify space-y-3"
               >
-                <p class="text-main-green text-2xl font-bold">
-                  الشركه المصريه الخليجيه للخدمات التعليمية
+                <p class="text-main-green text-xl font-bold">
+                  الشركه المصرية الخليجية للخدمات التعليمية
                 </p>
                 <p class="text-main-text font-normal text-xl">
                   تهدف الي تنميه و تاهيل الموارد البشريه و تقديم كافة الخدمات
@@ -1638,7 +1727,7 @@
         </div>
       </section>
       <!-- Study by sector -->
-      <section class="relative">
+      <section class="relative mt-10 xl:mt-0">
         <img
           src="../assets/icons/low-wave.webp"
           class="absolute start-0 -top-5 z-10"
@@ -1655,59 +1744,68 @@
         />
         <div class="container relative">
           <div
-            class="mx-auto py-20 rounded-4xl text-center bg-cover bg-center"
+            class="mx-auto py-24 rounded-4xl text-center bg-cover bg-center"
             style="
               background-image: url('../assets/images/home/study-by-sector.webp');
             "
           >
-            <h2 class="text-5xl font-bold text-main-white">ادرس حسب القطاع</h2>
+            <h2 class="text-5xl font-bold text-main-white">
+              ادرس حــســب القـطــاع
+            </h2>
+            <img
+              src="../assets/icons/single-green-line.webp"
+              width="200"
+              class="mx-auto mt-4"
+              alt="line"
+            />
           </div>
 
-          <div class="absolute bottom-0 left-0 right-0 mx-auto translate-y-1/2">
+          <div
+            class="xl:absolute bottom-0 left-0 right-0 mx-auto xl:translate-y-1/2 -mt-10 xl:mt-0"
+          >
             <ul
-              class="flex space-x-3 justify-start lg:justify-center items-center overflow-x-auto xl:overflow-x-visible scrollbar-hide py-4 max-w-full px-4"
+              class="grid col-end-1 md:grid-cols-2 xl:grid-cols-6 text-center lg:px-10 gap-3 items-center px-4"
             >
               <li>
                 <a
-                  class="p-10 block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_14px_3px_gray] text-main-text hover:text-main-white cursor-pointer font-medium"
+                  class="px-5 py-10 text-xl font-light block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
                 >
                   الطب
                 </a>
               </li>
               <li>
                 <a
-                  class="p-10 block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_14px_3px_gray] text-main-text hover:text-main-white cursor-pointer font-medium"
+                  class="px-5 py-10 text-xl font-light block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
                 >
                   الهندسه
                 </a>
               </li>
               <li>
                 <a
-                  class="p-10 block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_14px_3px_gray] text-main-text hover:text-main-white cursor-pointer font-medium"
+                  class="px-5 py-10 text-xl font-light block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
                 >
                   علوم الحاسب
                 </a>
               </li>
               <li>
                 <a
-                  class="p-10 block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_14px_3px_gray] text-main-text hover:text-main-white cursor-pointer font-medium"
+                  class="px-5 py-10 text-xl font-light block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
                 >
                   الحقوق
                 </a>
               </li>
               <li>
                 <a
-                  class="p-10 block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_14px_3px_gray] text-main-text hover:text-main-white cursor-pointer font-medium"
+                  class="px-5 py-10 text-xl font-light block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
                 >
                   اداره الأعمال
                 </a>
               </li>
               <li>
                 <a
-                  class="p-10 block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_14px_3px_gray] text-main-text hover:text-main-white cursor-pointer font-medium"
+                  class="px-5 py-10 text-xl font-light block whitespace-nowrap capitalize bg-main-white hover:bg-main-green rounded-2xl shadow-[0_3px_20px_0_gray] text-main-text hover:text-main-white cursor-pointer"
+                  >العلوم الانسانية</a
                 >
-                  العلوم الانسانيه
-                </a>
               </li>
             </ul>
           </div>
@@ -1731,15 +1829,15 @@
               class="flex items-center justify-center py-4 lg:py-0 lg:col-span-4"
             >
               <div class="text-center lg:text-start">
-                <h2 class="text-5xl font-bold text-main-text">
-                  ادرس حسب الدولة
+                <h2 class="text-5xl font-bold leading-16 text-main-text">
+                  ادرس حــســب الـــــــــــــــــدولة
                 </h2>
-                <span class="text-gray-500 mt-3 block"
-                  >النحق الان بالجامعه في...</span
+                <span class="text-main-gray/50 text-lg mt-3 block"
+                  >النحق الان بالجامعات في...</span
                 >
                 <img
                   src="../assets/icons/single-green-line.webp"
-                  width="200"
+                  width="250"
                   class="mx-auto lg:ms-1 mt-2"
                   alt="single green line"
                   loading="lazy"
@@ -1758,9 +1856,12 @@
                     alt="Study in Russia"
                   />
                   <div
-                    class="transition-opacity duration-500 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 absolute inset-0"
+                    class="transition-colors duration-500 flex items-center justify-center bg-white/50 group-hover:bg-black/50 absolute inset-0"
                   >
-                    <span class="text-main-white text-xl font-bold">روسيا</span>
+                    <span
+                      class="text-main-white text-xl font-bold transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+                      >روسيا</span
+                    >
                   </div>
                 </a>
                 <a href="#" class="relative group">
@@ -1771,9 +1872,12 @@
                     alt="Study in Egypt"
                   />
                   <div
-                    class="transition-opacity duration-500 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 absolute inset-0"
+                    class="transition-colors duration-500 flex items-center justify-center bg-white/50 group-hover:bg-black/50 absolute inset-0"
                   >
-                    <span class="text-main-white text-xl font-bold">مصر</span>
+                    <span
+                      class="text-main-white text-xl font-bold transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+                      >مصر</span
+                    >
                   </div>
                 </a>
                 <a href="#" class="relative group">
@@ -1784,9 +1888,10 @@
                     alt="Study in UAE"
                   />
                   <div
-                    class="transition-opacity duration-500 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 absolute inset-0"
+                    class="transition-colors duration-500 flex items-center justify-center bg-white/50 group-hover:bg-black/50 absolute inset-0"
                   >
-                    <span class="text-main-white text-xl font-bold"
+                    <span
+                      class="text-main-white text-xl font-bold transition-opacity duration-500 opacity-0 group-hover:opacity-100"
                       >الأمارات</span
                     >
                   </div>
@@ -1799,9 +1904,10 @@
                     alt="Study in USA"
                   />
                   <div
-                    class="transition-opacity duration-500 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 absolute inset-0"
+                    class="transition-colors duration-500 flex items-center justify-center bg-white/50 group-hover:bg-black/50 absolute inset-0"
                   >
-                    <span class="text-main-white text-xl font-bold"
+                    <span
+                      class="text-main-white text-xl font-bold transition-opacity duration-500 opacity-0 group-hover:opacity-100"
                       >امريكا</span
                     >
                   </div>
@@ -1823,34 +1929,28 @@
       <section>
         <div class="container">
           <div
-            class="bg-[linear-gradient(90deg,rgba(0,192,251,1)_0%,rgba(30,79,146,1)_100%)] py-10 rounded-4xl"
+            class="bg-[linear-gradient(90deg,rgba(0,192,251,1)_0%,rgba(30,79,146,1)_100%)] py-16 rounded-[50px]"
           >
             <ul
-              class="flex flex-col lg:flex-row text-main-white lg:space-x-10 space-y-8 lg:space-y-0 justify-center items-center text-center"
+              class="flex flex-col lg:flex-row text-main-white lg:space-x-14 space-y-8 lg:space-y-0 justify-center items-center text-center"
             >
               <li>
                 <span class="text-4xl font-bold">4900+</span>
-                <p class="text-md font-medium capitalize">
-                  استفسارات طلاب سنويا
-                </p>
+                <p class="text-sm capitalize">استفسارات طلاب سنويا</p>
               </li>
               <li>
                 <span class="text-4xl font-bold">1800+</span>
-                <p class="text-md font-medium capitalize">
+                <p class="text-sm capitalize">
                   انهاء و اجراءات و قبولات طلاب سنويا
                 </p>
               </li>
               <li>
                 <span class="text-4xl font-bold">293+</span>
-                <p class="text-md font-medium capitalize">
-                  مراجعه جامعه واجهة حكومية
-                </p>
+                <p class="text-sm capitalize">مراجعه جامعه واجهة حكومية</p>
               </li>
               <li>
                 <span class="text-4xl font-bold">86+</span>
-                <p class="text-md font-medium capitalize">
-                  موظف حول الوطن العربي
-                </p>
+                <p class="text-sm capitalize">موظف حول الوطن العربي</p>
               </li>
             </ul>
           </div>
@@ -1882,10 +1982,11 @@
                   loading="lazy"
                 />
               </div>
-              <ul class="space-y-5">
+              <ul class="space-y-3 sectors-list">
                 <li
-                  class="flex gap-2 items-center text-main-text text-lg font-medium"
+                  class=" text-main-text text-lg font-medium"
                 >
+                <div class="flex gap-2 items-center">
                   <img
                     src="../assets/icons/contact-EGEC-icon.webp"
                     width="30"
@@ -1893,10 +1994,12 @@
                     loading="lazy"
                   />
                   <span> تواصل مع ايجيك </span>
+                </div>
                 </li>
                 <li
-                  class="flex gap-2 items-center text-main-text text-lg font-medium"
+                  class="text-main-text text-lg font-medium"
                 >
+                <div class="flex gap-2 items-center">
                   <img
                     src="../assets/icons/chat-with-us-icon.webp"
                     width="30"
@@ -1904,10 +2007,12 @@
                     loading="lazy"
                   />
                   <span> تحدث مع مرشدك الالكتروني </span>
+                </div>
                 </li>
                 <li
-                  class="flex gap-2 items-center text-main-text text-lg font-medium"
+                  class="text-main-text text-lg font-medium"
                 >
+                <div class="flex gap-2 items-center">
                   <img
                     src="../assets/icons/Suggestions-icon.webp"
                     width="30"
@@ -1915,10 +2020,12 @@
                     loading="lazy"
                   />
                   <span> اقتراح الجامعات المناسبه </span>
+                </div>
                 </li>
                 <li
-                  class="flex gap-2 items-center text-main-text text-lg font-medium"
+                  class=" text-main-text text-lg font-medium"
                 >
+                <div class="flex gap-2 items-center">
                   <img
                     src="../assets/icons/paper-icon.webp"
                     width="30"
@@ -1926,10 +2033,12 @@
                     loading="lazy"
                   />
                   <span> نتلقي اوراقك وننهي كافه الاجرءات </span>
+                </div>
                 </li>
                 <li
-                  class="flex gap-2 items-center text-main-text text-lg font-medium"
+                  class="text-main-text text-lg font-medium"
                 >
+                <div class="flex gap-2 items-center">
                   <img
                     src="../assets/icons/accepted-icon.webp"
                     width="30"
@@ -1937,6 +2046,7 @@
                     loading="lazy"
                   />
                   <span> لقد تم قبولك تهانينا </span>
+                </div>
                 </li>
               </ul>
             </div>
@@ -2840,7 +2950,6 @@
                   class="transition-all duration-300 group-hover:brightness-90 group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.5)]"
                   viewBox="0 0 448 512"
                 >
-                  
                   <path
                     d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
                   />
@@ -2861,7 +2970,6 @@
                   class="transition-all duration-300 group-hover:brightness-90 group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.5)]"
                   viewBox="0 0 448 512"
                 >
-                  
                   <path
                     d="M100.3 448l-92.9 0 0-299.1 92.9 0 0 299.1zM53.8 108.1C24.1 108.1 0 83.5 0 53.8 0 39.5 5.7 25.9 15.8 15.8s23.8-15.8 38-15.8 27.9 5.7 38 15.8 15.8 23.8 15.8 38c0 29.7-24.1 54.3-53.8 54.3zM447.9 448l-92.7 0 0-145.6c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7l0 148.1-92.8 0 0-299.1 89.1 0 0 40.8 1.3 0c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3l0 164.3-.1 0z"
                   />
@@ -2884,7 +2992,6 @@
                   class="transition-all duration-300 group-hover:brightness-90 group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.5)]"
                   viewBox="0 0 448 512"
                 >
-                  
                   <path
                     d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"
                   />
@@ -2917,8 +3024,12 @@
           class="flex justify-center mt-6 text-main-white text-lg gap-1 items-end"
         >
           <span>جميع الحقوق محفوظه ل </span>
-          <img src="../assets/images/shared/digital-bond-logo.webp" width="30"
-          alt="Digital Bond logo" loading="lazy">
+          <img
+            src="../assets/images/shared/digital-bond-logo.webp"
+            width="30"
+            alt="Digital Bond logo"
+            loading="lazy"
+          />
         </div>
       </div>
     </footer>

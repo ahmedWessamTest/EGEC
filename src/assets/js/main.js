@@ -25,6 +25,7 @@ const elements = {
   navMenu: document.getElementById("navbar-custom"),
   mainNavBtn: document.getElementById("customNavBtn"),
   mainNavbar: document.getElementById("main-navbar"),
+  navLogo: document.getElementById("navLogo"),
   scrollTopBtn: document.getElementById("scrollToTopBtn"),
   sideNav: {
     openBtn: document.getElementById("sideMenuBtn"),
@@ -56,8 +57,23 @@ const replaceClass = (element, oldClass, newClass) => {
   if (!element) return;
   element.classList.replace(oldClass, newClass);
 };
+const replaceSrc = () => {
 
+}
 // Core Functions
+const closeLoadingScreen = ()=> {
+    const loadingScreen = document.getElementById('loadingScreen');
+    
+    // Hide loading screen when page is fully loaded
+    window.addEventListener('load', function() {
+        loadingScreen.classList.add('hidden');
+    });
+
+    // Fallback: Hide loading screen after 3 seconds if load event doesn't fire
+    setTimeout(() => {
+        loadingScreen.classList.add('hidden');
+    }, 3000);
+}
 const toggleNavbar = () => {
   const { navMenu } = elements;
   if (!navMenu) return;
@@ -74,7 +90,7 @@ const toggleNavbar = () => {
 };
 
 const handleNavbarScroll = () => {
-  const { mainNavbar } = elements;
+  const { mainNavbar,navLogo } = elements;
   if (!mainNavbar) return;
   
   const { NAVBAR_SCROLLED, FIXED } = CONFIG.CLASSES;
@@ -83,8 +99,10 @@ const handleNavbarScroll = () => {
   
   if (shouldFixNavbar) {
     mainNavbar.classList.add(NAVBAR_SCROLLED, FIXED);
+    navLogo.setAttribute("src","../assets/images/shared/green-logo.webp");
   } else {
     mainNavbar.classList.remove(NAVBAR_SCROLLED, FIXED);
+    navLogo.setAttribute("src","../assets/images/home/logo.webp");
   }
 };
 
@@ -194,6 +212,7 @@ const setupEventListeners = () => {
   
   window.addEventListener("scroll", handleScroll);
   window.addEventListener("resize", handleWindowResize);
+  window.addEventListener("DOMContentLoaded", closeLoadingScreen);
 };
 
 // Initialize Application
@@ -208,3 +227,32 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
+const btn = document.getElementById('customNavBtn');
+    const target = document.getElementById('navbarCustom');
+
+
+    btn.addEventListener('click', () => {
+      const isHidden = target.classList.contains('hidden');
+      if (isHidden) {
+        target.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        target.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Optional: close menu on window resize when width >= lg (1024)
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1536) {
+        // ensure the menu is visible on large screens
+        target.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        // hide it by default on small screens
+        target.classList.add('hidden');
+      }
+    });
+
+    // trigger resize once to set initial state
+    window.dispatchEvent(new Event('resize'));
