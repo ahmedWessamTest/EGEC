@@ -21,6 +21,10 @@
     xl:!max-w-[1200px]
     2xl:!max-w-[1380px];
 }
+.container-xs {
+  @apply mx-auto px-4
+    md:!max-w-2xl    
+}
   .container-sm {
   @apply mx-auto px-4
     md:!max-w-2xl
