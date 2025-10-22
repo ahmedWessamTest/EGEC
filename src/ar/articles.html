@@ -38,12 +38,16 @@
   <body class="bg-main-white">
     <div id="loadingScreen">
       <div>
-        <img src="../assets/images/home/logo.webp" width="100" alt="EGEC Logo" />
-    <div class="loader">
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
+        <img
+          src="../assets/images/home/logo.webp"
+          width="100"
+          alt="EGEC Logo"
+        />
+        <div class="loader">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
       </div>
-</div>
+    </div>
     <a
       class="skip-link"
       href="#main-content"
@@ -170,7 +174,7 @@
       </div>
     </div>
     <!-- tob navbar  -->
-    <nav class="home-top-nav" aria-label="Main navigation">
+    <nav class="home-top-nav hidden 2xl:block" aria-label="Main navigation">
       <div
         class="max-w-screen-xl flex flex-wrap justify-center items-center lg:justify-between mx-auto py-2"
       >
@@ -216,13 +220,21 @@
             </li>
           </ul>
         </div>
-
-        <button
-          type="button"
-          class="text-white bg-main-green hover:bg-main-green/80 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-3 py-2 text-center"
+        <a
+          href="./login.html"
+          class="text-white flex items-center gap-1 bg-main-green hover:bg-main-green/80 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-3 py-2 text-center"
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            width="20"
+          >
+            <path
+              d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"
+            />
+          </svg>
           تسجيل الدخول / انشاء حساب
-        </button>
+        </a>
       </div>
     </nav>
     <!-- hero section -->
@@ -234,34 +246,69 @@
         aria-label="Main navigation"
       >
         <div
-          class="flex flex-wrap lg:flex-nowrap justify-between lg:justify-start items-center mx-auto p-4 z-50 gap-2 w-full"
+          class="flex relative justify-between 2xl:justify-start items-center mx-auto py-4 z-50 space-x-5 w-full container"
         >
           <a
             href="./index.html"
-            class="transition-colors duration-500 rounded-full p-1 navbar-logo"
+            class="transition-colors duration-500 rounded-full navbar-logo"
           >
             <img
-            id="navLogo"
-            class="aspect-square"
-            width="60"
-            height="60"
-            src="../assets/images/home/logo.webp"
+              id="navLogo"
+              class="aspect-square"
+              width="60"
+              height="60"
+              src="../assets/images/home/logo.webp"
               alt="شعار ايجيك"
             />
           </a>
           <div
-            id="navbar-custom"
-            class="transition-all duration-500 ease-in-out max-h-0 overflow-x-auto scroll-bar-style pb-3 md:max-h-none md:block md:w-auto w-full order-1 lg:order-none"
+            id="navbarCustom"
+            class="absolute top-full start-0 w-full 2xl:relative hidden 2xl:block 2xl:w-auto order-1 2xl:order-none scroll-bar-style"
           >
             <ul
-              class="font-medium text-nowrap max-md:bg-white flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
+              class="font-medium 2xl:items-baseline [&_li_button]:text-xs [&_li_a]:text-xs [&_li_button]:text-main-green [&_li_a]:text-main-green 2xl:[&_li_button]:text-main-white 2xl:[&_li_a]:text-main-white text-nowrap max-2xl:bg-white [&_li_ul_li_a]:text-main-green [&_li_ul_li_button]:!text-main-green flex flex-col p-4 2xl:p-0 rounded-lg 2xl:flex-row 2xl:space-x-8"
             >
+              <li class="2xl:hidden">
+                <a
+                  href="./about.html"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
+                  >من نحن</a
+                >
+              </li>
+              <li class="2xl:hidden">
+                <a
+                  href="./articles.html"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
+                  >المقالات</a
+                >
+              </li>
+              <li class="2xl:hidden">
+                <a
+                  href="./exhibition.html"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
+                  >المعرض</a
+                >
+              </li>
+              <li class="2xl:hidden">
+                <a
+                  href="./acceptance-certificates.html"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
+                  >شهادات القبول</a
+                >
+              </li>
+              <li class="2xl:hidden">
+                <a
+                  href="./contact-us.html"
+                  class="block nav-item text-sm text-nowrap py-2 px-3 text-main-white rounded-sm 2xl:bg-transparent 2xl:p-0"
+                  >اتصل بنا</a
+                >
+              </li>
               <!-- الوجهات الدراسيه -->
               <li>
                 <button
                   id="studyDestinationDropdown"
                   data-dropdown-toggle="studyDestinationsDropdownNavbar"
-                  class="flex nav-item text-sm items-center justify-between max-md:text-main-green text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex nav-item text-sm items-center justify-between text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                 >
                   الوجهات الدراسية
                   <svg
@@ -591,7 +638,7 @@
                 <button
                   id="academicDegreeDropdown"
                   data-dropdown-toggle="academicDegreeDropdownNavbar"
-                  class="flex nav-item items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex nav-item items-center justify-between text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                 >
                   الدرجات العلميه
                   <svg
@@ -621,7 +668,7 @@
                   >
                     <li>
                       <a
-                        href="#"
+                        href="./study-destinations.html"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >ادرس في مصر</a
                       >
@@ -729,7 +776,7 @@
                 <button
                   id="AcademicSpecializationsDropdown"
                   data-dropdown-toggle="AcademicSpecializationsDropdownNavbar"
-                  class="flex nav-item items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex nav-item items-center justify-between text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                 >
                   التخصصات الدراسيه
                   <svg
@@ -759,7 +806,7 @@
                   >
                     <li>
                       <a
-                        href="#"
+                        href="./study-destinations.html"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >الدراسه في مصر</a
                       >
@@ -867,7 +914,7 @@
                 <button
                   id="StudyByCountryDropdown"
                   data-dropdown-toggle="StudyByCountryDropdownNavbar"
-                  class="flex nav-item items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex nav-item items-center justify-between text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                 >
                   ادرس حسب الدوله
                   <svg
@@ -924,7 +971,7 @@
                 <button
                   id="ArabStudentsDropdown"
                   data-dropdown-toggle="ArabStudentsDropdownNavbar"
-                  class="flex nav-item items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex nav-item items-center justify-between text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                 >
                   الطلاب العرب
                   <svg
@@ -1055,11 +1102,11 @@
                 </div>
               </li>
               <!-- Register From here -->
-              <li class="xl:hidden">
+              <li class="2xl:hidden">
                 <button
                   id="registerFromHereDropdown"
                   data-dropdown-toggle="registerFromHereDropdownNavbar"
-                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                 >
                   سجل من هنا
                   <svg
@@ -1091,7 +1138,6 @@
                       <a
                         href="./bachelors-form.html"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                        
                       >
                         درجة البكالوريوس
                       </a>
@@ -1119,7 +1165,7 @@
               <li>
                 <a
                   href="./learning-remotely.html"
-                  class="block nav-item max-md:text-main-green text-sm text-nowrap py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
+                  class="text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer 2xl:p-0 2xl:w-auto"
                   >التعليم عن بعد</a
                 >
               </li>
@@ -1127,25 +1173,19 @@
               <li>
                 <a
                   href="./registration-in-universities.html"
-                  class="block nav-item max-md:text-main-green text-sm text-nowrap py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
+                  class="block nav-item text-sm text-nowrap py-2 px-3 text-main-white rounded-sm 2xl:bg-transparent 2xl:p-0"
                   >التسجيل في الجامعات</a
                 >
               </li>
               <li>
                 <div
-                  class="flex lg:mt-0 items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse"
+                  class="flex px-3 py-2 lg:mt-0 items-center 2xl:order-2 space-x-1 2xl:space-x-0 rtl:space-x-reverse"
                 >
                   <button
                     type="button"
                     data-dropdown-toggle="language-dropdown-menu"
-                  class="flex items-center text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                    class="text-nowrap w-full py-2 px-3 text-main-white 2xl:hover:bg-transparent 2xl:border-0 cursor-pointer md:p-0 md:w-auto"
                   >
-                    <img
-                      src="https://flagcdn.com/w20/eg.webp"
-                      alt="Egypt flag"
-                      class="w-4 h-4 rounded-full me-2"
-                      loading="lazy"
-                    />
                     العربية (مصر)
                   </button>
 
@@ -1162,20 +1202,29 @@
                           class="block px-4 py-2 text-sm text-main-green hover:bg-main-green hover:!text-main-white"
                           role="menuitem"
                         >
-                          <div class="inline-flex items-center">
-                            <img
-                              src="https://flagcdn.com/w20/us.webp"
-                              alt="US flag"
-                              class="w-4 h-4 rounded-full me-2"
-                              loading="lazy"
-                            />
-                            English (US)
-                          </div>
+                          English (US)
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
+              </li>
+              <li class="2xl:hidden mt-3">
+                <a
+                  href="./login.html"
+                  class="!text-white flex items-center gap-1 bg-main-green hover:bg-main-green/80 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-3 py-2 text-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    width="20"
+                  >
+                    <path
+                      d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"
+                    />
+                  </svg>
+                  تسجيل الدخول / انشاء حساب
+                </a>
               </li>
             </ul>
           </div>
@@ -1183,8 +1232,8 @@
           <button
             data-collapse-toggle="navbar-custom"
             type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white cursor-pointer hover:text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 mobile-btn"
-            aria-controls="navbar-default"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white cursor-pointer hover:text-black rounded-lg 2xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 mobile-btn"
+            aria-controls="navbar-custom"
             aria-expanded="false"
             id="customNavBtn"
           >
@@ -1208,78 +1257,96 @@
         </div>
       </nav>
       <div class="relative w-full h-full" data-carousel="static">
-        <div class="relative h-screen overflow-hidden">
+        <div class="relative h-[80vh] overflow-hidden">
           <div
-            class="hidden duration-700 h-screen ease-in-out"
+            class="hidden duration-700 h-full ease-in-out"
             data-carousel-item
           >
             <div
               style="
-                background-image: url('../assets/images/about/about-us-hero.webp');
+                background-image: url('../assets/images/articles/articles.webp');
               "
-              class="bg-center bg-cover w-full h-screen"
+              class="bg-center bg-cover w-full h-full"
             >
               <div
-                class="container flex items-center h-screen justify-center md:justify-start"
+                class="container-sm flex items-center h-full justify-center md:justify-start"
               >
-                <div class="w-full lg:w-1/2 text-center lg:text-start">
+                <div class="text-center w-fit lg:text-start">
                   <div class="flex items-center content-center">
-                    <img src="../assets/icons/three-buble.webp" width="40"
-                    alt="buble icon" class="self-start ms-4 lg:ms-2 hidden
-                    lg:block" loading="lazy">
-                    <h1
-                      class="text-4xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
-                    >
-                      المقالات
-                    </h1>
-                    <img src="../assets/icons/exclamation-mark.webp" class="ms-3
-                    hidden lg:block" width="20" alt="exclamation mark icon" /
-                    loading="lazy">
-                  </div>
-                  <img src="../assets/icons/double-green-line.webp" width="200"
-                  class="ms-6 mt-2" alt="line icon" loading="lazy">
-                  <div class="mt-3 flex items-center gap-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      fill="#000000"
-                      version="1.1"
-                      id="Capa_1"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 495.398 495.398"
-                      xml:space="preserve"
-                      class="fill-main-green"
-                    >
-                      <g>
-                        <g>
+                    <img
+                      src="../assets/icons/three-buble.webp"
+                      width="45"
+                      alt="buble icon"
+                      class="self-start ms-4 lg:ms-3 hidden lg:block"
+                      loading="lazy"
+                    />
+                    <div>
+                      <h1
+                        class="text-5xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
+                      >
+                        الـــمـقـــالات
+                      </h1>
+                      <img
+                        src="../assets/icons/double-green-line.webp"
+                        width="300"
+                        class="mx-auto lg:mb-1 my-5"
+                        alt="line icon"
+                        loading="lazy"
+                      />
+                      <div class="mt-5 flex items-center gap-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          fill="#000000"
+                          id="Capa_1"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 495.398 495.398"
+                          xml:space="preserve"
+                          class="fill-main-green"
+                        >
                           <g>
-                            <path
-                              d="M487.083,225.514l-75.08-75.08V63.704c0-15.682-12.708-28.391-28.413-28.391c-15.669,0-28.377,12.709-28.377,28.391     v29.941L299.31,37.74c-27.639-27.624-75.694-27.575-103.27,0.05L8.312,225.514c-11.082,11.104-11.082,29.071,0,40.158     c11.087,11.101,29.089,11.101,40.172,0l187.71-187.729c6.115-6.083,16.893-6.083,22.976-0.018l187.742,187.747     c5.567,5.551,12.825,8.312,20.081,8.312c7.271,0,14.541-2.764,20.091-8.312C498.17,254.586,498.17,236.619,487.083,225.514z"
-                            />
-                            <path
-                              d="M257.561,131.836c-5.454-5.451-14.285-5.451-19.723,0L72.712,296.913c-2.607,2.606-4.085,6.164-4.085,9.877v120.401     c0,28.253,22.908,51.16,51.16,51.16h81.754v-126.61h92.299v126.61h81.755c28.251,0,51.159-22.907,51.159-51.159V306.79     c0-3.713-1.465-7.271-4.085-9.877L257.561,131.836z"
-                            />
+                            <g>
+                              <g>
+                                <path
+                                  d="M487.083,225.514l-75.08-75.08V63.704c0-15.682-12.708-28.391-28.413-28.391c-15.669,0-28.377,12.709-28.377,28.391     v29.941L299.31,37.74c-27.639-27.624-75.694-27.575-103.27,0.05L8.312,225.514c-11.082,11.104-11.082,29.071,0,40.158     c11.087,11.101,29.089,11.101,40.172,0l187.71-187.729c6.115-6.083,16.893-6.083,22.976-0.018l187.742,187.747     c5.567,5.551,12.825,8.312,20.081,8.312c7.271,0,14.541-2.764,20.091-8.312C498.17,254.586,498.17,236.619,487.083,225.514z"
+                                />
+                                <path
+                                  d="M257.561,131.836c-5.454-5.451-14.285-5.451-19.723,0L72.712,296.913c-2.607,2.606-4.085,6.164-4.085,9.877v120.401     c0,28.253,22.908,51.16,51.16,51.16h81.754v-126.61h92.299v126.61h81.755c28.251,0,51.159-22.907,51.159-51.159V306.79     c0-3.713-1.465-7.271-4.085-9.877L257.561,131.836z"
+                                />
+                              </g>
+                            </g>
                           </g>
-                        </g>
-                      </g>
-                    </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="50"
-                      height="20"
-                      viewBox="0 0 50 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="stroke-main-green"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
-                    <span class="font-medium text-main-green">المقالات</span>
+                        </svg>
+                        <span class="ltr:rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="20"
+                            viewBox="0 0 50 20"
+                            fill="none"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stroke-main-green"
+                          >
+                            <line x1="0" y1="10" x2="100" y2="10" />
+                            <polyline points="15,0 0,10 15,20" />
+                          </svg>
+                        </span>
+                        <span class="font-light text-lg text-main-green"
+                          >المقالات</span
+                        >
+                      </div>
+                    </div>
+                    <img
+                      src="../assets/icons/exclamation-mark.webp"
+                      class="ms-3 hidden lg:block mb-20"
+                      width="25"
+                      alt="exclamation mark icon"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>
@@ -1289,8 +1356,21 @@
       </div>
     </header>
     <main>
-      <!-- Latest educational articles -->
-      <section class="common-section relative">
+      <section class="my-36 py-36 relative">
+        <img
+          src="../assets/icons/xl-Scribbles.webp"
+          width="400"
+          class="absolute hidden lg:block -start-5 -z-10 -bottom-20 "
+          loading="lazy"
+          alt="Scribbles"
+        />
+        <img
+          src="../assets/icons/hashtag.webp"
+          width="400"
+          class="absolute hidden lg:block -end-5 -z-10 -bottom-20 "
+          loading="lazy"
+          alt="Scribbles"
+        />
         <img
           src="../assets/icons/low-wave.webp"
           loading="lazy"
@@ -1300,8 +1380,8 @@
           ab
           alt=""
         />
-        <div class="mx-auto !max-w-3xl px-3.5 mt-10">
-          <div class="grid gap-10 grid-cols-1 lg:grid-cols-2">
+        <div class="mx-auto container-sm px-3.5 mt-10">
+          <div class="grid gap-x-32 gap-y-28 grid-cols-1 lg:grid-cols-2">
             <div>
               <div>
                 <img
@@ -1313,31 +1393,33 @@
               </div>
               <div class="flex justify-between mt-2">
                 <div>
-                  <h3 class="text-main-green text-xl font-semibold">
+                  <h3 class="text-main-green text-xl">
                     دراسة الطب في جامعة القاهرة
                   </h3>
-                  <p class="text-main-gray font-semibold line-clamp-3 pe-6">
+                  <p class="text-main-gray font-light line-clamp-3 pe-6">
                     من قلعة العلم الكبري و من بين جدران جامعة القاهرة العتيقة من
                     بين جنبات محارب كلية الطب جامعة القاهرة يسبريبرس يسبر سيبر
                     سيبر سيبر يسبرسي
                   </p>
                   <a href="#" class="text-main-green flex items-center group">
-                    <span class="font-semibold">المزيد</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="90"
-                      height="20"
-                      viewBox="0 0 120 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
+                    <span class="font-light">المزيد</span>
+                    <span class="ltr:rotate-180">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="90"
+                        height="20"
+                        viewBox="0 0 120 20"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="stroke-main-green mt-1 ltr:mb-1 ltr:mt-0 transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <line x1="0" y1="10" x2="100" y2="10" />
+                        <polyline points="15,0 0,10 15,20" />
+                      </svg>
+                    </span>
                   </a>
                 </div>
                 <div>
@@ -1363,31 +1445,33 @@
               </div>
               <div class="flex justify-between mt-2">
                 <div>
-                  <h3 class="text-main-green text-xl font-semibold">
+                  <h3 class="text-main-green text-xl">
                     دراسة الطب في جامعة القاهرة
                   </h3>
-                  <p class="text-main-gray font-semibold line-clamp-3 pe-6">
+                  <p class="text-main-gray font-light line-clamp-3 pe-6">
                     من قلعة العلم الكبري و من بين جدران جامعة القاهرة العتيقة من
                     بين جنبات محارب كلية الطب جامعة القاهرة يسبريبرس يسبر سيبر
                     سيبر سيبر يسبرسي
                   </p>
                   <a href="#" class="text-main-green flex items-center group">
-                    <span class="font-semibold">المزيد</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="90"
-                      height="20"
-                      viewBox="0 0 120 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
+                    <span class="font-light">المزيد</span>
+                    <span class="ltr:rotate-180">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="90"
+                        height="20"
+                        viewBox="0 0 120 20"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="stroke-main-green mt-1 ltr:mb-1 ltr:mt-0 transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <line x1="0" y1="10" x2="100" y2="10" />
+                        <polyline points="15,0 0,10 15,20" />
+                      </svg>
+                    </span>
                   </a>
                 </div>
                 <div>
@@ -1413,31 +1497,33 @@
               </div>
               <div class="flex justify-between mt-2">
                 <div>
-                  <h3 class="text-main-green text-xl font-semibold">
+                  <h3 class="text-main-green text-xl">
                     دراسة الطب في جامعة القاهرة
                   </h3>
-                  <p class="text-main-gray font-semibold line-clamp-3 pe-6">
+                  <p class="text-main-gray font-light line-clamp-3 pe-6">
                     من قلعة العلم الكبري و من بين جدران جامعة القاهرة العتيقة من
                     بين جنبات محارب كلية الطب جامعة القاهرة يسبريبرس يسبر سيبر
                     سيبر سيبر يسبرسي
                   </p>
                   <a href="#" class="text-main-green flex items-center group">
-                    <span class="font-semibold">المزيد</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="90"
-                      height="20"
-                      viewBox="0 0 120 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
+                    <span class="font-light">المزيد</span>
+                    <span class="ltr:rotate-180">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="90"
+                        height="20"
+                        viewBox="0 0 120 20"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="stroke-main-green mt-1 ltr:mb-1 ltr:mt-0 transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <line x1="0" y1="10" x2="100" y2="10" />
+                        <polyline points="15,0 0,10 15,20" />
+                      </svg>
+                    </span>
                   </a>
                 </div>
                 <div>
@@ -1463,31 +1549,33 @@
               </div>
               <div class="flex justify-between mt-2">
                 <div>
-                  <h3 class="text-main-green text-xl font-semibold">
+                  <h3 class="text-main-green text-xl">
                     دراسة الطب في جامعة القاهرة
                   </h3>
-                  <p class="text-main-gray font-semibold line-clamp-3 pe-6">
+                  <p class="text-main-gray font-light line-clamp-3 pe-6">
                     من قلعة العلم الكبري و من بين جدران جامعة القاهرة العتيقة من
                     بين جنبات محارب كلية الطب جامعة القاهرة يسبريبرس يسبر سيبر
                     سيبر سيبر يسبرسي
                   </p>
                   <a href="#" class="text-main-green flex items-center group">
-                    <span class="font-semibold">المزيد</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="90"
-                      height="20"
-                      viewBox="0 0 120 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="stroke-main-green mt-1 transition-transform duration-500 group-hover:translate-x-2"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
+                    <span class="font-light">المزيد</span>
+                    <span class="ltr:rotate-180">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="90"
+                        height="20"
+                        viewBox="0 0 120 20"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="stroke-main-green mt-1 ltr:mb-1 ltr:mt-0 transition-transform duration-500 group-hover:translate-x-2"
+                      >
+                        <line x1="0" y1="10" x2="100" y2="10" />
+                        <polyline points="15,0 0,10 15,20" />
+                      </svg>
+                    </span>
                   </a>
                 </div>
                 <div>
@@ -1504,7 +1592,8 @@
             </div>
           </div>
         </div>
-        <div class="flex justify-center items-center gap-2 mt-3">
+        <!-- pagination -->
+        <div class="flex justify-center items-center gap-2 mt-20">
           <!-- indicators -->
           <div
             class="w-9 h-9 border-2 border-main-text rounded-full text-center content-center font-bold text-main-text cursor-pointer hover:bg-main-text hover:text-main-white transition-colors duration-300 active"
@@ -1821,7 +1910,6 @@
                   class="transition-all duration-300 group-hover:brightness-90 group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.5)]"
                   viewBox="0 0 448 512"
                 >
-                  
                   <path
                     d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
                   />
@@ -1842,7 +1930,6 @@
                   class="transition-all duration-300 group-hover:brightness-90 group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.5)]"
                   viewBox="0 0 448 512"
                 >
-                  
                   <path
                     d="M100.3 448l-92.9 0 0-299.1 92.9 0 0 299.1zM53.8 108.1C24.1 108.1 0 83.5 0 53.8 0 39.5 5.7 25.9 15.8 15.8s23.8-15.8 38-15.8 27.9 5.7 38 15.8 15.8 23.8 15.8 38c0 29.7-24.1 54.3-53.8 54.3zM447.9 448l-92.7 0 0-145.6c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7l0 148.1-92.8 0 0-299.1 89.1 0 0 40.8 1.3 0c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3l0 164.3-.1 0z"
                   />
@@ -1865,7 +1952,6 @@
                   class="transition-all duration-300 group-hover:brightness-90 group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.5)]"
                   viewBox="0 0 448 512"
                 >
-                  
                   <path
                     d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"
                   />
@@ -1898,8 +1984,12 @@
           class="flex justify-center mt-6 text-main-white text-lg gap-1 items-end"
         >
           <span>جميع الحقوق محفوظه ل </span>
-          <img src="../assets/images/shared/digital-bond-logo.webp" width="30"
-          alt="Digital Bond logo" loading="lazy">
+          <img
+            src="../assets/images/shared/digital-bond-logo.webp"
+            width="30"
+            alt="Digital Bond logo"
+            loading="lazy"
+          />
         </div>
       </div>
     </footer>

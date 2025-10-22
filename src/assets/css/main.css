@@ -67,15 +67,11 @@ html {
 .animate-slide-up {
   animation: slide-up 0.4s ease forwards;
 }
-.home-top-nav .navbar-item.active-nav-item {
-    background-color: var(--color-main-green);
-    color: var(--color-main-white);
-  }
 @media screen and (min-width: 1024px) {
   .home-top-nav .navbar-item {
     position: relative !important;
   }
-  .home-top-nav .navbar-item:before {
+  .home-top-nav .navbar-item::before {
     content: "";
     position: absolute;
     background-color: #08c261;
@@ -88,7 +84,9 @@ html {
     margin: auto;
     transition: width 0.3s;
   }
-  
+  .home-top-nav :is(.navbar-item:hover,.active-nav-item)::before {
+    width: 30% !important;
+  }
 }
 .hero-section .indicator-btn {
   background-color: transparent !important;
@@ -205,6 +203,7 @@ html {
       width: 30% !important;
   }
 }
+
 /* Loading Screen Styles */
 #loadingScreen {
   position: fixed;

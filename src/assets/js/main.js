@@ -211,7 +211,6 @@ const setupEventListeners = () => {
   if (sideNav.registerMenu) {
     sideNav.registerMenu.addEventListener("click", handleSideMenuClick);
   }
-  
   window.addEventListener("scroll", handleScroll);
   window.addEventListener("resize", handleWindowResize);
   window.addEventListener("DOMContentLoaded", closeLoadingScreen);
@@ -243,18 +242,19 @@ const btn = document.getElementById('customNavBtn');
         btn.setAttribute('aria-expanded', 'false');
       }
     });
-
-    // Optional: close menu on window resize when width >= lg (1024)
+    let resizeTimeout;
     window.addEventListener('resize', () => {
       if (window.innerWidth >= 1536) {
-        // ensure the menu is visible on large screens
         target.classList.remove('hidden');
         btn.setAttribute('aria-expanded', 'false');
       } else {
-        // hide it by default on small screens
         target.classList.add('hidden');
       }
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(()=>{
+        handleWindowResize();
+        handleNavbarScroll();
+      },300);
+      window.dispatchEvent(new Event("resize"));
     });
 
-    // trigger resize once to set initial state
-    window.dispatchEvent(new Event('resize'));
