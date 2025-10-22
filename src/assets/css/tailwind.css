@@ -28,5 +28,17 @@
     xl:!max-w-[1100px]
     2xl:!max-w-[1250px];
 }
+  .container-xl {
+  @apply mx-auto px-4
+    md:!max-w-2xl
+    lg:!max-w-[950px]
+    xl:!max-w-[1200px]
+    2xl:!max-w-[1450px];
+}
+
+.section-with-green-wave {
+  @apply py-32 my-32
+}
+
 }
 
