@@ -32,7 +32,7 @@
   @apply mx-auto px-4
     md:!max-w-2xl
     lg:!max-w-[950px]
-    xl:!max-w-[1200px]
+    xl:!max-w-[1280px]
     2xl:!max-w-[1450px];
 }
 
