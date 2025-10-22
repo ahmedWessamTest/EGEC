@@ -39,6 +39,8 @@
 .section-with-green-wave {
   @apply py-32 my-32
 }
-
+.text-5xl {
+  @apply leading-16
+}
 }
 

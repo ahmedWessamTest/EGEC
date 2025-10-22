@@ -177,7 +177,7 @@ html {
   color: var(--color-main-green);
 }
 /* custom navbar */
-@media screen and (min-width:1536px) {
+@media screen and (min-width:1280px) {
   #navbarCustom {
     min-height: 30px;
   }
@@ -271,3 +271,48 @@ background-size: cover;
 background-position: center;
 margin-top: 12px;
 }
+/* Custom scrollbar for dropdowns */
+        .scroll-bar-style::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .scroll-bar-style::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .scroll-bar-style::-webkit-scrollbar-thumb {
+            background: var(--color-main-green);
+            border-radius: 10px;
+        }
+        
+        .scroll-bar-style::-webkit-scrollbar-thumb:hover {
+            background: #06a850;
+        }
+        
+        /* Animation for mobile menu */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slideDown {
+            animation: slideDown 0.3s ease-out;
+        }
+        
+        /* Ensure proper RTL support */
+        [dir="rtl"] .ltr\:transform {
+            transform: scaleX(-1);
+        }
+        
+        /* Custom focus styles */
+        .nav-item:focus {
+            outline: 2px solid #08c261;
+            outline-offset: 2px;
+        }

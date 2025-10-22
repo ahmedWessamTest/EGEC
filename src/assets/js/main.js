@@ -244,7 +244,7 @@ const btn = document.getElementById('customNavBtn');
     });
     let resizeTimeout;
     window.addEventListener('resize', () => {
-      if (window.innerWidth >= 1536) {
+      if (window.innerWidth >= 1280) {
         target.classList.remove('hidden');
         btn.setAttribute('aria-expanded', 'false');
       } else {
@@ -258,3 +258,91 @@ const btn = document.getElementById('customNavBtn');
       window.dispatchEvent(new Event("resize"));
     });
 
+// Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            
+            // Toggle mobile menu
+            mobileMenuButton.addEventListener('click', function() {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                
+                if (isExpanded) {
+                    // Close menu
+                    mobileMenu.style.opacity = '0';
+                    mobileMenu.style.visibility = 'hidden';
+                    mobileMenu.style.transform = 'translateY(-10px)';
+                    setTimeout(() => {
+                        mobileMenu.style.display = 'none';
+                    }, 300);
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                } else {
+                    // Open menu
+                    mobileMenu.style.display = 'block';
+                    setTimeout(() => {
+                        mobileMenu.style.opacity = '1';
+                        mobileMenu.style.visibility = 'visible';
+                        mobileMenu.style.transform = 'translateY(0)';
+                    }, 10);
+                    mobileMenuButton.setAttribute('aria-expanded', 'true');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-bars');
+                    mobileMenuButton.querySelector('i').classList.add('fa-times');
+                }
+            });
+            
+            // Mobile dropdown toggles
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    if (content.classList.contains('hidden')) {
+                        // Open dropdown
+                        content.classList.remove('hidden');
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        // Close dropdown
+                        content.classList.add('hidden');
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && mobileMenuButton.getAttribute('aria-expanded') === 'true') {
+                    mobileMenu.style.opacity = '0';
+                    mobileMenu.style.visibility = 'hidden';
+                    mobileMenu.style.transform = 'translateY(-10px)';
+                    setTimeout(() => {
+                        mobileMenu.style.display = 'none';
+                    }, 300);
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                    
+                    // Also close all mobile dropdowns
+                    document.querySelectorAll('.mobile-dropdown-content').forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    document.querySelectorAll('.mobile-dropdown-toggle i').forEach(icon => {
+                        icon.style.transform = 'rotate(0deg)';
+                    });
+                }
+            });
+            
+            // Change navbar style on scroll
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('main-navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('bg-main-text', 'shadow-lg');
+                    navbar.classList.remove('bg-main-text/90');
+                } else {
+                    navbar.classList.remove('bg-main-text', 'shadow-lg');
+                    navbar.classList.add('bg-main-text/90');
+                }
+            });
+        });
