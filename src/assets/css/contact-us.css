@@ -5,7 +5,7 @@
 }
 
 [data-tabs-target][aria-selected="false"] {
-    background-color: color-mix(in oklab, var(--color-main-gray) 50%, transparent);
+    background-color: color-mix(in oklab, var(--color-main-gray) 30%, transparent);
   color: var(--color-main-gray);
 }
 .iti--inline-dropdown,.iti {
