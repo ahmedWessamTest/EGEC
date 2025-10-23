@@ -174,6 +174,8 @@ const handleSideMenuClick = (event) => {
 };
 
 const handleWindowResize = () => {
+  console.log(elements.mainNavbar);
+  
   if (!elements.mainNavbar) return;
   navbarOffset = getElementPositionFromTop(elements.mainNavbar);
 };
@@ -242,21 +244,7 @@ const btn = document.getElementById('customNavBtn');
         btn.setAttribute('aria-expanded', 'false');
       }
     });
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 1280) {
-        target.classList.remove('hidden');
-        btn.setAttribute('aria-expanded', 'false');
-      } else {
-        target.classList.add('hidden');
-      }
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(()=>{
-        handleWindowResize();
-        handleNavbarScroll();
-      },300);
-      window.dispatchEvent(new Event("resize"));
-    });
+    
 
 // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
