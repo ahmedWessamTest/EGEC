@@ -54,8 +54,6 @@ function getBackendHTML() {
     <p>مهمتنا هي تمكين الطلاب من تحقيق أحلامهم من خلال التعليم والانفتاح على العالم.</p>
   `;
 }
-
-
 function createContactBox() {
   const contactDiv = document.createElement("div");
   contactDiv.innerHTML = isEn ? `
@@ -104,6 +102,42 @@ function createContactBox() {
   `;
   return contactDiv;
 }
+function generateRandomId() {
+  return 'id-' + Math.random().toString(36).substring(2, 9);
+}
+function generateTableOfContents() {
+  const container = document.getElementById("articleContainer");
+  const tocContainer = document.querySelector("#tableOfContents ul");
+  tocContainer.innerHTML = "";
+
+  const headings = container.querySelectorAll("h2, h3");
+
+  headings.forEach((heading) => {
+    const id = generateRandomId();
+    heading.setAttribute("id", id);
+
+    const li = document.createElement("li");
+
+    const a = document.createElement("a");
+    a.textContent = heading.textContent;
+    a.href = `#${id}`; // بنسيبها عشان الـ cursor يفضل link
+    a.className = `block hover:text-[var(--color-main-green)] transition-all duration-300 ${
+      heading.tagName === "H3" ? "ps-4 text-sm" : "font-semibold"
+    }`;
+
+    // 👇 هنا السحر
+    a.addEventListener("click", (e) => {
+      e.preventDefault(); // يمنع تحديث الـ URL
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    });
+
+    li.appendChild(a);
+    tocContainer.appendChild(li);
+  });
+}
 
 function renderArticle() {
   const container = document.getElementById("articleContainer");
@@ -118,3 +152,4 @@ function renderArticle() {
 }
 
 renderArticle();
+generateTableOfContents()
