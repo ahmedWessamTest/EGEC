@@ -16,7 +16,7 @@
 .article-content h2::after {
   content: "";
   display: block;
-  width: 70%; 
+  width: 250px; 
   height: 10px;
   margin: 4px auto 10px;
   background-image: url('../icons/single-green-line.webp');
@@ -27,8 +27,6 @@
 .article-content p {
   color: var(--color-main-text);
   line-height: 1.8;
-  font-size: 1.25rem;
-  font-weight: 500;
 }
 
 .article-content ul,
