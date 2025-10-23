@@ -29,6 +29,7 @@
 }
 body {
   font-family: "Alexandria", sans-serif;
+  overflow-x: hidden;
 }
 /* skip focus */
 .skip-link {
@@ -39,7 +40,12 @@ body {
   height: 1px;
   overflow: hidden;
 }
-
+.swiper {
+  overflow-x: hidden !important;
+}
+.swiper-wrapper {
+  box-sizing: border-box;
+}
 .skip-link:focus {
   position: static;
   width: auto;
@@ -51,9 +57,6 @@ body {
   z-index: 1000;
 }
 /* global */
-html {
-  overflow-x: hidden;
-}
 @keyframes slide-up {
   from {
     transform: translateY(20px);

@@ -44,3 +44,8 @@ const initListers = () => {
 }
 initTestimonialsCarousel();
 initListers();
+[...document.body.querySelectorAll('*')].forEach(el => {
+  if (el.scrollWidth > document.documentElement.clientWidth) {
+    console.log("العنصر المسبب:", el);
+  }
+});
