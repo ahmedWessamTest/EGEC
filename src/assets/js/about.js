@@ -4,22 +4,42 @@ const initWhyEGECCarousel = () => {
     spaceBetween: 20, 
     loop: true,
     centerInsufficientSlides: true,
+    rtl: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      dynamicBullets: true,
       renderBullet: function (index, className) {
-      return `<span class="${className}">${index + 1}</span>`;
+        return `<span class="${className}">${index + 1}</span>`;
+      },
     },
-    },
+    preventInteractionOnTransition: true,
+    touchRatio: 1,
+    grabCursor: true,
     breakpoints: {
-      640: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
+      640: { 
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      768: { 
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: { 
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
     },
+    on: {
+      init: function() {
+        this.update();
+      }
+    }
   });
 }
 const initStudyAbroadServicesCarousel = () => {
@@ -27,19 +47,38 @@ const initStudyAbroadServicesCarousel = () => {
     slidesPerView: 2.5,
     spaceBetween: 20,
     loop: true,
+    rtl: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: ".studyNext",
       prevEl: ".studyPrev",
     },
+    preventInteractionOnTransition: true,
+    touchRatio: 1,
+    grabCursor: true,
     breakpoints: {
-      0: { slidesPerView: 1.2 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 2.5 },
+      0: { 
+        slidesPerView: 1.2,
+        spaceBetween: 15,
+      },
+      768: { 
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: { 
+        slidesPerView: 2.5,
+        spaceBetween: 25,
+      },
     },
+    on: {
+      init: function() {
+        this.update();
+      }
+    }
   });
 }
 
@@ -80,20 +119,29 @@ let missionData = [];
  new Swiper(".ourMissionSwiper", {
       slidesPerView: 1,
     loop: true,
+    rtl: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      dynamicBullets: true,
     },
+    preventInteractionOnTransition: true,
+    touchRatio: 1,
+    grabCursor: true,
     on: {
+      init: function() {
+        this.update();
+      },
       slideChange: function () {
         const activeIndex = (this.realIndex) % missionData.length;
         const { title, text } = missionData[activeIndex];
         missionText.innerHTML = `
-          <h2 class="text-4xl font-bold text-[#1e4f92]"">${title}</h2>
+          <h2 class="text-4xl font-bold text-[#1e4f92]">${title}</h2>
           <img
                       src="../assets/icons/single-green-line.webp"
                       loading="lazy"
@@ -118,12 +166,23 @@ const initPartnersCarousel = () => {
     spaceBetween: 100,
     loop: true,
     initialSlide: middleIndex,
+    rtl: true,
     autoplay: {
       delay: 5000,
+      pauseOnMouseEnter: true,
     },
+    preventInteractionOnTransition: true,
+    touchRatio: 1,
+    grabCursor: true,
     breakpoints: {
-      768: { slidesPerView: 5 },
-      1024: { slidesPerView: 7 },
+      768: { 
+        slidesPerView: 5,
+        spaceBetween: 80,
+      },
+      1024: { 
+        slidesPerView: 7,
+        spaceBetween: 100,
+      },
     },
     on: {
       init: function () {

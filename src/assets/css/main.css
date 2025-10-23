@@ -27,9 +27,70 @@
   font-style: normal;
   font-display: swap;
 }
+body,html{
+  overflow-x: hidden;
+}
 body {
   font-family: "Alexandria", sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Arabic text handling */
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] * {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Prevent horizontal overflow for Arabic content */
+.container, .swiper, .swiper-wrapper, .swiper-slide {
+  max-width: 100%;
   overflow-x: hidden;
+}
+
+/* Arabic text in swiper slides */
+.swiper-slide p, .swiper-slide h1, .swiper-slide h2, .swiper-slide h3, 
+.swiper-slide h4, .swiper-slide h5, .swiper-slide h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .swiper-slide {
+    padding: 0 10px;
+  }
+  
+  .swiper-slide p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .container {
+    padding-inline: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .swiper-slide {
+    padding: 0 5px;
+  }
 }
 /* skip focus */
 .skip-link {
@@ -41,10 +102,29 @@ body {
   overflow: hidden;
 }
 .swiper {
-  overflow-x: hidden !important;
+  overflow: hidden;
+  will-change: transform;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  width: 100% !important;
+  max-width: 100%;
+  position: relative;
 }
+
 .swiper-wrapper {
   box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.scrollable-content {
+  -webkit-overflow-scrolling: touch;
 }
 .skip-link:focus {
   position: static;
@@ -274,24 +354,45 @@ background-size: cover;
 background-position: center;
 margin-top: 12px;
 }
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
 /* Custom scrollbar for dropdowns */
-        .scroll-bar-style::-webkit-scrollbar {
-            width: 6px;
-        }
-        
-        .scroll-bar-style::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-        
-        .scroll-bar-style::-webkit-scrollbar-thumb {
-            background: var(--color-main-green);
-            border-radius: 10px;
-        }
-        
-        .scroll-bar-style::-webkit-scrollbar-thumb:hover {
-            background: #06a850;
-        }
+.scroll-bar-style::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scroll-bar-style::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.scroll-bar-style::-webkit-scrollbar-thumb {
+    background: var(--color-main-green);
+    border-radius: 10px;
+}
+
+.scroll-bar-style::-webkit-scrollbar-thumb:hover {
+    background: #06a850;
+}
+
+/* Performance optimizations for images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
         
         /* Animation for mobile menu */
         @keyframes slideDown {
