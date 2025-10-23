@@ -35,8 +35,8 @@
   font-display: swap;
 }
 html, body {
-  overflow-x: hidden; 
-  overflow-y: auto;
+  height: 100%;
+  overflow-x: hidden;
 }
 body {
   font-family: "Alexandria", sans-serif;
@@ -50,10 +50,7 @@ body {
   height: 1px;
   overflow: hidden;
 }
-.container {
-  position: relative;
-  overflow-x: hidden;
-}
+
 .swiper {
   width: 100% !important;
 }
