@@ -529,9 +529,3 @@ margin-top: 12px;
                  -o-transform: scaleX(-1);
                     transform: scaleX(-1);
         }
-        
-        /* Custom focus styles */
-        .nav-item:focus {
-            outline: 2px solid #08c261;
-            outline-offset: 2px;
-        }
