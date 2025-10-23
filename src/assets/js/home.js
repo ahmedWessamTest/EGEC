@@ -23,4 +23,24 @@
     },
   });
 }
+const filterDropdownItems = (e) => {
+  console.log(e);
+if (e.target.matches("[data-filter-input]")) {
+      const input = e.target;
+      const filterValue = input.value.toLowerCase();
+      const dropdown = input.closest("div[id$='Navbar']"); // يجيب الـ dropdown الحالي
+      const items = dropdown.querySelectorAll("ul li button");
+  
+      items.forEach((btn) => {
+        const text = btn.textContent.toLowerCase();
+        btn.closest("li").style.display = text.includes(filterValue)
+          ? ""
+          : "none";
+      });
+    }
+}
+const initListers = () => {
+  document.addEventListener("input", filterDropdownItems.bind(this));
+}
 initTestimonialsCarousel();
+initListers();

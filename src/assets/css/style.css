@@ -1354,6 +1354,9 @@
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
   .rounded-sm {
     border-radius: var(--radius-sm);
   }
@@ -3351,6 +3354,16 @@
           color: var(--color-white);
         }
       }
+    }
+  }
+  .\[\&_input\]\:text-main-text {
+    & input {
+      color: var(--color-main-text);
+    }
+  }
+  .\[\&_li\]\:w-full {
+    & li {
+      width: 100%;
     }
   }
   .\[\&_li\]\:py-7 {

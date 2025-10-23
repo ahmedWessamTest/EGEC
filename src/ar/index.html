@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>الرئيسيه</title>
-    <link rel="shortcut icon" href="../assets/images/shared/favicon.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="../assets/images/shared/favicon.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link
@@ -293,7 +297,7 @@
               <!-- الوجهات الدراسيه -->
               <li class="relative group/main">
                 <button
-                id="studyDestinationDropdown"
+                  id="studyDestinationDropdown"
                   class="flex nav-item text-sm items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
                 >
                   الوجهات الدراسية
@@ -333,7 +337,7 @@
                     <li class="relative group/sub">
                       <button
                         type="button"
-                        class="flex transition-colors hover:bg-main-green/90 text-main-green  duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
+                        class="flex transition-colors hover:bg-main-green/90 text-main-green duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
                         ادرس في اوروبا
                         <svg
@@ -382,7 +386,7 @@
               <!-- الدرجات العلميه -->
               <li class="relative group/main">
                 <button
-                id="AcademicDegreesDropdown"
+                  id="AcademicDegreesDropdown"
                   class="flex nav-item text-sm items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
                 >
                   الدرجات العلمية
@@ -470,7 +474,7 @@
               <!-- التخصصات الدراسيه -->
               <li class="relative group/main">
                 <button
-                id="academicSpecializationsDropdown"
+                  id="academicSpecializationsDropdown"
                   class="flex nav-item text-sm items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
                 >
                   التخصصات الدراسية
@@ -558,10 +562,10 @@
               <!-- ادرس حسب الدوله -->
               <li class="relative group/main">
                 <button
-                id="studyDependOnCountryDropdown"
+                  id="studyDependOnCountryDropdown"
                   class="flex nav-item text-sm items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
                 >
-                  ادرس حسب الدولة 
+                  ادرس حسب الدولة
                   <svg
                     class="w-2.5 h-2.5 ms-2.5"
                     aria-hidden="true"
@@ -614,7 +618,7 @@
               <!-- الطلاب العرب -->
               <li class="relative group/main">
                 <button
-                id="arabStudentsDropdown"
+                  id="arabStudentsDropdown"
                   class="flex nav-item text-sm items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
                 >
                   الطلاب العرب
@@ -775,9 +779,7 @@
                 >
               </li>
               <li class="relative">
-                <div
-                  class="group/main"
-                >
+                <div class="group/main">
                   <button
                     type="button"
                     class="text-nowrap text-main-white cursor-pointer"
@@ -788,7 +790,7 @@
 
                   <!-- Dropdown -->
                   <div
-                  class="z-10 hidden group-hover/main:block font-normal bg-white divide-y overflow-hidden divide-gray-100 rounded-lg shadow-sm absolute top-full"
+                    class="z-10 hidden group-hover/main:block font-normal bg-white divide-y overflow-hidden divide-gray-100 rounded-lg shadow-sm absolute top-full"
                     aria-labelledby="landguageDropdown"
                   >
                     <ul class="font-medium" role="none">
@@ -827,7 +829,6 @@
           </div>
 
           <button
-            data-collapse-toggle="navbar-custom"
             type="button"
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white cursor-pointer hover:text-black rounded-lg xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 mobile-btn"
             aria-controls="navbar-custom"
@@ -884,7 +885,7 @@
                       loading="lazy"
                     />
                     <h1
-                      class="text-5xl text-center  lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
+                      class="text-5xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
                     >
                       حقق اهدافك الدراسية الان
                     </h1>
@@ -1000,10 +1001,10 @@
         >
           <div class="m-0 md:max-h-none md:block md:w-auto w-full">
             <ul
-              class="lg:divide-x-2 divide-main-gray/70 text-nowrap font-medium max-lg:bg-white flex flex-col items-center p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:flex-row lg:[&_li_button]:px-8 [&_li_button_span]:text-main-gray/70 lg:mt-0 lg:border-0"
+              class="lg:divide-x-2 [&_li]:w-full [&_input]:text-main-text divide-main-gray/70 text-nowrap font-medium max-lg:bg-white flex flex-col items-center p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:flex-row lg:[&_li_button]:px-8 [&_li_button_span]:text-main-gray/70 lg:mt-0 lg:border-0"
             >
               <!-- place dropdown -->
-              <li>
+              <li class="relative">
                 <button
                   id="PlaceSearchDropdown"
                   data-dropdown-toggle="PlaceSearchDropdownNavbar"
@@ -1015,8 +1016,17 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="PlaceSearchDropdownNavbar"
-                  class="z-40 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="z-40 hidden w-full font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
+                  <!-- search input -->
+                  <div class="p-2 border-b border-gray-200">
+                    <input
+                      type="text"
+                      placeholder="ابحث..."
+                      class="w-full rounded-md border border-gray-300 px-3 py-1 text-sm focus:ring-2 focus:ring-main-green focus:outline-none"
+                      data-filter-input
+                    />
+                  </div>
                   <ul
                     class="text-sm w-full text-gray-700 main-dropdown-list"
                     aria-labelledby="PlaceSearchDropdown"
@@ -1053,7 +1063,7 @@
                 </div>
               </li>
               <!-- Academic degrees dropdown -->
-              <li>
+              <li class="relative">
                 <button
                   id="AcademicDegreesSearchDropdown"
                   data-dropdown-toggle="AcademicDegreesSearchDropdownNavbar"
@@ -1065,8 +1075,17 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="AcademicDegreesSearchDropdownNavbar"
-                  class="z-40 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="z-40 hidden w-full font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
+                  <!-- search input -->
+                  <div class="p-2 border-b border-gray-200">
+                    <input
+                      type="text"
+                      placeholder="ابحث..."
+                      class="w-full rounded-md border border-gray-300 px-3 py-1 text-sm focus:ring-2 focus:ring-main-green focus:outline-none"
+                      data-filter-input
+                    />
+                  </div>
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
                     aria-labelledby="AcademicDegreesSearchDropdown"
@@ -1102,7 +1121,7 @@
                 </div>
               </li>
               <!-- The University dropdown -->
-              <li>
+              <li class="relative">
                 <button
                   id="TheUniversitySearchDropdown"
                   data-dropdown-toggle="TheUniversitySearchDropdownNavbar"
@@ -1114,8 +1133,17 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="TheUniversitySearchDropdownNavbar"
-                  class="z-40 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="z-40 w-full hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
+                  <!-- search input -->
+                  <div class="p-2 border-b border-gray-200">
+                    <input
+                      type="text"
+                      placeholder="ابحث..."
+                      class="w-full rounded-md border border-gray-300 px-3 py-1 text-sm focus:ring-2 focus:ring-main-green focus:outline-none"
+                      data-filter-input
+                    />
+                  </div>
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
                     aria-labelledby="TheUniversitySearchDropdown"
@@ -1151,7 +1179,7 @@
                 </div>
               </li>
               <!-- The Cost dropdown -->
-              <li>
+              <li class="relative">
                 <button
                   id="CostSearchDropdown"
                   data-dropdown-toggle="CostSearchDropdownNavbar"
@@ -1163,8 +1191,17 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="CostSearchDropdownNavbar"
-                  class="z-40 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="z-40 w-full hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
+                  <!-- search input -->
+                  <div class="p-2 border-b border-gray-200">
+                    <input
+                      type="text"
+                      placeholder="ابحث..."
+                      class="w-full rounded-md border border-gray-300 px-3 py-1 text-sm focus:ring-2 focus:ring-main-green focus:outline-none"
+                      data-filter-input
+                    />
+                  </div>
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
                     aria-labelledby="CostSearchDropdown"
@@ -1200,7 +1237,7 @@
                 </div>
               </li>
               <!-- Specialization DropDown -->
-              <li>
+              <li class="relative">
                 <button
                   id="SpecializationDropdownSearch"
                   data-dropdown-toggle="SpecializationDropdownSearchNavbar"
@@ -1212,8 +1249,17 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="SpecializationDropdownSearchNavbar"
-                  class="z-40 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="z-40 w-full hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
+                  <!-- search input -->
+                  <div class="p-2 border-b border-gray-200">
+                    <input
+                      type="text"
+                      placeholder="ابحث..."
+                      class="w-full rounded-md border border-gray-300 px-3 py-1 text-sm focus:ring-2 focus:ring-main-green focus:outline-none"
+                      data-filter-input
+                    />
+                  </div>
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
                     aria-labelledby="SpecializationDropdownSearch"
