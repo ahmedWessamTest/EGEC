@@ -57,9 +57,6 @@ const replaceClass = (element, oldClass, newClass) => {
   if (!element) return;
   element.classList.replace(oldClass, newClass);
 };
-const replaceSrc = () => {
-
-}
 // Core Functions
 const closeLoadingScreen = ()=> {
   document.body.style.overflow = 'hidden';

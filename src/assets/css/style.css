@@ -2649,6 +2649,11 @@
       inset-inline-start: calc(var(--spacing) * -15);
     }
   }
+  .lg\:-start-\[3\%\] {
+    @media (width >= 64rem) {
+      inset-inline-start: calc(3% * -1);
+    }
+  }
   .lg\:-start-\[15\%\] {
     @media (width >= 64rem) {
       inset-inline-start: calc(15% * -1);
@@ -2797,6 +2802,12 @@
   .lg\:w-auto {
     @media (width >= 64rem) {
       width: auto;
+    }
+  }
+  .lg\:-translate-y-1\/2 {
+    @media (width >= 64rem) {
+      --tw-translate-y: calc(calc(1/2 * 100%) * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
   .lg\:translate-y-1\/2 {
@@ -3199,6 +3210,11 @@
   .xl\:py-0 {
     @media (width >= 80rem) {
       padding-block: calc(var(--spacing) * 0);
+    }
+  }
+  .xl\:text-start {
+    @media (width >= 80rem) {
+      text-align: start;
     }
   }
   .xl\:hover\:bg-transparent {
