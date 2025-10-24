@@ -206,9 +206,11 @@ body {
   }
 }
 /* shared style */
+main-bullets-list li,
 .gray-bullets-list li {
  position: relative;
 }
+gray-bullets-list li::before,
 .gray-bullets-list li::before {
   content: "";
   position: absolute;
@@ -227,6 +229,9 @@ body {
        -o-background-size: contain;
           background-size: contain;
   background-repeat: no-repeat;
+}
+gray-bullets-list li::before {
+  background-image: url("../icons/");
 }
 /* section rules */
 .common-section {

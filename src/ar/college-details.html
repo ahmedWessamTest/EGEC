@@ -35,13 +35,16 @@
   <body class="bg-main-white">
     <div id="loadingScreen">
       <div>
-        <img src="../assets/images/home/logo.webp" width="100" alt="EGEC Logo" />
-    <div class="loader">
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
+        <img
+          src="../assets/images/home/logo.webp"
+          width="100"
+          alt="EGEC Logo"
+        />
+        <div class="loader">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
       </div>
-</div>
-    
+    </div>
 
     <!-- floating whatsapp icon -->
     <a
@@ -155,14 +158,14 @@
       </div>
     </div>
     <!-- tob navbar  -->
-    <nav class="home-top-nav" aria-label="Main navigation">
+    <nav class="home-top-nav hidden xl:block" aria-label="Main navigation">
       <div
-        class="max-w-screen-xl flex flex-wrap justify-center items-center lg:justify-between mx-auto py-2"
+        class="max-w-screen-xl flex flex-wrap justify-center items-center lg:justify-between mx-auto py-3"
       >
         <div class="lg:w-auto w-full">
           <ul
             id="SubNavbar"
-            class="font-medium flex gap-2 justify-center p-4 lg:p-0 border border-gray-100 rounded-lg flex-wrap lg:space-x-8 lg:border-0"
+            class="font-medium text-xs flex gap-2 justify-center p-4 lg:p-0 border border-gray-100 rounded-lg flex-wrap lg:space-x-8 lg:border-0"
           >
             <li>
               <a
@@ -201,13 +204,21 @@
             </li>
           </ul>
         </div>
-
-        <button
-          type="button"
-          class="text-white bg-main-green hover:bg-main-green/80 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-3 py-2 text-center"
+        <a
+          href="./login.html"
+          class="text-white flex items-center gap-1 bg-main-green hover:bg-main-green/80 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-300 font-medium text-xs rounded-full px-3 py-2 text-center"
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            width="15"
+          >
+            <path
+              d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"
+            />
+          </svg>
           تسجيل الدخول / انشاء حساب
-        </button>
+        </a>
       </div>
     </nav>
     <!-- hero section -->
@@ -219,34 +230,68 @@
         aria-label="Main navigation"
       >
         <div
-          class="flex flex-wrap lg:flex-nowrap justify-between lg:justify-start items-center mx-auto p-4 z-50 gap-2 w-full"
+          class="flex relative justify-between xl:justify-start items-center mx-auto py-4 z-50 space-x-5 w-full container"
         >
           <a
             href="./index.html"
-            class="transition-colors duration-500 rounded-full p-1 navbar-logo"
+            class="transition-colors duration-500 rounded-full navbar-logo"
           >
             <img
-            id="navLogo"
-            class="aspect-square"
-            width="60"
-            height="60"
-            src="../assets/images/home/logo.webp"
+              id="navLogo"
+              class="aspect-square"
+              width="60"
+              height="60"
+              src="../assets/images/home/logo.webp"
               alt="شعار ايجيك"
             />
           </a>
           <div
-            id="navbar-custom"
-            class="transition-all duration-500 ease-in-out max-h-0 overflow-x-auto scroll-bar-style pb-3 md:max-h-none md:block md:w-auto w-full order-1 lg:order-none"
+            id="navbarCustom"
+            class="absolute top-full start-0 w-full xl:relative hidden xl:block xl:w-auto order-1 xl:order-none scroll-bar-style"
           >
             <ul
-              class="font-medium text-nowrap max-md:bg-white flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
+              class="font-medium xl:items-baseline [&_li_button]:text-[10px] [&_li_a]:text-[10px] 2xl:[&_li_button]:text-xs 2xl:[&_li_a]:text-xs [&_li_button]:text-main-green [&_li_a]:text-main-green xl:[&_li_button]:text-main-white xl:[&_li_a]:text-main-white text-nowrap max-xl:bg-white [&_li_ul_li_a]:text-main-green [&_li_ul_li_button]:!text-main-green flex flex-col p-4 xl:p-0 rounded-lg xl:flex-row xl:space-x-8"
             >
+              <li class="xl:hidden">
+                <a
+                  href="./about.html"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
+                  >من نحن</a
+                >
+              </li>
+              <li class="xl:hidden">
+                <a
+                  href="./articles.html"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
+                  >المقالات</a
+                >
+              </li>
+              <li class="xl:hidden">
+                <a
+                  href="./exhibition.html"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
+                  >المعرض</a
+                >
+              </li>
+              <li class="xl:hidden">
+                <a
+                  href="./acceptance-certificates.html"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
+                  >شهادات القبول</a
+                >
+              </li>
+              <li class="xl:hidden">
+                <a
+                  href="./contact-us.html"
+                  class="block nav-item text-sm text-nowrap py-2 px-3 text-main-white rounded-sm xl:bg-transparent xl:p-0"
+                  >اتصل بنا</a
+                >
+              </li>
               <!-- الوجهات الدراسيه -->
-              <li>
+              <li class="relative group/main">
                 <button
-                  id="studyDestinationDropdown"
-                  data-dropdown-toggle="studyDestinationsDropdownNavbar"
-                  class="flex nav-item text-sm items-center justify-between max-md:text-main-green text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                id="studyDestinationDropdown"
+                  class="flex nav-item text-sm items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
                 >
                   الوجهات الدراسية
                   <svg
@@ -265,10 +310,10 @@
                     />
                   </svg>
                 </button>
-                <!-- Study destinations Dropdown menu -->
+
+                <!-- Dropdown -->
                 <div
-                  id="studyDestinationsDropdownNavbar"
-                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="z-10 hidden group-hover/main:block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm absolute"
                 >
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
@@ -281,13 +326,9 @@
                         >ادرس في مصر</a
                       >
                     </li>
-                    <li
-                      aria-labelledby="studyDestinationDropdown"
-                      class="relative"
-                    >
+
+                    <li class="relative group/sub">
                       <button
-                        id="EuropeDropdownButton"
-                        data-dropdown-toggle="EuropeDropdown"
                         type="button"
                         class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
@@ -308,15 +349,12 @@
                           />
                         </svg>
                       </button>
-                      <!-- Study in Europe Dropdown -->
+
+                      <!-- Sub dropdown -->
                       <div
-                        id="EuropeDropdown"
-                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                        class="z-10 shadow-2xl hidden group-hover/sub:block absolute bg-white divide-y divide-gray-100 rounded-lg mt-2 start-full top-0"
                       >
-                        <ul
-                          class="text-sm text-gray-700 main-dropdown-list"
-                          aria-labelledby="EuropeDropdownButton"
-                        >
+                        <ul class="text-sm text-gray-700 main-dropdown-list">
                           <li>
                             <a
                               href="./study-destinations.html"
@@ -329,240 +367,6 @@
                               href="./study-destinations.html"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
                               >ادرس في تركيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="./study-destinations.html"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في قبرص</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="./study-destinations.html"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في بولندا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="./study-destinations.html"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في التشيك</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="./study-destinations.html"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في جورجيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="./study-destinations.html"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في المجر</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="./study-destinations.html"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في لاتفيا</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <!-- ادرس في الوطن العربي -->
-                    <li
-                      aria-labelledby="studyDestinationDropdown"
-                      class="relative"
-                    >
-                      <button
-                        id="ArabicWorldDropdownButton"
-                        data-dropdown-toggle="ArabicWorldDropdown"
-                        type="button"
-                        class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
-                      >
-                        درس في الوطن العربي
-                        <svg
-                          class="w-2.5 h-2.5 ms-2.5"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 10 6"
-                        >
-                          <path
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="m1 1 4 4 4-4"
-                          />
-                        </svg>
-                      </button>
-                      <!-- Study in Europe Dropdown -->
-                      <div
-                        id="ArabicWorldDropdown"
-                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
-                      >
-                        <ul
-                          class="text-sm text-gray-700 main-dropdown-list"
-                          aria-labelledby="ArabicWorldDropdownButton"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في المانيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في تركيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في قبرص</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في بولندا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في التشيك</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في جورجيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في المجر</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في لاتفيا</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <!-- ادرس في اسيا -->
-                    <li
-                      aria-labelledby="studyDestinationDropdown"
-                      class="relative"
-                    >
-                      <button
-                        id="StudyAsiaDropdownButton"
-                        data-dropdown-toggle="StudyAsiaDropdown"
-                        type="button"
-                        class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
-                      >
-                        ادرس في اسيا
-                        <svg
-                          class="w-2.5 h-2.5 ms-2.5"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 10 6"
-                        >
-                          <path
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="m1 1 4 4 4-4"
-                          />
-                        </svg>
-                      </button>
-                      <!-- Study in Europe Dropdown -->
-                      <div
-                        id="StudyAsiaDropdown"
-                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
-                      >
-                        <ul
-                          class="text-sm text-gray-700 main-dropdown-list"
-                          aria-labelledby="StudyAsiaDropdownButton"
-                        >
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في المانيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في تركيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في قبرص</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في بولندا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في التشيك</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في جورجيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في المجر</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في لاتفيا</a
                             >
                           </li>
                         </ul>
@@ -571,14 +375,14 @@
                   </ul>
                 </div>
               </li>
+
               <!-- الدرجات العلميه -->
-              <li>
+              <li class="relative group/main">
                 <button
-                  id="academicDegreeDropdown"
-                  data-dropdown-toggle="academicDegreeDropdownNavbar"
-                  class="flex nav-item items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                id="AcademicDegreesDropdown"
+                  class="flex nav-item text-sm items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
                 >
-                  الدرجات العلميه
+                  الدرجات العلمية
                   <svg
                     class="w-2.5 h-2.5 ms-2.5"
                     aria-hidden="true"
@@ -595,33 +399,29 @@
                     />
                   </svg>
                 </button>
-                <!-- Study destinations Dropdown menu -->
+
+                <!-- Dropdown -->
                 <div
-                  id="academicDegreeDropdownNavbar"
-                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="z-10 hidden group-hover/main:block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm absolute"
                 >
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
-                    aria-labelledby="academicDegreeDropdown"
+                    aria-labelledby="AcademicDegreesDropdown"
                   >
                     <li>
                       <a
-                        href="#"
+                        href="./study-destinations.html"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >ادرس في مصر</a
                       >
                     </li>
-                    <li
-                      aria-labelledby="academicDegreeDropdown"
-                      class="relative"
-                    >
+
+                    <li class="relative group/sub">
                       <button
-                        id="EuropeTwoDropdownButton"
-                        data-dropdown-toggle="EuropeTwoDropdown"
                         type="button"
                         class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
-                        ادرس في اوروبا - 2
+                        ادرس في اوروبا
                         <svg
                           class="w-2.5 h-2.5 ms-2.5"
                           aria-hidden="true"
@@ -638,69 +438,24 @@
                           />
                         </svg>
                       </button>
-                      <!-- Study in Europe Dropdown -->
+
+                      <!-- Sub dropdown -->
                       <div
-                        id="EuropeTwoDropdown"
-                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                        class="z-10 shadow-2xl hidden group-hover/sub:block absolute bg-white divide-y divide-gray-100 rounded-lg mt-2 start-full top-0"
                       >
-                        <ul
-                          class="text-sm text-gray-700 main-dropdown-list"
-                          aria-labelledby="EuropeTwoDropdownButton"
-                        >
+                        <ul class="text-sm text-gray-700 main-dropdown-list">
                           <li>
                             <a
-                              href="#"
+                              href="./study-destinations.html"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
                               >ادرس في المانيا</a
                             >
                           </li>
                           <li>
                             <a
-                              href="#"
+                              href="./study-destinations.html"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
                               >ادرس في تركيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في قبرص</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في بولندا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في التشيك</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في جورجيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في المجر</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في لاتفيا</a
                             >
                           </li>
                         </ul>
@@ -710,13 +465,12 @@
                 </div>
               </li>
               <!-- التخصصات الدراسيه -->
-              <li>
+              <li class="relative group/main">
                 <button
-                  id="AcademicSpecializationsDropdown"
-                  data-dropdown-toggle="AcademicSpecializationsDropdownNavbar"
-                  class="flex nav-item items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                id="academicSpecializationsDropdown"
+                  class="flex nav-item text-sm items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
                 >
-                  التخصصات الدراسيه
+                  التخصصات الدراسية
                   <svg
                     class="w-2.5 h-2.5 ms-2.5"
                     aria-hidden="true"
@@ -733,33 +487,29 @@
                     />
                   </svg>
                 </button>
-                <!-- Study destinations Dropdown menu -->
+
+                <!-- Dropdown -->
                 <div
-                  id="AcademicSpecializationsDropdownNavbar"
-                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="z-10 hidden group-hover/main:block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm absolute"
                 >
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
-                    aria-labelledby="AcademicSpecializationsDropdown"
+                    aria-labelledby="academicSpecializationsDropdown"
                   >
                     <li>
                       <a
-                        href="#"
+                        href="./study-destinations.html"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                        >الدراسه في مصر</a
+                        >ادرس في مصر</a
                       >
                     </li>
-                    <li
-                      aria-labelledby="AcademicSpecializationsDropdown"
-                      class="relative"
-                    >
+
+                    <li class="relative group/sub">
                       <button
-                        id="EuropeThreeDropdownButton"
-                        data-dropdown-toggle="EuropeThreeDropdown"
                         type="button"
                         class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
-                        الدراسه في اوروبا - 3
+                        ادرس في اوروبا
                         <svg
                           class="w-2.5 h-2.5 ms-2.5"
                           aria-hidden="true"
@@ -776,69 +526,24 @@
                           />
                         </svg>
                       </button>
-                      <!-- Study in Europe 3 Dropdown -->
+
+                      <!-- Sub dropdown -->
                       <div
-                        id="EuropeThreeDropdown"
-                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                        class="z-10 shadow-2xl hidden group-hover/sub:block absolute bg-white divide-y divide-gray-100 rounded-lg mt-2 start-full top-0"
                       >
-                        <ul
-                          class="text-sm text-gray-700 main-dropdown-list"
-                          aria-labelledby="EuropeThreeDropdownButton"
-                        >
+                        <ul class="text-sm text-gray-700 main-dropdown-list">
                           <li>
                             <a
-                              href="#"
+                              href="./study-destinations.html"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
                               >ادرس في المانيا</a
                             >
                           </li>
                           <li>
                             <a
-                              href="#"
+                              href="./study-destinations.html"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
                               >ادرس في تركيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في قبرص</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في بولندا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في التشيك</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في جورجيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في المجر</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في لاتفيا</a
                             >
                           </li>
                         </ul>
@@ -848,13 +553,12 @@
                 </div>
               </li>
               <!-- ادرس حسب الدوله -->
-              <li>
+              <li class="relative group/main">
                 <button
-                  id="StudyByCountryDropdown"
-                  data-dropdown-toggle="StudyByCountryDropdownNavbar"
-                  class="flex nav-item items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                id="studyDependOnCountryDropdown"
+                  class="flex nav-item text-sm items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
                 >
-                  ادرس حسب الدوله
+                  ادرس حسب الدولة 
                   <svg
                     class="w-2.5 h-2.5 ms-2.5"
                     aria-hidden="true"
@@ -871,32 +575,32 @@
                     />
                   </svg>
                 </button>
-                <!-- Study destinations Dropdown menu -->
+
+                <!-- Dropdown -->
                 <div
-                  id="StudyByCountryDropdownNavbar"
-                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="z-10 hidden group-hover/main:block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm absolute"
                 >
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
-                    aria-labelledby="StudyByCountryDropdown"
+                    aria-labelledby="studyDependOnCountryDropdown"
                   >
                     <li>
                       <a
-                        href="./study-by-country.html"
+                        href="./study-destinations.html"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >مصر</a
                       >
                     </li>
                     <li>
                       <a
-                        href="./study-by-country.html"
+                        href="./study-destinations.html"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >الامارات</a
                       >
                     </li>
                     <li>
                       <a
-                        href="./study-by-country.html"
+                        href="./study-destinations.html"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >تركيا</a
                       >
@@ -904,12 +608,11 @@
                   </ul>
                 </div>
               </li>
-              <!-- arab students -->
-              <li>
+              <!-- الطلاب العرب -->
+              <li class="relative group/main">
                 <button
-                  id="ArabStudentsDropdown"
-                  data-dropdown-toggle="ArabStudentsDropdownNavbar"
-                  class="flex nav-item items-center justify-between max-md:text-main-green text-sm text-nowrap w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                id="arabStudentsDropdown"
+                  class="flex nav-item text-sm items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
                 >
                   الطلاب العرب
                   <svg
@@ -928,26 +631,26 @@
                     />
                   </svg>
                 </button>
-                <!-- Study destinations Dropdown menu -->
+
+                <!-- Dropdown -->
                 <div
-                  id="ArabStudentsDropdownNavbar"
-                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  id="arabStudentsDropdown"
+                  class="z-10 hidden group-hover/main:block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm absolute"
                 >
                   <ul
                     class="text-sm text-gray-700 main-dropdown-list"
-                    aria-labelledby="ArabStudentsDropdown"
+                    aria-labelledby="studyDestinationDropdown"
                   >
                     <li>
                       <a
-                        href="#"
+                        href="./study-destinations.html"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
                         >ادرس في مصر</a
                       >
                     </li>
-                    <li aria-labelledby="ArabStudentsDropdown" class="relative">
+
+                    <li class="relative group/sub">
                       <button
-                        id="EuropeFourDropdownButton"
-                        data-dropdown-toggle="EuropeFourDropdown"
                         type="button"
                         class="flex transition-colors hover:bg-main-green/90 text-main-green hover:text-main-white duration-500 items-center justify-between w-full px-4 py-2 cursor-pointer"
                       >
@@ -968,69 +671,24 @@
                           />
                         </svg>
                       </button>
-                      <!-- Study in Europe 3 Dropdown -->
+
+                      <!-- Sub dropdown -->
                       <div
-                        id="EuropeFourDropdown"
-                        class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow-sm mt-2 left-0 top-0 main-sub-dropdown md:ms-2"
+                        class="z-10 shadow-2xl hidden group-hover/sub:block absolute bg-white divide-y divide-gray-100 rounded-lg mt-2 start-full top-0"
                       >
-                        <ul
-                          class="text-sm text-gray-700 main-dropdown-list"
-                          aria-labelledby="EuropeFourDropdownButton"
-                        >
+                        <ul class="text-sm text-gray-700 main-dropdown-list">
                           <li>
                             <a
-                              href="#"
+                              href="./study-destinations.html"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
                               >ادرس في المانيا</a
                             >
                           </li>
                           <li>
                             <a
-                              href="#"
+                              href="./study-destinations.html"
                               class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
                               >ادرس في تركيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في قبرص</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في بولندا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في التشيك</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في جورجيا</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في المجر</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                              >ادرس في لاتفيا</a
                             >
                           </li>
                         </ul>
@@ -1043,8 +701,7 @@
               <li class="xl:hidden">
                 <button
                   id="registerFromHereDropdown"
-                  data-dropdown-toggle="registerFromHereDropdownNavbar"
-                  class="flex items-center justify-between text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                  class="flex items-center justify-between text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
                 >
                   سجل من هنا
                   <svg
@@ -1065,7 +722,6 @@
                 </button>
                 <!-- Study destinations Dropdown menu -->
                 <div
-                  id="registerFromHereDropdownNavbar"
                   class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
                   <ul
@@ -1076,7 +732,6 @@
                       <a
                         href="./bachelors-form.html"
                         class="block px-4 py-2 transition-colors duration-500 hover:bg-main-green/90 text-main-green hover:text-main-white"
-                        
                       >
                         درجة البكالوريوس
                       </a>
@@ -1104,7 +759,7 @@
               <li>
                 <a
                   href="./learning-remotely.html"
-                  class="block nav-item max-md:text-main-green text-sm text-nowrap py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
+                  class="text-nowrap w-full py-2 px-3 text-main-white xl:hover:bg-transparent xl:border-0 cursor-pointer xl:p-0 xl:w-auto"
                   >التعليم عن بعد</a
                 >
               </li>
@@ -1112,63 +767,66 @@
               <li>
                 <a
                   href="./registration-in-universities.html"
-                  class="block nav-item max-md:text-main-green text-sm text-nowrap py-2 px-3 text-main-white rounded-sm md:bg-transparent md:p-0"
+                  class="block nav-item text-sm text-nowrap py-2 px-3 text-main-white rounded-sm xl:bg-transparent xl:p-0"
                   >التسجيل في الجامعات</a
                 >
               </li>
-              <li>
+              <li class="relative">
                 <div
-                  class="flex lg:mt-0 items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse"
+                  class="group/main"
                 >
                   <button
                     type="button"
-                    data-dropdown-toggle="language-dropdown-menu"
-                  class="flex items-center text-nowrap max-md:text-main-green w-full py-2 px-3 text-main-white md:hover:bg-transparent md:border-0 cursor-pointer md:p-0 md:w-auto"
+                    class="text-nowrap text-main-white cursor-pointer"
+                    id="landguageDropdown"
                   >
-                    <img
-                      src="https://flagcdn.com/w20/eg.webp"
-                      alt="Egypt flag"
-                      class="w-4 h-4 rounded-full me-2"
-                      loading="lazy"
-                    />
                     العربية (مصر)
                   </button>
 
                   <!-- Dropdown -->
                   <div
-                    class="z-50 hidden overflow-hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
-                    id="language-dropdown-menu"
+                  class="z-10 hidden group-hover/main:block font-normal bg-white divide-y overflow-hidden divide-gray-100 rounded-lg shadow-sm absolute top-full"
+                    aria-labelledby="landguageDropdown"
                   >
                     <ul class="font-medium" role="none">
                       <!-- English -->
                       <li>
                         <a
-                          href="../en/college-details.html"
+                          href="../en/about.html"
                           class="block px-4 py-2 text-sm text-main-green hover:bg-main-green hover:!text-main-white"
                           role="menuitem"
                         >
-                          <div class="inline-flex items-center">
-                            <img
-                              src="https://flagcdn.com/w20/us.webp"
-                              alt="US flag"
-                              class="w-4 h-4 rounded-full me-2"
-                              loading="lazy"
-                            />
-                            English (US)
-                          </div>
+                          English (US)
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
               </li>
+              <li class="xl:hidden mt-3">
+                <a
+                  href="./login.html"
+                  class="!text-white flex items-center gap-1 bg-main-green hover:bg-main-green/80 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-3 py-2 text-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    width="20"
+                  >
+                    <path
+                      d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"
+                    />
+                  </svg>
+                  تسجيل الدخول / انشاء حساب
+                </a>
+              </li>
             </ul>
           </div>
 
           <button
             type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white cursor-pointer hover:text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 mobile-btn"
-            aria-controls="navbar-default"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white cursor-pointer hover:text-black rounded-lg xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 mobile-btn"
+            aria-controls="navbar-custom"
             aria-expanded="false"
             id="customNavBtn"
           >
@@ -1192,37 +850,42 @@
         </div>
       </nav>
       <div class="relative w-full h-full" data-carousel="static">
-        <div class="relative h-screen overflow-hidden">
+        <div class="relative h-[80vh] overflow-hidden">
           <div
-            class="hidden duration-700 h-screen ease-in-out"
+            class="hidden duration-700 h-full ease-in-out"
             data-carousel-item
           >
             <div
               style="
                 background-image: url('../assets/images/college-details/College-of-Engineering.webp');
               "
-              class="bg-center bg-cover w-full h-screen"
-            >
-              <div
-                class="container flex items-center h-screen justify-center md:justify-start"
+              class="bg-center bg-cover w-full h-full"
+            ><div
+                class="container-sm flex items-center h-full justify-center md:justify-start"
               >
-                <div class="w-full text-center lg:text-start">
-                  <div class="flex items-center content-center">
-                    <img src="../assets/icons/three-buble.webp" width="40"
-                    alt="buble icon" class="self-start ms-4 lg:ms-2 hidden
-                    lg:block" loading="lazy">
-                    <h1
-                      class="text-4xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
-                    >
-                      دراسة الهندسة في مصر
-                    </h1>
-                    <img src="../assets/icons/exclamation-mark.webp" class="ms-3
-                    hidden lg:block" width="20" alt="exclamation mark icon" /
-                    loading="lazy">
-                  </div>
-                  <img src="../assets/icons/double-green-line.webp" width="200"
-                  class="ms-6 mt-2" alt="line icon" loading="lazy">
-                  <div class="mt-3 flex items-center flex-wrap gap-2">
+                <div class="text-center w-fit lg:text-start">
+                  <div class="flex  items-center content-center">
+                    <img
+                      src="../assets/icons/three-buble.webp"
+                      width="45"
+                      alt="buble icon"
+                      class="self-start ms-4 lg:ms-3 hidden lg:block"
+                      loading="lazy"
+                    />
+                    <div>
+                      <h1
+                        class="text-5xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
+                      >
+                        دراسة الهندسة في مصر 
+                      </h1>
+                      <img
+                    src="../assets/icons/double-green-line.webp"
+                    width="300"
+                    class="mx-auto lg:mb-1 my-5"
+                    alt="line icon"
+                    loading="lazy"
+                  />
+                      <div class="mt-5 flex flex-wrap items-center gap-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -1231,6 +894,7 @@
                       width="20"
                       height="20"
                       viewBox="0 0 495.398 495.398"
+                      xml:space="preserve"
                       class="fill-main-green"
                     >
                       <g>
@@ -1246,64 +910,72 @@
                         </g>
                       </g>
                     </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="50"
-                      height="20"
-                      viewBox="0 0 50 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="stroke-main-green"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
-                    <span
-                      class="text-xs lg:text-base font-medium text-main-green text-nowrap"
-                      >التخصصات الدراسية</span
-                    >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="50"
-                      height="20"
-                      viewBox="0 0 50 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="stroke-main-green"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
-                    <span
-                      class="text-xs lg:text-base font-medium text-main-green text-nowrap"
-                      >دراسة الهندسه</span
-                    >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="50"
-                      height="20"
-                      viewBox="0 0 50 20"
-                      fill="none"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="stroke-main-green"
-                    >
-                      <line x1="0" y1="10" x2="100" y2="10" />
-                      <polyline points="15,0 0,10 15,20" />
-                    </svg>
-                    <span
-                      class="text-xs lg:text-base font-medium text-main-green text-nowrap"
-                      >دراسة الهندسة في مصر</span
-                    >
+                    <span class="ltr:rotate-180">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="50"
+                        height="20"
+                        viewBox="0 0 50 20"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="stroke-main-green"
+                      >
+                        <line x1="0" y1="10" x2="100" y2="10" />
+                        <polyline points="15,0 0,10 15,20" />
+                      </svg>
+                    </span>
+                    <span class="font-light text-lg text-main-green">التخصصات الدراسية</span>
+                    <span class="ltr:rotate-180">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="50"
+                        height="20"
+                        viewBox="0 0 50 20"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="stroke-main-green"
+                      >
+                        <line x1="0" y1="10" x2="100" y2="10" />
+                        <polyline points="15,0 0,10 15,20" />
+                      </svg>
+                    </span>
+                    <span class="font-light text-lg text-main-green">دراسة الهندسة</span>
+                    <span class="ltr:rotate-180">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="50"
+                        height="20"
+                        viewBox="0 0 50 20"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="stroke-main-green"
+                      >
+                        <line x1="0" y1="10" x2="100" y2="10" />
+                        <polyline points="15,0 0,10 15,20" />
+                      </svg>
+                    </span>
+                    <span class="font-light text-lg text-main-green">دراسة الهندسة في مصر</span>
                   </div>
+                    </div>
+                    <img
+                      src="../assets/icons/exclamation-mark.webp"
+                      class="ms-3 hidden lg:block mb-20"
+                      width="25"
+                      alt="exclamation mark icon"
+                      loading="lazy"
+                    />
+                  </div>
+                  
+                 
                 </div>
               </div>
             </div>
@@ -1312,31 +984,31 @@
       </div>
       <!-- Details bar -->
       <div
-        class="container p-2 text-xl lg:translate-y-1/2 block lg:absolute mx-auto bottom-0 mt-3 left-0 right-0 z-30"
+        class="max-w-5xl p-2 text-xl lg:translate-y-1/2 block lg:absolute mx-auto bottom-0 mt-3 left-0 right-0 z-30"
         aria-label="Main navigation"
       >
-        <address class="grid grid-cols-1 lg:grid-cols-3 not-italic">
+        <address class="grid grid-cols-1 lg:grid-cols-3 [&>div]:shadow-[6px_10px_17px_0px_color-mix(in_srgb,var(--color-main-gray)_50%,transparent)] not-italic">
           <div
-            class="bg-main-white pb-14 pt-5 ps-5 shadow-[-3px_0px_14px_1px_gray] rounded-3xl"
+            class="bg-main-white pb-12 pt-5 ps-5 rounded-3xl"
           >
             <h3 class="text-main-text font-medium text-xl">العنوان</h3>
-            <span class="text-sm text-main-gray"
+            <span class="text-base text-main-gray/80"
               >ميدان النهضه الاولي ,الجيزة</span
             >
           </div>
           <div
-            class="bg-main-white pb-14 pt-5 ps-5 shadow-[-3px_0px_14px_1px_gray] rounded-3xl lg:-ms-6"
+            class="bg-main-white pb-12 pt-5 ps-5 rounded-3xl lg:-ms-6"
           >
             <h3 class="text-main-text font-medium text-xl">الموقع</h3>
-            <a href="https://eng.cu.edu.eg/rar" class="text-sm text-main-gray"
+            <a href="https://eng.cu.edu.eg/rar" class="text-base text-main-gray/80"
               >https://eng.cu.edu.eg/rar</a
             >
           </div>
           <div
-            class="bg-main-white pb-14 pt-5 ps-5 shadow-[-3px_0px_14px_1px_gray] rounded-3xl lg:-ms-6"
+            class="bg-main-white pb-12 pt-5 ps-5 rounded-3xl lg:-ms-6"
           >
             <h3 class="text-main-text font-medium text-xl">رقم الهاتف</h3>
-            <span class="text-sm text-main-gray">013456789</span>
+            <span class="text-base text-main-gray/80">013456789</span>
           </div>
         </address>
       </div>
@@ -1351,18 +1023,18 @@
         class="ms-auto"
       />
       <!-- collage -->
-      <section class="common-section">
-        <div class="container">
+      <section class="common-section !pt-32">
+        <div class="max-w-5xl mx-auto ">
           <!-- navigation -->
           <ul
             id="aboutCollege"
             data-tabs-toggle="#aboutCollegeContent"
             role="tablist"
-            class="flex gap-3 flex-wrap justify-between"
+            class="flex gap-3 flex-col lg:flex-row justify-between [&_li_button]:bg-main-gray/30 [&_li_button]:text-main-gray [&_li_button]:py-4"
           >
             <li class="grow">
               <button
-                class="px-6 py-3 w-full bg-main-text hover:bg-main-green text-main-white hover:text-main-text cursor-pointer transition-colors duration-500 rounded-full"
+                class=" w-full cursor-pointer transition-colors duration-500 rounded-full"
                 id="about-tab"
                 data-tabs-target="#about"
                 type="button"
@@ -1381,7 +1053,7 @@
                 role="tab"
                 aria-controls="bachelors"
                 aria-selected="false"
-                class="px-6 py-3 w-full bg-main-text hover:bg-main-green text-main-white hover:text-main-text cursor-pointer transition-colors duration-500 rounded-full"
+                class=" w-full cursor-pointer transition-colors duration-500 rounded-full"
               >
                 البكالوريوس
               </button>
@@ -1394,7 +1066,7 @@
                 role="tab"
                 aria-controls="diploma"
                 aria-selected="false"
-                class="px-6 py-3 w-full bg-main-text hover:bg-main-green text-main-white hover:text-main-text cursor-pointer transition-colors duration-500 rounded-full"
+                class=" w-full cursor-pointer transition-colors duration-500 rounded-full"
               >
                 دبلوم الدراسات العليا
               </button>
@@ -1407,7 +1079,7 @@
                 role="tab"
                 aria-controls="master"
                 aria-selected="false"
-                class="px-6 py-3 w-full bg-main-text hover:bg-main-green text-main-white hover:text-main-text cursor-pointer transition-colors duration-500 rounded-full"
+                class=" w-full cursor-pointer transition-colors duration-500 rounded-full"
               >
                 الماجستير
               </button>
@@ -1420,7 +1092,7 @@
                 role="tab"
                 aria-controls="PhD"
                 aria-selected="false"
-                class="px-6 py-3 w-full bg-main-text hover:bg-main-green text-main-white hover:text-main-text cursor-pointer transition-colors duration-500 rounded-full"
+                class=" w-full cursor-pointer transition-colors duration-500 rounded-full"
               >
                 الدكتوراه
               </button>
@@ -1430,12 +1102,12 @@
           <div>
             <div class="grid grid-cols-1 lg:grid-cols-12 mt-12 gap-10">
               <div class="lg:col-span-4 lg:order-1">
-                <div class="lg:border-2 border-main-green rounded-[100px]">
+                <div class="lg:border-[3px] border-main-green rounded-[100px]">
                   <img
                     src="../assets/images/college-details/about-college.webp"
                     loading="lazy"
                     height="400"
-                    class="rounded-[100px] relative lg:end-5 h-[450px] object-cover"
+                    class="rounded-[100px] relative lg:end-2 lg:bottom-1 h-[450px] mx-auto object-cover"
                     loading="lazy"
                     alt="college details"
                   />
@@ -2050,29 +1722,29 @@
       <section class="common-section">
         <img
           src="../assets/icons/low-wave.webp"
-          width="250"
-          height="21.94"
+          width="300"
+          height="25.34"
           loading="lazy"
           alt="wave"
         />
-        <div class="px-2">
+        <div class="max-w-6xl mx-auto px-2">
           <div
-            class="container bg-cover bg-center mt-3 py-10 px-5 rounded-[50px]"
+            class="container bg-cover bg-center py-14 px-5 rounded-[65px]"
             style="
               background-image: linear-gradient(
-                  rgba(256, 256, 256, 0.8),
-                  rgba(256, 256, 256, 0.8)
+                  rgba(256, 256, 256, 0.9),
+                  rgba(256, 256, 256, 0.9)
                 ),
                 url('../assets/images/college-details/about-college.webp');
             "
           >
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-5 items-center">
               <div>
-                <h2 class="text-4xl text-main-text font-bold text-center mb-2">
+                <h2 class="text-title-size text-main-text font-bold text-center mb-2">
                   التصنيف الأكاديمي
                 </h2>
                 <svg
-                  class="scale-50 block mx-auto"
+                  class="scale-50 block mx-auto mt-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="366"
                   height="17"
@@ -2110,7 +1782,7 @@
                 </svg>
               </div>
               <div>
-                <ul class="gray-bullets-list text-main-text px-4 lg:px-0">
+                <ul class="gray-bullets-list text-main-text px-4 lg:px-0 text-lg">
                   <li>
                     من 1:200 عليميا في علمو العمارة و الحاسوب و الالكترونيات
                   </li>
@@ -2125,16 +1797,16 @@
         </div>
       </section>
       <!-- Frequently asked questions -->
-      <section class="common-seciton">
-        <div class="container">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <section class="common-seciton !pt-24">
+        <div class="max-w-5xl px-2 mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div class="lg:col-span-4 lg:order-1">
               <div class="lg:border-2 border-main-green rounded-[100px]">
                 <img
                   src="../assets/images/college-details/about-college.webp"
                   loading="lazy"
                   height="400"
-                  class="rounded-[100px] relative lg:end-5 h-[450px] object-cover"
+                  class="rounded-[100px] relative mx-auto lg:end-5 h-[450px] object-cover"
                   loading="lazy"
                   alt="college details"
                 />
@@ -2142,22 +1814,20 @@
             </div>
             <div class="lg:col-span-8">
               <div class="py-4 w-fit">
-                <h2 class="text-4xl font-bold text-main-text">
-                  اسئله شائعة
-                </h2>
+                <h2 class="text-4xl font-bold text-main-text">اسئله شائعة</h2>
                 <img
                   src="../assets/icons/single-green-line.webp"
-                  class="mt-5 mb-2 mx-auto"
+                  class="mt-4 mb-2"
                   height="12"
                   width="80%"
                   alt="line"
                 />
               </div>
-              <div id="accordion-collapse" data-accordion="collapse">
+              <div id="accordion-collapse" data-accordion="collapse" class="[&_h3]:border-2 [&_h3]:border-main-text [&_h3]:rounded-full [&_h3_button]:py-2 [&_h3_button]:px-3 [&_h3]:my-2 [&_h3]:overflow-hidden">
                 <h3 id="accordion-collapse-heading-1">
                   <button
                     type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-main-text gap-3"
+                    class="flex items-center justify-between w-full font-medium rtl:text-right text-main-text gap-3"
                     data-accordion-target="#accordion-collapse-body-1"
                     aria-expanded="true"
                     aria-controls="accordion-collapse-body-1"
@@ -2202,7 +1872,7 @@
                 <h3 id="accordion-collapse-heading-2">
                   <button
                     type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right gap-3"
+                    class="flex items-center justify-between w-full  font-medium rtl:text-right gap-3"
                     data-accordion-target="#accordion-collapse-body-2"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-2"
@@ -2247,7 +1917,7 @@
                 <h3 id="accordion-collapse-heading-3">
                   <button
                     type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right gap-3"
+                    class="flex items-center justify-between w-full  font-medium rtl:text-right gap-3"
                     data-accordion-target="#accordion-collapse-body-3"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-3"
@@ -2276,7 +1946,7 @@
                   class="hidden overflow-y-auto"
                   aria-labelledby="accordion-collapse-heading-3"
                 >
-                  <div  class="p-5 h-[300px] border border-t-0 border-gray-200">
+                  <div class="p-5 h-[300px] border border-t-0 border-gray-200">
                     <p class="mb-2 text-gray-500">
                       الفرق الرئيسي هو أن المكونات الأساسية لـ Flowbite مفتوحة
                       المصدر بموجب ترخيص MIT، بينما Tailwind UI منتج مدفوع. ومن
@@ -2313,7 +1983,7 @@
                 <h3 id="accordion-collapse-heading-4">
                   <button
                     type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right gap-3"
+                    class="flex items-center justify-between w-full font-medium rtl:text-right gap-3"
                     data-accordion-target="#accordion-collapse-body-4"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-4"
@@ -2379,7 +2049,7 @@
                 <h3 id="accordion-collapse-heading-5">
                   <button
                     type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right gap-3"
+                    class="flex items-center justify-between w-full  font-medium rtl:text-right gap-3"
                     data-accordion-target="#accordion-collapse-body-5"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-5"
@@ -2445,7 +2115,7 @@
                 <h3 id="accordion-collapse-heading-6">
                   <button
                     type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium rtl:text-right gap-3"
+                    class="flex items-center justify-between w-full font-medium rtl:text-right gap-3"
                     data-accordion-target="#accordion-collapse-body-6"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-6"
@@ -2516,202 +2186,211 @@
       <!-- Colleges -->
       <section class="common-section">
         <div class="container text-center">
-          <div class="w-fit">
+          <div class="w-fit mx-auto lg:mx-0">
             <h2 class="text-main-text inline text-4xl font-bold">الكليات</h2>
             <img
               src="../assets/icons/single-green-line.webp"
               width="200"
-              height="7"
               alt="line"
-              class="mt-1"
             />
           </div>
         </div>
-        <div class="container">
+        <div class="relative">
+          <picture class="absolute hidden lg:block bottom-full -z-10 start-0">
+            <source
+              media="(min-width: 1024px)"
+              srcset="../assets/icons/xl-Scribbles.webp"
+            />
+            <img
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              width="320"
+              height="384"
+              alt="hashtag"
+              loading="lazy"
+            />
+          </picture>
           <div class="swiper collageSwiper">
             <div class="swiper-wrapper py-4">
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
               <div class="swiper-slide">
-                <div class="text-center">
-                    <img
-                      width="150"
-                      src="../assets/images/university-details/cairo-university-logo.webp"
-                      class="object-cover filter grayscale mx-auto text-center cursor-pointer"
-                      loading="lazy"
-                      alt="HTML5 Logo"
-                    />
-                    <span class="text-main-text mt-2 block">جامعة القاهرة</span>
-                </div>
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
               </div>
-           
+              <div class="swiper-slide">
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  width="150"
+                  src="../assets/images/university-details/cairo-university-logo.webp"
+                  class="object-cover filter grayscale mx-auto text-center cursor-pointer aspect-square"
+                  loading="lazy"
+                  alt="College Logo"
+                />
+              </div>
             </div>
 
             <div
@@ -2721,7 +2400,20 @@
         </div>
       </section>
       <!-- Prominent graduates -->
-      <section class="common-section">
+      <section class="common-section !mb-28 relative">
+        <picture class="absolute hidden lg:block -bottom-5 -z-10 end-0">
+            <source
+              media="(min-width: 1024px)"
+              srcset="../assets/icons/xl-Scribbles.webp"
+            />
+            <img
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              width="320"
+              height="384"
+              alt="hashtag"
+              loading="lazy"
+            />
+          </picture>
         <div class="w-fit mx-auto text-center">
           <h2 class="text-main-text inline text-4xl font-bold">
             ابرز الخريجون
@@ -2734,7 +2426,7 @@
             class="my-5"
           />
         </div>
-        <div class="container">
+        <div class="container-sm">
           <!-- Swiper container -->
           <div class="swiper Prominent-graduates">
             <div class="swiper-wrapper">
@@ -3039,7 +2731,7 @@
             </li>
           </ul>
 
-          <ul class="flex justify-center gap-3 mt-3 fill-white">
+          <ul class="flex flex-wrap justify-center gap-3 mt-3 fill-white">
             <li>
               <a
                 aria-label="youtube"
@@ -3134,7 +2826,6 @@
                   class="transition-all duration-300 group-hover:brightness-90 group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.5)]"
                   viewBox="0 0 448 512"
                 >
-                  
                   <path
                     d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
                   />
@@ -3155,7 +2846,6 @@
                   class="transition-all duration-300 group-hover:brightness-90 group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.5)]"
                   viewBox="0 0 448 512"
                 >
-                  
                   <path
                     d="M100.3 448l-92.9 0 0-299.1 92.9 0 0 299.1zM53.8 108.1C24.1 108.1 0 83.5 0 53.8 0 39.5 5.7 25.9 15.8 15.8s23.8-15.8 38-15.8 27.9 5.7 38 15.8 15.8 23.8 15.8 38c0 29.7-24.1 54.3-53.8 54.3zM447.9 448l-92.7 0 0-145.6c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7l0 148.1-92.8 0 0-299.1 89.1 0 0 40.8 1.3 0c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3l0 164.3-.1 0z"
                   />
@@ -3178,7 +2868,6 @@
                   class="transition-all duration-300 group-hover:brightness-90 group-hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.5)]"
                   viewBox="0 0 448 512"
                 >
-                  
                   <path
                     d="M380.9 97.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480 117.7 449.1c32.4 17.7 68.9 27 106.1 27l.1 0c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6zM325.1 300.5c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6z"
                   />
@@ -3211,8 +2900,12 @@
           class="flex justify-center mt-6 text-main-white text-lg gap-1 items-end"
         >
           <span>جميع الحقوق محفوظه ل </span>
-          <img src="../assets/images/shared/digital-bond-logo.webp" width="30"
-          alt="Digital Bond logo" loading="lazy">
+          <img
+            src="../assets/images/shared/digital-bond-logo.webp"
+            width="30"
+            alt="Digital Bond logo"
+            loading="lazy"
+          />
         </div>
       </div>
     </footer>

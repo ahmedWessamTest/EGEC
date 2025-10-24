@@ -1,13 +1,10 @@
 ul li button[aria-selected="true"]
 {
-    background-color: var(--color-main-green) !important;
+    background-color: var(--color-main-text) !important;
     color: var(--color-main-white) !important;
     fill: var(--color-main-white) !important;
 }
-ul li button[aria-selected="false"]
-{
-    color: var(--color-main-white) !important;
-}
+
 #accordion-collapse [aria-expanded="false"] {
     color: var(--color-main-text);
 }

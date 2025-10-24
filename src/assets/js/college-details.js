@@ -35,7 +35,7 @@ const initCollegeCarousel = () => {
     },
     breakpoints: {
       768: { slidesPerView: 5 },
-      1024: { slidesPerView: 7 },
+      1024: { slidesPerView: 8 },
     },
     on: {
       init: function () {

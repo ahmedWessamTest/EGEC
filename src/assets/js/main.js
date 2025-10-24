@@ -1,4 +1,6 @@
-// Configuration and Constants
+// =====================
+// Configuration & Constants
+// =====================
 const CONFIG = {
   SCROLL_THRESHOLD: 300,
   NAVBAR_TRANSITION: {
@@ -20,7 +22,9 @@ const CONFIG = {
   }
 };
 
+// =====================
 // DOM Elements
+// =====================
 const elements = {
   navMenu: document.getElementById("navbar-custom"),
   mainNavBtn: document.getElementById("customNavBtn"),
@@ -34,15 +38,20 @@ const elements = {
   }
 };
 
-// Check if required elements exist
 if (!elements.mainNavbar) {
   console.error('Main navbar element not found');
 }
 
+// =====================
 // State
-let navbarOffset = elements.mainNavbar ? elements.mainNavbar.getBoundingClientRect().top + window.scrollY : 0;
+// =====================
+let navbarOffset = elements.mainNavbar
+  ? elements.mainNavbar.getBoundingClientRect().top + window.scrollY
+  : 0;
 
+// =====================
 // Utility Functions
+// =====================
 const getElementPositionFromTop = (element) => {
   return element ? element.getBoundingClientRect().top + window.scrollY : 0;
 };
@@ -57,58 +66,51 @@ const replaceClass = (element, oldClass, newClass) => {
   if (!element) return;
   element.classList.replace(oldClass, newClass);
 };
-// Core Functions
-const closeLoadingScreen = ()=> {
-  document.body.style.overflow = 'hidden';
-    const loadingScreen = document.getElementById('loadingScreen');
-    
-    // Hide loading screen when page is fully loaded
-    window.addEventListener('load', function() {
-        loadingScreen.classList.add('hidden');
-        document.body.style.overflow = '';
-    });
 
-    // Fallback: Hide loading screen after 3 seconds if load event doesn't fire
-    setTimeout(() => {
-        loadingScreen.classList.add('hidden');
-    }, 3000);
-}
+// =====================
+// Core Functions
+// =====================
+const closeLoadingScreen = () => {
+  document.body.style.overflow = 'hidden';
+  const loadingScreen = document.getElementById('loadingScreen');
+  
+  window.addEventListener('load', () => {
+    loadingScreen?.classList.add('hidden');
+    document.body.style.overflow = '';
+  });
+
+  setTimeout(() => {
+    loadingScreen?.classList.add('hidden');
+  }, 3000);
+};
+
 const toggleNavbar = () => {
   const { navMenu } = elements;
   if (!navMenu) return;
-  
   const { COLLAPSED, EXPANDED } = CONFIG.NAVBAR_TRANSITION.MAX_HEIGHT;
-  
   const isCollapsed = navMenu.classList.contains(COLLAPSED);
-  
-  if (isCollapsed) {
-    toggleClass(navMenu, COLLAPSED, EXPANDED);
-  } else {
-    toggleClass(navMenu, EXPANDED, COLLAPSED);
-  }
+  toggleClass(navMenu, isCollapsed ? COLLAPSED : EXPANDED, isCollapsed ? EXPANDED : COLLAPSED);
 };
 
 const handleNavbarScroll = () => {
-  const { mainNavbar,navLogo } = elements;
+  const { mainNavbar, navLogo } = elements;
   if (!mainNavbar) return;
-  
   const { NAVBAR_SCROLLED, FIXED } = CONFIG.CLASSES;
-  
   const shouldFixNavbar = window.scrollY > navbarOffset;
-  
+
   if (shouldFixNavbar) {
     mainNavbar.classList.add(NAVBAR_SCROLLED, FIXED);
-    navLogo.setAttribute("src","../assets/images/shared/green-logo.webp");
+    navLogo?.setAttribute("src", "../assets/images/shared/green-logo.webp");
   } else {
     mainNavbar.classList.remove(NAVBAR_SCROLLED, FIXED);
-    navLogo.setAttribute("src","../assets/images/home/logo.webp");
+    navLogo?.setAttribute("src", "../assets/images/home/logo.webp");
   }
 };
 
 const setActiveNavbarItem = () => {
   const currentPath = location.hash || location.pathname;
   const subNavbarItems = document.querySelectorAll('#SubNavbar .navbar-item');
-  actualCurrentPath = `./${currentPath.split('/').at(-1)}`
+  const actualCurrentPath = `./${currentPath.split('/').at(-1)}`;
   
   subNavbarItems.forEach(item => {
     const isActive = item.getAttribute("href") === actualCurrentPath;
@@ -119,39 +121,24 @@ const setActiveNavbarItem = () => {
 const toggleScrollButton = () => {
   const { scrollTopBtn } = elements;
   if (!scrollTopBtn) return;
-  
   const { HIDDEN, VISIBLE } = CONFIG.CLASSES;
   const shouldShow = window.scrollY > CONFIG.SCROLL_THRESHOLD;
-  
-  if (shouldShow) {
-    replaceClass(scrollTopBtn, HIDDEN, VISIBLE);
-  } else {
-    replaceClass(scrollTopBtn, VISIBLE, HIDDEN);
-  }
+  replaceClass(scrollTopBtn, shouldShow ? HIDDEN : VISIBLE, shouldShow ? VISIBLE : HIDDEN);
 };
 
 const toggleSideNavButton = () => {
   const { sideNav } = elements;
   if (!sideNav.openBtn) return;
-  
   const { SIDENAV_HIDDEN, SIDENAV_VISIBLE } = CONFIG.CLASSES;
   const shouldShow = window.scrollY > CONFIG.SCROLL_THRESHOLD;
-  
-  if (shouldShow) {
-    replaceClass(sideNav.openBtn, SIDENAV_HIDDEN, SIDENAV_VISIBLE);
-  } else {
-    replaceClass(sideNav.openBtn, SIDENAV_VISIBLE, SIDENAV_HIDDEN);
-  }
+  replaceClass(sideNav.openBtn, shouldShow ? SIDENAV_HIDDEN : SIDENAV_VISIBLE, shouldShow ? SIDENAV_VISIBLE : SIDENAV_HIDDEN);
 };
 
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 const openSideMenu = () => {
   const { registerMenu } = elements.sideNav;
   if (!registerMenu) return;
-  
   const { SIDEMENU_HIDDEN, SIDEMENU_VISIBLE } = CONFIG.CLASSES;
   toggleClass(registerMenu, SIDEMENU_HIDDEN, SIDEMENU_VISIBLE);
 };
@@ -159,99 +146,132 @@ const openSideMenu = () => {
 const closeSideMenu = () => {
   const { registerMenu } = elements.sideNav;
   if (!registerMenu) return;
-  
   const { SIDEMENU_HIDDEN, SIDEMENU_VISIBLE } = CONFIG.CLASSES;
   toggleClass(registerMenu, SIDEMENU_VISIBLE, SIDEMENU_HIDDEN);
 };
 
 const handleSideMenuClick = (event) => {
-  if (event.target === elements.sideNav.registerMenu) {
-    closeSideMenu();
+  if (event.target === elements.sideNav.registerMenu) closeSideMenu();
+};
+
+// =====================
+// Optimized Scroll & Resize (THROTTLED)
+// =====================
+let scrollTicking = false;
+let resizeTimeout;
+
+const optimizedScrollHandler = () => {
+  if (!scrollTicking) {
+    window.requestAnimationFrame(() => {
+      handleNavbarScroll();
+      toggleScrollButton();
+      toggleSideNavButton();
+      scrollTicking = false;
+    });
+    scrollTicking = true;
   }
 };
 
-const handleWindowResize = () => {
-  console.log(elements.mainNavbar);
-  
-  if (!elements.mainNavbar) return;
-  navbarOffset = getElementPositionFromTop(elements.mainNavbar);
+const optimizedResizeHandler = () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    navbarOffset = getElementPositionFromTop(elements.mainNavbar);
+  }, 150);
 };
 
-const handleScroll = () => {
-  handleNavbarScroll();
-  toggleScrollButton();
-  toggleSideNavButton();
-};
-
+// =====================
+// Initialization
+// =====================
 const initialize = () => {
   setActiveNavbarItem();
+  closeLoadingScreen();
 };
 
+// =====================
 // Event Listeners
+// =====================
 const setupEventListeners = () => {
   const { mainNavBtn, scrollTopBtn, sideNav } = elements;
-  
-  if (mainNavBtn) {
-    mainNavBtn.addEventListener("click", toggleNavbar);
-  }
-  
-  if (scrollTopBtn) {
-    scrollTopBtn.addEventListener("click", scrollToTop);
-  }
-  
-  if (sideNav.openBtn) {
-    sideNav.openBtn.addEventListener("click", openSideMenu);
-  }
-  
-  if (sideNav.closeBtn) {
-    sideNav.closeBtn.addEventListener("click", closeSideMenu);
-  }
-  
-  if (sideNav.registerMenu) {
-    sideNav.registerMenu.addEventListener("click", handleSideMenuClick);
-  }
-  window.addEventListener("scroll", handleScroll);
-  window.addEventListener("resize", handleWindowResize);
-  window.addEventListener("DOMContentLoaded", closeLoadingScreen);
+
+  mainNavBtn?.addEventListener("click", toggleNavbar);
+  scrollTopBtn?.addEventListener("click", scrollToTop);
+  sideNav.openBtn?.addEventListener("click", openSideMenu);
+  sideNav.closeBtn?.addEventListener("click", closeSideMenu);
+  sideNav.registerMenu?.addEventListener("click", handleSideMenuClick);
+
+  // Optimized listeners
+  window.addEventListener("scroll", optimizedScrollHandler, { passive: true });
+  window.addEventListener("resize", optimizedResizeHandler, { passive: true });
 };
 
-// Initialize Application
+// =====================
+// App Entry
+// =====================
 const init = () => {
   initialize();
   setupEventListeners();
 };
 
-// Start the application when DOM is loaded
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init);
 } else {
   init();
 }
+
+// =====================
+// Extra: Mobile Navbar Button
+// =====================
 const btn = document.getElementById('customNavBtn');
-    const target = document.getElementById('navbarCustom');
+const target = document.getElementById('navbarCustom');
+
+btn?.addEventListener('click', () => {
+  const isHidden = target.classList.contains('hidden');
+  target.classList.toggle('hidden', !isHidden);
+  btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+});
+
+// =====================
+// Simple Navbar Shadow on Scroll
+// =====================
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('main-navbar');
+  if (!navbar) return;
+  navbar.classList.toggle('bg-main-text', window.scrollY > 50);
+  navbar.classList.toggle('shadow-lg', window.scrollY > 50);
+}, { passive: true });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const isMobile = () => window.innerWidth < 1280;
+
+    const dropdownButtons = document.querySelectorAll(
+      "#main-navbar button[id$='Dropdown']"
+    );
+
+    dropdownButtons.forEach((btn) => {
+      const dropdown = btn.nextElementSibling;
+
+      if (!dropdown) return;
 
 
-    btn.addEventListener('click', () => {
-      const isHidden = target.classList.contains('hidden');
-      if (isHidden) {
-        target.classList.remove('hidden');
-        btn.setAttribute('aria-expanded', 'true');
-      } else {
-        target.classList.add('hidden');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-    
+      // toggle click behavior
+      btn.addEventListener("click", (e) => {
+        if (!isMobile()) return; // ignore on desktop
+        e.stopPropagation();
 
-// Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Change navbar style on scroll
-            window.addEventListener('scroll', function() {
-                const navbar = document.getElementById('main-navbar');
-                if (window.scrollY > 50) {
-                    navbar.classList.add('bg-main-text', 'shadow-lg');
-                } else {
-                    navbar.classList.remove('bg-main-text', 'shadow-lg');
-                }
-            });
+        // إغلاق باقي القوائم
+        dropdownButtons.forEach((b) => {
+          if (b !== btn) b.nextElementSibling?.classList.add("hidden");
         });
+
+        dropdown.classList.toggle("hidden");
+      });
+    });
+
+    // غلق القوائم عند الضغط خارجها
+    document.addEventListener("click", () => {
+      if (!isMobile()) return;
+      dropdownButtons.forEach((btn) =>
+        btn.nextElementSibling?.classList.add("hidden")
+      );
+    });
+  });
