@@ -2929,6 +2929,11 @@
       height: calc(var(--spacing) * 14);
     }
   }
+  .lg\:h-\[80vh\] {
+    @media (width >= 64rem) {
+      height: 80vh;
+    }
+  }
   .lg\:h-full {
     @media (width >= 64rem) {
       height: 100%;
