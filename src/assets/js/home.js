@@ -3,7 +3,6 @@
   const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1, 
     spaceBetween: 20, 
-    rtl:true,
     loop: true,
     autoplay: {
       delay: 5000,
