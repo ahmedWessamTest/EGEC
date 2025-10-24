@@ -34,7 +34,7 @@
   font-style: normal;
   font-display: swap;
 }
-html {
+html,body {
   overflow-x: hidden; 
 }
 body {
