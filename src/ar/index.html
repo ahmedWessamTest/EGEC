@@ -19,13 +19,12 @@
       href="../assets/images/shared/favicon.ico"
       type="image/x-icon"
     />
-    
-    <!-- Critical CSS -->
-    <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css" />
-    
-    <!-- Non-critical CSS -->
+<link rel="preload" href="../vendors/flowbite/flowbite.min.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="../vendors/swiper/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css">
+  <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css">
+</noscript>    
     <link
       rel="preload"
       as="style"
@@ -35,7 +34,7 @@
     <noscript>
       <link rel="stylesheet" href="../assets/css/main.css" />
     </noscript>
-    
+    <link href="../assets/css/style.css" rel="stylesheet">
     <!-- Alternate Language Links -->
     <link rel="alternate" hreflang="ar" href="/src/ar/index.html" />
     <link rel="alternate" hreflang="en" href="/src/en/index.html" />
