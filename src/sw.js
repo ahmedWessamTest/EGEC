@@ -1,4 +1,4 @@
-const CACHE_NAME = 'egec-static-v1';
+const CACHE_NAME = 'egec-static-v3';
 const PRECACHE_URLS = [
   './assets/css/main.css',
   './assets/css/style.css',
