@@ -1045,14 +1045,19 @@
             data-carousel-item
           >
             <div class="bg-center bg-cover w-full h-full relative z-10">
-              <img
+              <picture >
+                <source type="image/avif" srcset="../assets/images/home/hero-image.avif">
+                <source type="image/webp" srcset="../assets/images/home/hero-image.webp">
+                <img
                 src="../assets/images/home/hero-image.webp"
                 alt="Hero image"
-                class="absolute inset-0 w-full h-full object-cover -z-10"
                 fetchpriority="high"
                 loading="eager"
                 decoding="sync"
+                class="absolute inset-0 w-full h-full object-cover -z-10"
               />
+              </picture>
+              
               <div
                 class="container-sm flex items-center h-full justify-center md:justify-start"
               >
@@ -1119,14 +1124,19 @@
             data-carousel-item
           >
             <div class="bg-center bg-cover w-full h-full">
-              <img
-                src="../assets/images/home/hero-image-2.webp"
+              <picture>
+                <source type="image/avif" srcset="../assets/images/home/hero-image-2.avif">
+                <source type="image/webp" srcset="../assets/images/home/hero-image-2.webp">
+                <img
+                src="../assets/images/home/hero-image.webp"
                 alt="Hero image"
-                class="absolute inset-0 w-full h-full object-cover -z-10"
                 fetchpriority="high"
                 loading="eager"
                 decoding="sync"
+                class="absolute inset-0 w-full h-full object-cover -z-10"
               />
+              </picture>
+             
               <div
                 class="container-sm flex items-center h-full justify-center md:justify-start"
               >
