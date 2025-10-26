@@ -162,13 +162,6 @@ async function handleFetchError(request, error) {
       statusText: 'Service Unavailable'
     });
   }
-  
-  // For images, you could return a placeholder image
-  if (request.destination === 'image') {
-    // Return a placeholder image response if needed
-    // return caches.match('/assets/images/placeholder.webp');
-  }
-  
   return new Response('Network error', {
     status: 408,
     statusText: 'Network Request Failed'
