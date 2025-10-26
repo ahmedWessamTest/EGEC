@@ -15,7 +15,7 @@
 .article-content ol {
   color: color-mix(in oklab, var(--color-main-gray) 80%, transparent); ;
   line-height: 1.8;
-  font-size: 1.50rem;
+  font-size: 1.10rem;
   font-weight: 300;
 }
 
