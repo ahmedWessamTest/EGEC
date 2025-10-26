@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta
-      name="description"
-      content="Put a brief description of this page (max 160 chars)."
-    />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Egyptian Gulf Educational Company - Developing and qualifying human resources and providing all educational services to students inside and outside Egypt" />
+    <meta name="theme-color" content="#08c261" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <!-- <link rel="canonical" href="https://yourdomain.com/en/index.html"> -->
-    <title>Home</title>
-    <link rel="shortcut icon" href="../assets/images/shared/favicon.ico" type="image/x-icon">
+    <title>Home - Egyptian Gulf Educational Company</title>
+    
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/shared/favicon.ico" type="image/x-icon" />
 
+    <!-- Critical CSS -->
     <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css" />
+    
+    <!-- Non-critical CSS -->
     <link
       rel="preload"
       as="style"
@@ -23,18 +32,10 @@
     <noscript>
       <link rel="stylesheet" href="../assets/css/main.css" />
     </noscript>
-    <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css" />
 
-    <link
-      rel="alternate"
-      hreflang="en"
-      href="http://127.0.0.1:5500/src/en/index.html"
-    />
-    <link
-      rel="alternate"
-      hreflang="ar"
-      href="http://127.0.0.1:5500/src/ar/index.html"
-    />
+    <!-- Alternate Language Links -->
+    <link rel="alternate" hreflang="en" href="http://127.0.0.1:5500/src/en/index.html" />
+    <link rel="alternate" hreflang="ar" href="http://127.0.0.1:5500/src/ar/index.html" />
   </head>
   <body class="bg-main-white">
     <!-- Loading Screen -->
@@ -43,7 +44,9 @@
         <img
           src="../assets/images/home/logo.webp"
           width="100"
+          height="100"
           alt="EGEC Logo"
+          fetchpriority="high"
         />
         <div class="loader">
           <span></span><span></span><span></span><span></span><span></span>

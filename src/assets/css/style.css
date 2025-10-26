@@ -454,9 +454,6 @@
   .end-0 {
     inset-inline-end: calc(var(--spacing) * 0);
   }
-  .end-5 {
-    inset-inline-end: calc(var(--spacing) * 5);
-  }
   .end-6 {
     inset-inline-end: calc(var(--spacing) * 6);
   }
@@ -1997,11 +1994,6 @@
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
   .transition-\[filter\] {
     transition-property: filter;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -2630,11 +2622,6 @@
       inset-inline-start: calc(3% * -1);
     }
   }
-  .lg\:-end-5 {
-    @media (width >= 64rem) {
-      inset-inline-end: calc(var(--spacing) * -5);
-    }
-  }
   .lg\:-end-8 {
     @media (width >= 64rem) {
       inset-inline-end: calc(var(--spacing) * -8);
@@ -3003,6 +2990,11 @@
   .lg\:\!pe-14 {
     @media (width >= 64rem) {
       padding-inline-end: calc(var(--spacing) * 14) !important;
+    }
+  }
+  .lg\:pe-14 {
+    @media (width >= 64rem) {
+      padding-inline-end: calc(var(--spacing) * 14);
     }
   }
   .lg\:text-start {

@@ -3,15 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>الرئيسيه</title>
+    <meta name="description" content="الشركه المصرية الخليجية للخدمات التعليمية - تهدف الي تنميه و تاهيل الموارد البشريه و تقديم كافة الخدمات التعليميه للطلبه داخل و خارج مصر" />
+    <meta name="theme-color" content="#08c261" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>الرئيسيه - الشركه المصرية الخليجية للخدمات التعليمية</title>
+    
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    
+    <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="../assets/images/shared/favicon.ico"
       type="image/x-icon"
     />
+    
+    <!-- Critical CSS -->
     <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css" />
+    
+    <!-- Non-critical CSS -->
     <link
       rel="preload"
       as="style"
@@ -21,6 +35,8 @@
     <noscript>
       <link rel="stylesheet" href="../assets/css/main.css" />
     </noscript>
+    
+    <!-- Alternate Language Links -->
     <link rel="alternate" hreflang="ar" href="/src/ar/index.html" />
     <link rel="alternate" hreflang="en" href="/src/en/index.html" />
   </head>
@@ -31,7 +47,9 @@
         <img
           src="../assets/images/home/logo.webp"
           width="100"
+          height="100"
           alt="EGEC Logo"
+          fetchpriority="high"
         />
         <div class="loader">
           <span></span><span></span><span></span><span></span><span></span>
@@ -236,6 +254,7 @@
               height="60"
               src="../assets/images/home/logo.webp"
               alt="شعار ايجيك"
+              fetchpriority="high"
             />
           </a>
           <div
@@ -874,6 +893,7 @@
                         width="45"
                         height="31.5"
                         alt="buble icon"
+                        fetchpriority="high"
                       />
                     </picture>
                     <h1
@@ -892,6 +912,7 @@
                         width="25"
                         height="111.42"
                         alt="exclamation mark icon"
+                        fetchpriority="high"
                       />
                     </picture>
                   </div>
@@ -901,6 +922,7 @@
                     height="24.22"
                     alt="line icon"
                     class="m-auto mx-auto lg:-mt-2 lg:mb-1 my-4"
+                    fetchpriority="high"
                   />
                   <p
                     class="text-main-green lg:w-2xl leading-8 text-xl text-justify"
@@ -929,25 +951,39 @@
               >
                 <div class="w-full lg:w-3xl text-center lg:text-start">
                   <div class="flex items-center content-center w-fit">
-                    <img
-                      src="../assets/icons/three-buble.webp"
-                      width="45"
-                      height="31.5"
-                      alt="buble icon"
-                      class="self-start ms-4 lg:ms-2 hidden lg:block"
-                    />
+                    <picture class="self-start ms-4 lg:ms-3 hidden lg:block">
+                      <source
+                        media="(min-width: 1024px)"
+                        srcset="../assets/icons/three-buble.webp"
+                      />
+                      <img
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                        alt="buble icon"
+                        width="45"
+                        height="31.5"
+                        alt="buble icon"
+                        fetchpriority="high"
+                      />
+                    </picture>
                     <h1
                       class="text-5xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
                     >
                       حقق اهدافك الدراسة الان
                     </h1>
-                    <img
-                      src="../assets/icons/exclamation-mark.webp"
-                      class="ms-3 hidden lg:block"
-                      width="25"
-                      height="111.42"
-                      alt="exclamation mark icon"
-                    />
+                    <picture class="ms-3 hidden lg:block">
+                      <source
+                        media="(min-width: 1024px)"
+                        srcset="../assets/icons/exclamation-mark.webp"
+                      />
+                      <img
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                        alt="buble icon"
+                        width="25"
+                        height="111.42"
+                        alt="exclamation mark icon"
+                        fetchpriority="high"
+                      />
+                    </picture>
                   </div>
                   <img
                     src="../assets/icons/double-green-line.webp"
@@ -955,6 +991,7 @@
                     height="24.22"
                     class="m-auto mx-auto lg:-mt-2 lg:mb-1 my-4"
                     alt="line icon"
+                    fetchpriority="high"
                   />
                   <p
                     class="text-main-green lg:w-2xl leading-8 text-xl text-justify"
@@ -1006,7 +1043,7 @@
                 <button
                   id="PlaceSearchDropdown"
                   data-dropdown-toggle="PlaceSearchDropdownNavbar"
-                  class="flex lg:!pe-14 flex-col items-center lg:items-start justify-between text-nowrap text-main-text w-full py-2 px-3 lg:hover:bg-transparent cursor-pointer lg:p-0 lg:w-auto"
+                  class="flex lg:pe-14 flex-col items-center lg:items-start justify-between text-nowrap text-main-text w-full py-2 px-3 lg:hover:bg-transparent cursor-pointer lg:p-0 lg:w-auto"
                 >
                   المكان
                   <span class="text-sm text-gray-500">ابحث عن الدوله</span>
@@ -1414,6 +1451,7 @@
               width="200"
               class="mx-auto mt-4"
               alt="line"
+              loading="lazy"
             />
           </div>
 
@@ -2712,9 +2750,10 @@
         </div>
       </div>
     </footer>
-    <!-- Swiper.js -->
-    <script src="../vendors/swiper/swiper-bundle.min.js"></script>
-    <script src="../vendors/flowbite/flowbite.min.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="../vendors/swiper/swiper-bundle.min.js" defer></script>
+    <script src="../vendors/flowbite/flowbite.min.js" defer></script>
+    <!-- Custom Scripts -->
     <script src="../assets/js/main.js" defer></script>
     <script src="../assets/js/home.js" defer></script>
   </body>

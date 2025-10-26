@@ -1,5 +1,4 @@
-
-  const initTestimonialsCarousel = () => {
+const initTestimonialsCarousel = () => {
   const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1, 
     spaceBetween: 20, 
@@ -23,12 +22,12 @@
     },
   });
 }
+
 const filterDropdownItems = (e) => {
-  console.log(e);
 if (e.target.matches("[data-filter-input]")) {
       const input = e.target;
       const filterValue = input.value.toLowerCase();
-      const dropdown = input.closest("div[id$='Navbar']"); // يجيب الـ dropdown الحالي
+      const dropdown = input.closest("div[id$='Navbar']");
       const items = dropdown.querySelectorAll("ul li button");
   
       items.forEach((btn) => {
@@ -39,13 +38,10 @@ if (e.target.matches("[data-filter-input]")) {
       });
     }
 }
+
 const initListers = () => {
   document.addEventListener("input", filterDropdownItems.bind(this));
 }
+
 initTestimonialsCarousel();
 initListers();
-[...document.body.querySelectorAll('*')].forEach(el => {
-  if (el.scrollWidth > document.documentElement.clientWidth) {
-    console.log("العنصر المسبب:", el);
-  }
-});
