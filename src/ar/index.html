@@ -57,12 +57,6 @@
         -moz-transition: opacity 0.5s ease, visibility 0.5s ease;
         transition: opacity 0.5s ease, visibility 0.5s ease;
       }
-
-      #loadingScreen.hidden {
-        opacity: 0;
-        visibility: hidden;
-      }
-
       #loadingScreen .loader {
         margin-top: 20px;
         display: -webkit-box;
@@ -208,7 +202,7 @@
     <noscript>
       <link rel="stylesheet" href="../assets/css/main.css" />
     </noscript>
-    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="../assets/css/style.css"  rel="stylesheet" />
     <!-- Alternate Language Links -->
     <link rel="alternate" hreflang="ar" href="/src/ar/index.html" />
     <link rel="alternate" hreflang="en" href="/src/en/index.html" />
@@ -283,13 +277,19 @@
         class="fixed hidden xl:block transition-all duration-500 -start-15 top-1/2 -translate-y-1/2 z-50 cursor-pointer hover:scale-110"
         aria-label="Open Register Menu"
       >
-        <img
-          src="../assets/images/shared/sidnav-btn.webp"
-          width="70"
-          alt="Register here"
-          class="drop-shadow-lg"
-          loading="lazy"
-        />
+      <picture class="drop-shadow-lg">
+                      <source
+                        
+                        media="(min-width: 1024px)"
+                        srcset="../assets/images/shared/sidnav-btn.webp"
+                      />
+                      <img
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                        width="70"
+                        alt="Register here"
+                       loading="lazy"
+                      />
+                    </picture>
       </button>
     </aside>
     <!-- Overlay + Menu -->
