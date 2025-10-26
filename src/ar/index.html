@@ -5,13 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="الشركه المصرية الخليجية للخدمات التعليمية - تهدف الي تنميه و تاهيل الموارد البشريه و تقديم كافة الخدمات التعليميه للطلبه داخل و خارج مصر" />
     <meta name="theme-color" content="#08c261" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>الرئيسيه - الشركه المصرية الخليجية للخدمات التعليمية</title>
     
-    <!-- Resource Hints -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <style>
+      /* Loading Screen Styles */
+#loadingScreen {
+  position: fixed;
+  inset: 0;
+  background: -webkit-linear-gradient(315deg, var(--color-main-green), #0f5132);
+  background: -moz-linear-gradient(315deg, var(--color-main-green), #0f5132);
+  background: -o-linear-gradient(315deg, var(--color-main-green), #0f5132);
+  background: linear-gradient(135deg, var(--color-main-green), #0f5132);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9999;
+  -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
+  -o-transition: opacity 0.5s ease, visibility 0.5s ease;
+  -moz-transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loadingScreen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#loadingScreen .loader {
+    margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+#loadingScreen .loader span {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-animation: wave 1s ease-in-out infinite;
+     -moz-animation: wave 1s ease-in-out infinite;
+       -o-animation: wave 1s ease-in-out infinite;
+          animation: wave 1s ease-in-out infinite;
+}
+
+#loadingScreen .loader span:nth-child(1) {
+  -webkit-animation-delay: 0s;
+     -moz-animation-delay: 0s;
+       -o-animation-delay: 0s;
+          animation-delay: 0s;
+}
+#loadingScreen .loader span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+     -moz-animation-delay: 0.1s;
+       -o-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+#loadingScreen .loader span:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+     -moz-animation-delay: 0.2s;
+       -o-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+#loadingScreen .loader span:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+     -moz-animation-delay: 0.3s;
+       -o-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+#loadingScreen .loader span:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+     -moz-animation-delay: 0.4s;
+       -o-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+@-webkit-keyframes wave {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes wave {
+  0%, 100% {
+    -moz-transform: translateY(0);
+         transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    -moz-transform: translateY(-12px);
+         transform: translateY(-12px);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes wave {
+  0%, 100% {
+    -o-transform: translateY(0);
+       transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    -o-transform: translateY(-12px);
+       transform: translateY(-12px);
+    opacity: 1;
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: translateY(-12px);
+       -moz-transform: translateY(-12px);
+         -o-transform: translateY(-12px);
+            transform: translateY(-12px);
+    opacity: 1;
+  }
+}
+    </style>
     
     <!-- Favicon -->
     <link
@@ -232,7 +374,7 @@
       </div>
     </nav>
     <!-- hero section -->
-    <header class="hero-section relative">
+    <header id="header" class="hero-section relative">
       <!-- main-navbar -->
       <nav
         class="home-top-nav absolute w-full top-0 left-0 z-50 transition-colors duration-500"
@@ -2764,7 +2906,7 @@
     <script src="../vendors/swiper/swiper-bundle.min.js" defer></script>
     <script src="../vendors/flowbite/flowbite.min.js" defer></script>
     <!-- Custom Scripts -->
-    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/main.js"></script>
     <script src="../assets/js/home.js" defer></script>
   </body>
 </html>
