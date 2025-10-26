@@ -202,7 +202,48 @@
     <noscript>
       <link rel="stylesheet" href="../assets/css/main.css" />
     </noscript>
-    <link href="../assets/css/style.css"  rel="stylesheet" />
+    <link
+      rel="preload"
+      href="../assets/css/style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="../assets/css/style.css" />
+    </noscript>
+
+    <!-- Preload local fonts (use font-display:swap below) -->
+    <link rel="preload" href="../assets/font/static/Alexandria-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="../assets/font/static/Alexandria-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="../assets/font/static/Alexandria-Bold.ttf" as="font" type="font/ttf" crossorigin>
+
+    <!-- Local @font-face with font-display:swap to avoid FOIT -->
+    <style>
+      @font-face {
+        font-family: 'AlexandriaLocal';
+        src: url('../assets/font/static/Alexandria-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'AlexandriaLocal';
+        src: url('../assets/font/static/Alexandria-SemiBold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'AlexandriaLocal';
+        src: url('../assets/font/static/Alexandria-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      /* Use the local font as a preference while keeping fallbacks */
+      :root { --site-font-family: 'AlexandriaLocal', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+      html, body { font-family: var(--site-font-family); }
+    </style>
     <!-- Alternate Language Links -->
     <link rel="alternate" hreflang="ar" href="/src/ar/index.html" />
     <link rel="alternate" hreflang="en" href="/src/en/index.html" />
@@ -1553,6 +1594,9 @@
             <div class="col-span-12 lg:col-span-4">
               <img
                 src="../assets/images/home/who-we-are.webp"
+                width="1080"
+                height="1920"
+                decoding="async"
                 class="opacity-30 aspect-[9/12]"
                 alt="من نحن"
                 loading="lazy"
@@ -1740,12 +1784,15 @@
                 class="grid grid-cols-1 lg:grid-cols-2 rounded-3xl overflow-hidden z-20 relative"
               >
                 <a href="#" class="relative group">
-                  <img
-                    loading="lazy"
-                    src="../assets/images/home/russia.webp"
-                    class="h-full w-full object-cover"
-                    alt="Study in Russia"
-                  />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src="../assets/images/home/russia.webp"
+                      width="647"
+                      height="431"
+                      class="h-full w-full object-cover"
+                      alt="Study in Russia"
+                    />
                   <div
                     class="transition-colors duration-500 flex items-center justify-center bg-white/50 group-hover:bg-black/50 absolute inset-0"
                   >
@@ -1758,7 +1805,10 @@
                 <a href="#" class="relative group">
                   <img
                     loading="lazy"
+                    decoding="async"
                     src="../assets/images/home/egypt.webp"
+                    width="706"
+                    height="471"
                     class="h-full w-full object-cover"
                     alt="Study in Egypt"
                   />
@@ -1774,7 +1824,10 @@
                 <a href="#" class="relative group">
                   <img
                     loading="lazy"
+                    decoding="async"
                     src="../assets/images/home/emirates.webp"
+                    width="633"
+                    height="422"
                     class="h-full w-full object-cover"
                     alt="Study in UAE"
                   />
@@ -1790,7 +1843,10 @@
                 <a href="#" class="relative group">
                   <img
                     loading="lazy"
+                    decoding="async"
                     src="../assets/images/home/usa.webp"
+                    width="714"
+                    height="388"
                     class="h-full w-full object-cover"
                     alt="Study in USA"
                   />
@@ -2968,8 +3024,22 @@
     </footer>
     <script src="../vendors/swiper/swiper-bundle.min.js" defer></script>
     <script src="../vendors/flowbite/flowbite.min.js" defer></script>
-    <script src="../assets/js/main.js"></script>
+    <!-- Defer main JS to avoid blocking initial render -->
+    <script src="../assets/js/main.js" defer></script>
     <script src="../assets/js/home.js" defer></script>
+
+    <!-- Service worker registration to provide long-lived caching for repeat visits -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          // Try to register at site root. If your site is served from a subpath,
+          // adjust the path to point to the generated sw.js location (e.g. '../sw.js').
+          navigator.serviceWorker.register('../sw.js')
+            .then(function(reg) { console.log('SW registered.', reg); })
+            .catch(function(err) { console.warn('SW registration failed:', err); });
+        });
+      }
+    </script>
     
 
   </body>

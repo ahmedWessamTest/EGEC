@@ -1,39 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 100 version
-*/
-
-/* font */
-@font-face {
-  font-family: "Alexandria";
-  src: url("../font/static/Alexandria-Light.ttf");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Alexandria";
-  src: url("../font/static/Alexandria-Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Alexandria";
-  src: url("../font/static/Alexandria-Bold.ttf");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Alexandria";
-  src: url("../font/static/Alexandria-SemiBold.ttf");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
 html,body {
   overflow-x: hidden; 
 }
