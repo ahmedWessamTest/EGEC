@@ -2142,5 +2142,18 @@
     <script src="../vendors/flowbite/flowbite.min.js" defer></script>
     <script src="../assets/js/main.js" defer></script>
     <script src="../assets/js/study-destinations.js" defer></script>
-  </body>
+  <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("../sw.js")
+            .then(function (reg) {
+              console.log("SW registered.", reg);
+            })
+            .catch(function (err) {
+              console.warn("SW registration failed:", err);
+            });
+        });
+      }
+    </script></body>
 </html>
