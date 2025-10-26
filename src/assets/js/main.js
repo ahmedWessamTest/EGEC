@@ -84,21 +84,20 @@ const batchClassOperations = (operations) => {
 // Core Functions (Optimized)
 // =====================
 const closeLoadingScreen = () => {
-  const loadingScreen = document.getElementById('loadingScreen');
-  const header = document.getElementById('header');
-  
-  // Use requestAnimationFrame for smoother animations
-  const hideLoader = () => {
-    requestAnimationFrame(() => {
-      loadingScreen?.classList.add('hidden');
-      setTimeout(() => loadingScreen?.remove(), 600);
-    });
-  };
+  const loadingScreen = document.getElementById("loadingScreen");
 
-  header?.addEventListener('load', hideLoader, { once: true });
-  
-  // Fallback timeout
-  setTimeout(hideLoader, 3000);
+  new PerformanceObserver((entryList) => {
+    const entries = entryList.getEntries();
+    const lastEntry = entries[entries.length - 1];
+
+    if (lastEntry) {
+      requestAnimationFrame(() => {
+        loadingScreen.classList.add("hidden");
+        setTimeout(() => loadingScreen.remove(), 600);
+      });
+    }
+
+  }).observe({ type: "largest-contentful-paint", buffered: true });
 };
 
 const toggleNavbar = () => {
