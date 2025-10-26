@@ -42,8 +42,7 @@ const elements = {
 // State with Object Sealing
 // =====================
 const state = Object.seal({
-  navbarOffset: elements.mainNavbar ? 
-    elements.mainNavbar.getBoundingClientRect().top + window.scrollY : 0,
+  navbarOffset: 0, // بدل القيمة القديمة
   scrollTicking: false,
   resizeTimeout: null,
   isMobile: () => window.innerWidth < 1280
@@ -52,8 +51,6 @@ const state = Object.seal({
 // =====================
 // Optimized Utility Functions
 // =====================
-const getElementPositionFromTop = (element) => 
-  element ? element.getBoundingClientRect().top + window.scrollY : 0;
 
 const toggleClass = (element, classToRemove, classToAdd) => {
   element?.classList.remove(classToRemove);
@@ -205,7 +202,7 @@ const optimizedScrollHandler = () => {
 const optimizedResizeHandler = () => {
   clearTimeout(state.resizeTimeout);
   state.resizeTimeout = setTimeout(() => {
-    state.navbarOffset = getElementPositionFromTop(elements.mainNavbar);
+    state.navbarOffset = elements.mainNavbar ? elements.mainNavbar.offsetTop : 0;
   }, 150);
 };
 
@@ -293,6 +290,9 @@ const setupMobileNavbarToggle = () => {
 const initialize = () => {
   setActiveNavbarItem();
   closeLoadingScreen();
+  window.addEventListener("load", () => {
+  state.navbarOffset = elements.mainNavbar ? elements.mainNavbar.offsetTop : 0;
+});
 };
 
 // =====================
