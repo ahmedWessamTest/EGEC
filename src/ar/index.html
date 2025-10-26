@@ -1850,7 +1850,7 @@
               <div class="mb-7 w-fit relative mx-auto lg:mx-0">
                 <img
                   src="../assets/icons/down-arrow.webp"
-                  class="absolute -end-0 -bottom-3"
+                  class="absolute end-0 -bottom-3"
                   width="20"
                   alt="سهم اخضر"
                   loading="lazy"
@@ -1952,13 +1952,19 @@
             />
           </div>
           <div class="relative">
-            <img
-              src="../assets/icons/three-lines-vertical.webp"
-              class="hidden lg:block absolute start-0 -top-36 ltr:-scale-x-[1]"
-              width="150"
-              alt="icon"
-              loading="lazy"
-            />
+            <picture class="hidden lg:block absolute start-0 -top-36 ltr:-scale-x-[1]">
+                      <source
+                        media="(min-width: 1024px)"
+                        srcset="../assets/icons/three-lines-vertical.webp"
+                      />
+                      <img
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                        alt="buble icon"
+                        width="150"
+                        alt="icon"
+                        loading="lazy"
+                      />
+                    </picture>
             <div class="grid grid-cols-1 lg:grid-cols-3 mt-6 gap-4">
               <div>
                 <a
