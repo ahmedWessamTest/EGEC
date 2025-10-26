@@ -1,3 +1,31 @@
+ @font-face {
+        font-family: 'Alexandria';
+        src: url('../font/static/Alexandria-Light.ttf') ;
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+ @font-face {
+        font-family: 'Alexandria';
+        src: url('../font/static/Alexandria-Regular.ttf') ;
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Alexandria';
+        src: url('../font/static/Alexandria-SemiBold.ttf') ;
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Alexandria';
+        src: url('../font/static/Alexandria-Bold.ttf') ;
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
 html,body {
   overflow-x: hidden; 
 }

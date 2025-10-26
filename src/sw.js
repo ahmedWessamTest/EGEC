@@ -23,7 +23,8 @@ const PRECACHE_URLS = [
   '/assets/images/shared/digital-bond-logo.webp',
   './assets/font/static/Alexandria-Regular.ttf',
   './assets/font/static/Alexandria-SemiBold.ttf',
-  './assets/font/static/Alexandria-Bold.ttf'
+  './assets/font/static/Alexandria-Bold.ttf',
+  './assets/font/static/Alexandria-Light.ttf'
 ];
 
 self.addEventListener('install', event => {
