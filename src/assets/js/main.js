@@ -71,12 +71,11 @@ const replaceClass = (element, oldClass, newClass) => {
 // Core Functions
 // =====================
 const closeLoadingScreen = () => {
-  document.body.style.overflow = 'hidden';
   const loadingScreen = document.getElementById('loadingScreen');
   
   window.addEventListener('load', () => {
     loadingScreen?.classList.add('hidden');
-    document.body.style.overflow = '';
+    setTimeout(() => loader.remove(), 600);
   });
 
   setTimeout(() => {
