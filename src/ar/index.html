@@ -3,170 +3,202 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="الشركه المصرية الخليجية للخدمات التعليمية - تهدف الي تنميه و تاهيل الموارد البشريه و تقديم كافة الخدمات التعليميه للطلبه داخل و خارج مصر" />
+    <meta
+      name="description"
+      content="الشركه المصرية الخليجية للخدمات التعليمية - تهدف الي تنميه و تاهيل الموارد البشريه و تقديم كافة الخدمات التعليميه للطلبه داخل و خارج مصر"
+    />
     <meta name="theme-color" content="#08c261" />
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <title>الرئيسيه - الشركه المصرية الخليجية للخدمات التعليمية</title>
-    
+
     <style>
       /* Loading Screen Styles */
-#loadingScreen {
-  position: fixed;
-  inset: 0;
-  background: -webkit-linear-gradient(315deg, var(--color-main-green), #0f5132);
-  background: -moz-linear-gradient(315deg, var(--color-main-green), #0f5132);
-  background: -o-linear-gradient(315deg, var(--color-main-green), #0f5132);
-  background: linear-gradient(135deg, var(--color-main-green), #0f5132);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 9999;
-  -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
-  -o-transition: opacity 0.5s ease, visibility 0.5s ease;
-  -moz-transition: opacity 0.5s ease, visibility 0.5s ease;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
+      #loadingScreen {
+        position: fixed;
+        inset: 0;
+        background: -webkit-linear-gradient(
+          315deg,
+          var(--color-main-green),
+          #0f5132
+        );
+        background: -moz-linear-gradient(
+          315deg,
+          var(--color-main-green),
+          #0f5132
+        );
+        background: -o-linear-gradient(
+          315deg,
+          var(--color-main-green),
+          #0f5132
+        );
+        background: linear-gradient(135deg, var(--color-main-green), #0f5132);
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        z-index: 9999;
+        -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
+        -o-transition: opacity 0.5s ease, visibility 0.5s ease;
+        -moz-transition: opacity 0.5s ease, visibility 0.5s ease;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+      }
 
-#loadingScreen.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
+      #loadingScreen.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
 
-#loadingScreen .loader {
-    margin-top: 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-}
+      #loadingScreen .loader {
+        margin-top: 20px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 8px;
+      }
 
-#loadingScreen .loader span {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
-  -webkit-animation: wave 1s ease-in-out infinite;
-     -moz-animation: wave 1s ease-in-out infinite;
-       -o-animation: wave 1s ease-in-out infinite;
-          animation: wave 1s ease-in-out infinite;
-}
+      #loadingScreen .loader span {
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-animation: wave 1s ease-in-out infinite;
+        -moz-animation: wave 1s ease-in-out infinite;
+        -o-animation: wave 1s ease-in-out infinite;
+        animation: wave 1s ease-in-out infinite;
+      }
 
-#loadingScreen .loader span:nth-child(1) {
-  -webkit-animation-delay: 0s;
-     -moz-animation-delay: 0s;
-       -o-animation-delay: 0s;
-          animation-delay: 0s;
-}
-#loadingScreen .loader span:nth-child(2) {
-  -webkit-animation-delay: 0.1s;
-     -moz-animation-delay: 0.1s;
-       -o-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-#loadingScreen .loader span:nth-child(3) {
-  -webkit-animation-delay: 0.2s;
-     -moz-animation-delay: 0.2s;
-       -o-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-#loadingScreen .loader span:nth-child(4) {
-  -webkit-animation-delay: 0.3s;
-     -moz-animation-delay: 0.3s;
-       -o-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-#loadingScreen .loader span:nth-child(5) {
-  -webkit-animation-delay: 0.4s;
-     -moz-animation-delay: 0.4s;
-       -o-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-@-webkit-keyframes wave {
-  0%, 100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 0.8;
-  }
-  50% {
-    -webkit-transform: translateY(-12px);
-            transform: translateY(-12px);
-    opacity: 1;
-  }
-}
+      #loadingScreen .loader span:nth-child(1) {
+        -webkit-animation-delay: 0s;
+        -moz-animation-delay: 0s;
+        -o-animation-delay: 0s;
+        animation-delay: 0s;
+      }
+      #loadingScreen .loader span:nth-child(2) {
+        -webkit-animation-delay: 0.1s;
+        -moz-animation-delay: 0.1s;
+        -o-animation-delay: 0.1s;
+        animation-delay: 0.1s;
+      }
+      #loadingScreen .loader span:nth-child(3) {
+        -webkit-animation-delay: 0.2s;
+        -moz-animation-delay: 0.2s;
+        -o-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+      }
+      #loadingScreen .loader span:nth-child(4) {
+        -webkit-animation-delay: 0.3s;
+        -moz-animation-delay: 0.3s;
+        -o-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+      }
+      #loadingScreen .loader span:nth-child(5) {
+        -webkit-animation-delay: 0.4s;
+        -moz-animation-delay: 0.4s;
+        -o-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+      }
+      @-webkit-keyframes wave {
+        0%,
+        100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+          opacity: 0.8;
+        }
+        50% {
+          -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
+          opacity: 1;
+        }
+      }
 
-@-moz-keyframes wave {
-  0%, 100% {
-    -moz-transform: translateY(0);
-         transform: translateY(0);
-    opacity: 0.8;
-  }
-  50% {
-    -moz-transform: translateY(-12px);
-         transform: translateY(-12px);
-    opacity: 1;
-  }
-}
+      @-moz-keyframes wave {
+        0%,
+        100% {
+          -moz-transform: translateY(0);
+          transform: translateY(0);
+          opacity: 0.8;
+        }
+        50% {
+          -moz-transform: translateY(-12px);
+          transform: translateY(-12px);
+          opacity: 1;
+        }
+      }
 
-@-o-keyframes wave {
-  0%, 100% {
-    -o-transform: translateY(0);
-       transform: translateY(0);
-    opacity: 0.8;
-  }
-  50% {
-    -o-transform: translateY(-12px);
-       transform: translateY(-12px);
-    opacity: 1;
-  }
-}
+      @-o-keyframes wave {
+        0%,
+        100% {
+          -o-transform: translateY(0);
+          transform: translateY(0);
+          opacity: 0.8;
+        }
+        50% {
+          -o-transform: translateY(-12px);
+          transform: translateY(-12px);
+          opacity: 1;
+        }
+      }
 
-@keyframes wave {
-  0%, 100% {
-    -webkit-transform: translateY(0);
-       -moz-transform: translateY(0);
-         -o-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 0.8;
-  }
-  50% {
-    -webkit-transform: translateY(-12px);
-       -moz-transform: translateY(-12px);
-         -o-transform: translateY(-12px);
-            transform: translateY(-12px);
-    opacity: 1;
-  }
-}
+      @keyframes wave {
+        0%,
+        100% {
+          -webkit-transform: translateY(0);
+          -moz-transform: translateY(0);
+          -o-transform: translateY(0);
+          transform: translateY(0);
+          opacity: 0.8;
+        }
+        50% {
+          -webkit-transform: translateY(-12px);
+          -moz-transform: translateY(-12px);
+          -o-transform: translateY(-12px);
+          transform: translateY(-12px);
+          opacity: 1;
+        }
+      }
     </style>
-    
+
     <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="../assets/images/shared/favicon.ico"
       type="image/x-icon"
     />
-<link rel="preload" href="../vendors/flowbite/flowbite.min.css" as="style" onload="this.rel='stylesheet'">
-<link rel="preload" href="../vendors/swiper/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css">
-  <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css">
-</noscript>    
+    <link
+      rel="preload"
+      href="../vendors/flowbite/flowbite.min.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="../vendors/swiper/swiper-bundle.min.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css" />
+      <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css" />
+    </noscript>
     <link
       rel="preload"
       as="style"
@@ -176,7 +208,7 @@
     <noscript>
       <link rel="stylesheet" href="../assets/css/main.css" />
     </noscript>
-    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet" />
     <!-- Alternate Language Links -->
     <link rel="alternate" hreflang="ar" href="/src/ar/index.html" />
     <link rel="alternate" hreflang="en" href="/src/en/index.html" />
@@ -1012,18 +1044,15 @@
             class="hidden duration-700 h-full ease-in-out"
             data-carousel-item
           >
-            <div
-              class="bg-center bg-cover w-full h-full relative z-10"
-              
-            >
-            <img 
-    src="../assets/images/home/hero-image.webp"
-    alt="Hero image"
-    class="absolute inset-0 w-full h-full object-cover -z-10"
-    fetchpriority="high"
-    loading="eager"
-    decoding="sync"
-  />
+            <div class="bg-center bg-cover w-full h-full relative z-10">
+              <img
+                src="../assets/images/home/hero-image.webp"
+                alt="Hero image"
+                class="absolute inset-0 w-full h-full object-cover -z-10"
+                fetchpriority="high"
+                loading="eager"
+                decoding="sync"
+              />
               <div
                 class="container-sm flex items-center h-full justify-center md:justify-start"
               >
@@ -1031,6 +1060,7 @@
                   <div class="flex items-center content-center">
                     <picture class="self-start ms-4 lg:ms-3 hidden lg:block">
                       <source
+                        
                         media="(min-width: 1024px)"
                         srcset="../assets/icons/three-buble.webp"
                       />
@@ -1050,6 +1080,7 @@
                     </h1>
                     <picture class="ms-3 hidden lg:block">
                       <source
+                        
                         media="(min-width: 1024px)"
                         srcset="../assets/icons/exclamation-mark.webp"
                       />
@@ -1087,17 +1118,15 @@
             class="hidden duration-700 h-full ease-in-out"
             data-carousel-item
           >
-            <div
-              class="bg-center bg-cover w-full h-full"
-            >
-            <img 
-    src="../assets/images/home/hero-image-2.webp"
-    alt="Hero image"
-    class="absolute inset-0 w-full h-full object-cover -z-10"
-    fetchpriority="high"
-    loading="eager"
-    decoding="sync"
-  />
+            <div class="bg-center bg-cover w-full h-full">
+              <img
+                src="../assets/images/home/hero-image-2.webp"
+                alt="Hero image"
+                class="absolute inset-0 w-full h-full object-cover -z-10"
+                fetchpriority="high"
+                loading="eager"
+                decoding="sync"
+              />
               <div
                 class="container-sm flex items-center h-full justify-center md:justify-start"
               >
@@ -1105,6 +1134,7 @@
                   <div class="flex items-center content-center w-fit">
                     <picture class="self-start ms-4 lg:ms-3 hidden lg:block">
                       <source
+                        
                         media="(min-width: 1024px)"
                         srcset="../assets/icons/three-buble.webp"
                       />
@@ -1124,6 +1154,7 @@
                     </h1>
                     <picture class="ms-3 hidden lg:block">
                       <source
+                        
                         media="(min-width: 1024px)"
                         srcset="../assets/icons/exclamation-mark.webp"
                       />
@@ -1660,13 +1691,19 @@
       </section>
       <!-- Study by country -->
       <section class="py-32 relative">
-        <img
-          src="../assets/icons/green-dots.webp"
-          width="250"
+        <picture
           class="absolute hidden lg:block -start-0 rtl:translate-x-1/2 -translate-x-1/2 -translate-y-7 bottom-0"
-          alt="green dots vector"
-          loading="lazy"
-        />
+        >
+          <source
+            
+            media="(min-width: 1024px)"
+            srcset="../assets/icons/green-dots.webp"
+          />
+          <img
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+          alt="buble icon" width="250" height="227.69" alt="green dots vector"
+          loading="lazy"" />
+        </picture>
         <div class="container">
           <div class="grid grid-cols-1 lg:grid-cols-12 lg:space-x-7">
             <div
@@ -1757,14 +1794,17 @@
                   </div>
                 </a>
               </div>
-              <span class="-top-[15%] -start-[15%] absolute hidden lg:block">
-                <img
-                  src="../assets/icons/green-dots.webp"
-                  width="250"
-                  alt="green dots vector"
-                  loading="lazy"
+              <picture class="-top-[15%] -start-[15%] absolute hidden lg:block">
+                <source
+                  
+                  media="(min-width: 1024px)"
+                  srcset="../assets/icons/green-dots.webp"
                 />
-              </span>
+                <img
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                alt="buble icon" width="250" height="227.69" alt="green dots
+                vector" loading="lazy"" />
+              </picture>
             </div>
           </div>
         </div>
@@ -2274,20 +2314,28 @@
       </section>
       <!-- Latest educational articles -->
       <section class="common-section relative">
-        <img
-          src="../assets/icons/xl-Scribbles.webp"
-          width="400"
-          class="absolute hidden lg:block end-0 top-15 -z-10"
-          loading="lazy"
-          alt="Scribbles"
-        />
-        <img
-          src="../assets/icons/xl-Scribbles.webp"
-          width="450"
-          class="absolute hidden lg:block lg:-start-5 top-1/2 -translate-y-1/2 -z-10"
-          loading="lazy"
-          alt="Scribbles"
-        />
+          <picture 
+          class="absolute hidden lg:block end-0 top-15 -z-10"           
+          >
+            <source
+              media="(min-width: 1024px)"
+              srcset="../assets/icons/xl-Scribbles.webp"
+            />
+            <img
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+            alt="buble icon" width="400" alt="Scribbles" loading="lazy"" />
+          </picture>
+        <picture
+        class="absolute hidden lg:block lg:-start-5 top-1/2 -translate-y-1/2 -z-10"     
+          >
+            <source
+              media="(min-width: 1024px)"
+              srcset="../assets/icons/xl-Scribbles.webp"
+            />
+            <img
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+            alt="buble icon" width="450" height="171." alt="Scribbles" loading="lazy"" />
+          </picture>
         <div class="w-fit mx-auto font-bold text-center relative">
           <img
             src="../assets/icons/three-buble.webp"
@@ -2902,11 +2950,11 @@
         </div>
       </div>
     </footer>
-    <!-- Vendor Scripts -->
     <script src="../vendors/swiper/swiper-bundle.min.js" defer></script>
     <script src="../vendors/flowbite/flowbite.min.js" defer></script>
-    <!-- Custom Scripts -->
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/home.js" defer></script>
+    
+
   </body>
 </html>
