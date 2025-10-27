@@ -55,6 +55,11 @@ body {
 }
 
 /* global */
+@media (max-width: 1024px) {
+  [data-hide-mobile] {
+    display: none !important;
+  }
+}
 @-webkit-keyframes slide-up {
   from {
     -webkit-transform: translateY(20px);
