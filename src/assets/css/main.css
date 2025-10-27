@@ -55,9 +55,12 @@ body {
 }
 
 /* global */
-@media (max-width: 1024px) {
+[data-hide-mobile] {
+  display: none !important;
+}
+@media (min-width: 1024px) {
   [data-hide-mobile] {
-    display: none !important;
+    display: block !important;
   }
 }
 @-webkit-keyframes slide-up {
