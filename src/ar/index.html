@@ -173,11 +173,11 @@
         margin-right: 8px !important;
         margin-left: 8px !important;
       }
-      .header-pagination .swiper-pagination-bullet{
+      .header-pagination .swiper-pagination-bullet {
         opacity: 100;
         background-color: var(--color-main-green);
       }
-      .header-pagination .swiper-pagination-bullet-active{
+      .header-pagination .swiper-pagination-bullet-active {
         background-color: transparent;
         border: 2px solid var(--color-main-green);
       }
@@ -347,7 +347,11 @@
       </div>
     </div>
     <!-- tob navbar  -->
-    <nav class="home-top-nav hidden xl:block" aria-label="Main navigation">
+    <nav
+      class="home-top-nav hidden xl:block"
+      aria-label="Main navigation"
+      data-hide-mobile
+    >
       <div
         class="max-w-screen-xl flex flex-wrap justify-center items-center lg:justify-between mx-auto py-3"
       >
@@ -1038,10 +1042,8 @@
         </div>
       </nav>
       <div class="swiper h-screen lg:h-[80vh] headerSwiper">
-        <div class="  swiper-wrapper">
-          <div
-            class="swiper-slide"
-          >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
             <div class="bg-center bg-cover w-full h-full relative z-10">
               <picture>
                 <source
@@ -1067,39 +1069,31 @@
               >
                 <div class="text-center w-fit lg:text-start">
                   <div class="flex items-center content-center">
-                    <picture class="self-start ms-4 lg:ms-3 hidden lg:block">
-                      <source
-                        media="(min-width: 1024px)"
-                        srcset="../assets/icons/three-buble.webp"
-                      />
                       <img
-                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                      data-hide-mobile
+                        src="../assets/icons/three-buble.webp"
                         alt="buble icon"
                         width="45"
                         height="31.5"
                         alt="buble icon"
                         fetchpriority="high"
+                        class="self-start ms-4 lg:ms-3"
                       />
-                    </picture>
                     <h1
                       class="text-5xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
                     >
                       حقق اهدافك الدراسية الان
                     </h1>
-                    <picture class="ms-3 hidden lg:block">
-                      <source
-                        media="(min-width: 1024px)"
-                        srcset="../assets/icons/exclamation-mark.webp"
-                      />
                       <img
-                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                      class="ms-3"
+                      data-hide-mobile
+                        src="../assets/icons/exclamation-mark.webp"
                         alt="buble icon"
                         width="25"
                         height="111.42"
                         alt="exclamation mark icon"
                         fetchpriority="high"
                       />
-                    </picture>
                   </div>
                   <img
                     src="../assets/icons/double-green-line.webp"
@@ -1120,10 +1114,7 @@
               </div>
             </div>
           </div>
-          <div
-            
-          class="swiper-slide"
-          >
+          <div class="swiper-slide">
             <div class="bg-center bg-cover w-full h-full relative z-10">
               <picture>
                 <source
@@ -1149,39 +1140,31 @@
               >
                 <div class="text-center w-fit lg:text-start">
                   <div class="flex items-center content-center">
-                    <picture class="self-start ms-4 lg:ms-3 hidden lg:block">
-                      <source
-                        media="(min-width: 1024px)"
-                        srcset="../assets/icons/three-buble.webp"
-                      />
-                      <img
-                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                    <img
+                      data-hide-mobile
+                        src="../assets/icons/three-buble.webp"
                         alt="buble icon"
                         width="45"
                         height="31.5"
                         alt="buble icon"
                         fetchpriority="high"
+                        class="self-start ms-4 lg:ms-3"
                       />
-                    </picture>
                     <h1
                       class="text-5xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
                     >
                       حقق اهدافك الدراسية الان
                     </h1>
-                    <picture class="ms-3 hidden lg:block">
-                      <source
-                        media="(min-width: 1024px)"
-                        srcset="../assets/icons/exclamation-mark.webp"
-                      />
-                      <img
-                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                    <img
+                      class="ms-3"
+                      data-hide-mobile
+                        src="../assets/icons/exclamation-mark.webp"
                         alt="buble icon"
                         width="25"
                         height="111.42"
                         alt="exclamation mark icon"
                         fetchpriority="high"
                       />
-                    </picture>
                   </div>
                   <img
                     src="../assets/icons/double-green-line.webp"
@@ -1203,9 +1186,15 @@
             </div>
           </div>
         </div>
-        <div class="swiper-pagination header-pagination relative mb-6" style="--swiper-pagination-bullet-width:12px;--swiper-pagination-bullet-height:12px"></div>
+        <div
+          class="swiper-pagination header-pagination relative mb-6"
+          style="
+            --swiper-pagination-bullet-width: 12px;
+            --swiper-pagination-bullet-height: 12px;
+          "
+        ></div>
       </div>
-     
+
       <!-- search bar -->
       <nav
         class="w-fit p-2 text-xl lg:translate-y-3/4 block lg:absolute mx-auto bottom-0 rouned lg:rounded-full shadow-2xl mt-3 left-0 right-0 z-30 bg-main-white"
@@ -1223,7 +1212,7 @@
                 <button
                   id="PlaceSearchDropdown"
                   data-dropdown-toggle="PlaceSearchDropdownNavbar"
-                  class="  flex lg:pe-14 flex-col items-center lg:items-start justify-between text-nowrap text-main-text w-full py-2 px-3 lg:hover:bg-transparent cursor-pointer lg:p-0 lg:w-auto"
+                  class="flex lg:pe-14 flex-col items-center lg:items-start justify-between text-nowrap text-main-text w-full py-2 px-3 lg:hover:bg-transparent cursor-pointer lg:p-0 lg:w-auto"
                 >
                   المكان
                   <span class="text-sm text-gray-500">ابحث عن الدوله</span>
@@ -1690,18 +1679,16 @@
       </section>
       <!-- Study by country -->
       <section class="py-32 relative">
-        <picture
-          class="absolute hidden lg:block -start-0 rtl:translate-x-1/2 -translate-x-1/2 -translate-y-7 bottom-0"
-        >
-          <source
-            media="(min-width: 1024px)"
-            srcset="../assets/icons/green-dots.webp"
-          />
           <img
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-          alt="buble icon" width="250" height="227.69" alt="green dots vector"
-          loading="lazy"" />
-        </picture>
+            data-hide-mobile
+            src="../assets/icons/green-dots.webp"
+            alt="buble icon"
+            width="250"
+            height="227.69"
+            alt="green dots vector"
+            loading="lazy"
+            class="absolute -start-0 rtl:translate-x-1/2 -translate-x-1/2 -translate-y-7 bottom-0"
+          />
         <div class="container">
           <div class="grid grid-cols-1 lg:grid-cols-12 lg:space-x-7">
             <div
@@ -1804,16 +1791,15 @@
                   </div>
                 </a>
               </div>
-              <picture class="-top-[15%] -start-[15%] absolute hidden lg:block">
-                <source
-                  media="(min-width: 1024px)"
-                  srcset="../assets/icons/green-dots.webp"
-                />
-                <img
-                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-                alt="buble icon" width="250" height="227.69" alt="green dots
-                vector" loading="lazy"" />
-              </picture>
+              <img
+                src="../assets/icons/green-dots.webp"
+                alt="green dots vector"
+                width="250"
+                height="227.69"
+                loading="lazy"
+                data-hide-mobile
+                class="-top-[15%] -start-[15%] absolute"
+              />
             </div>
           </div>
         </div>
@@ -1961,21 +1947,16 @@
             />
           </div>
           <div class="relative">
-            <picture
-              class="hidden lg:block absolute start-0 -top-36 ltr:-scale-x-[1]"
-            >
-              <source
-                media="(min-width: 1024px)"
-                srcset="../assets/icons/three-lines-vertical.webp"
-              />
+
               <img
-                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-hide-mobile
+                src="../assets/icons/three-lines-vertical.webp"
                 alt="buble icon"
                 width="150"
                 alt="icon"
                 loading="lazy"
+                class="absolute start-0 -top-36 ltr:-scale-x-[1]"
               />
-            </picture>
             <div class="grid grid-cols-1 lg:grid-cols-3 mt-6 gap-4">
               <div>
                 <a
@@ -2323,7 +2304,6 @@
                   </span>
                 </div>
               </div>
-              
             </div>
 
             <div class="swiper-pagination !relative"></div>
@@ -2332,27 +2312,18 @@
       </section>
       <!-- Latest educational articles -->
       <section class="common-section relative">
-        <picture class="absolute hidden lg:block end-0 top-15 -z-10">
-          <source
-            media="(min-width: 1024px)"
-            srcset="../assets/icons/xl-Scribbles.webp"
+          <img
+          data-hide-mobile
+          src="../assets/icons/xl-Scribbles.webp"
+          alt="buble icon" width="400" alt="Scribbles" loading="lazy"
+          class="absolute end-0 top-15 -z-10"
           />
           <img
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
-          alt="buble icon" width="400" alt="Scribbles" loading="lazy"" />
-        </picture>
-        <picture
-          class="absolute hidden lg:block lg:-start-5 top-1/2 -translate-y-1/2 -z-10"
-        >
-          <source
-            media="(min-width: 1024px)"
-            srcset="../assets/icons/xl-Scribbles.webp"
-          />
-          <img
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+          data-hide-mobile
+           class="absolute lg:-start-5 top-1/2 -translate-y-1/2 -z-10"
+          src="../assets/icons/xl-Scribbles.webp"
           alt="buble icon" width="450" height="171." alt="Scribbles"
           loading="lazy"" />
-        </picture>
         <div class="w-fit mx-auto font-bold text-center relative">
           <img
             src="../assets/icons/three-buble.webp"
@@ -2967,6 +2938,8 @@
         </div>
       </div>
     </footer>
+    <script src="../assets/js/mobile-optimizer.js"></script>
+
     <script src="../vendors/swiper/swiper-bundle.min.js" defer></script>
     <!-- Defer main JS to avoid blocking initial render -->
     <script src="../assets/js/main.js" defer></script>
