@@ -1,3 +1,21 @@
+const initHeaderCarousel = () => {
+  new Swiper(".headerSwiper", {
+    slidesPerView:1,
+    loop: true,
+    spaceBetween: 20,
+    centeredSlides: false,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}
 const initTestimonialsCarousel = () => {
   const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1, 
@@ -39,29 +57,8 @@ if (e.target.matches("[data-filter-input]")) {
     }
 }
 
-const initListers = () => {
-  document.addEventListener("input", filterDropdownItems.bind(this));
-}
 
-initTestimonialsCarousel();
-initListers();
-   new Swiper(".headerSwiper", {
-    slidesPerView:1,
-    loop: true,
-    spaceBetween: 20,
-    centeredSlides: false,
-
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-document.addEventListener("click", function (e) {
+const searchDropdown = (e) => {
   // ---------------- Toggle dropdowns ----------------
   const toggleBtn = e.target.closest("[data-dropdown-toggle]");
   if (toggleBtn) {
@@ -81,4 +78,12 @@ document.addEventListener("click", function (e) {
       document.querySelectorAll("[id$='Navbar']").forEach(m => m.classList.add("hidden"));
     }
   }
-});
+}
+const initListers = () => {
+  document.addEventListener("input", filterDropdownItems.bind(this));
+  document.addEventListener("click", searchDropdown);
+}
+initTestimonialsCarousel();
+initHeaderCarousel();
+initListers();
+   

@@ -12,7 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <link rel="canonical" href="https://yourdomain.com/en/index.html"> -->
     <title>من نحن</title>
-    <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link
       rel="preload"
@@ -851,11 +850,10 @@
           </button>
         </div>
       </nav>
-      <div class="relative w-full h-full" data-carousel="static">
-        <div class="relative h-screen lg:h-[80vh] overflow-hidden">
+      <div class="relative">
+        <div class="relative h-screen lg:h-[80vh]">
           <div
-            class="hidden duration-700 h-full ease-in-out"
-            data-carousel-item
+            class=" duration-700 h-full ease-in-out"
           >
             <div class="w-full h-full">
               <picture>
@@ -877,7 +875,7 @@
                 />
               </picture>
               <div
-                class="container-sm flex items-center h-full justify-center md:justify-start"
+                class="container-sm flex h-full items-center h-full justify-center md:justify-start"
               >
                 <div class="text-center w-fit lg:text-start">
                   <div class="flex items-center content-center">
@@ -900,19 +898,13 @@
                       >
                         مــــــن نـــــحـــــن
                       </h1>
-                      <picture>
-                        <source
-                          media="(min-width: 1024px)"
-                          srcset="../assets/icons/double-green-line.webp"
-                        />
                         <img
-                          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                          src="../assets/icons/double-green-line.webp"
                           width="300"
                           class="mx-auto lg:mb-1 my-5"
                           alt="line icon"
                           fetchpriority="high"
                         />
-                      </picture>
                       <div class="mt-5 flex flex-wrap items-center gap-2">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -1990,7 +1982,6 @@
     </footer>
     <!-- Swiper.js -->
     <script src="../vendors/swiper/swiper-bundle.min.js" defer></script>
-    <script src="../vendors/flowbite/flowbite.min.js" defer></script>
     <script src="../assets/js/main.js" defer></script>
     <script src="../assets/js/about.js" defer></script>
     <script>
