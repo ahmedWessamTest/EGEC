@@ -4,7 +4,10 @@ const initHeaderCarousel = () => {
     loop: true,
     spaceBetween: 20,
     centeredSlides: false,
-
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -21,10 +24,10 @@ const initTestimonialsCarousel = () => {
     slidesPerView: 1, 
     spaceBetween: 20, 
     loop: true,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
