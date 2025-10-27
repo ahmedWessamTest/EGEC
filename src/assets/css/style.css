@@ -646,9 +646,6 @@
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
   }
-  .my-7 {
-    margin-block: calc(var(--spacing) * 7);
-  }
   .my-20 {
     margin-block: calc(var(--spacing) * 20);
   }
@@ -1452,21 +1449,9 @@
     border-style: var(--tw-border-style);
     border-width: 3px;
   }
-  .border-s-2 {
-    border-inline-start-style: var(--tw-border-style);
-    border-inline-start-width: 2px;
-  }
   .border-s-4 {
     border-inline-start-style: var(--tw-border-style);
     border-inline-start-width: 4px;
-  }
-  .border-e {
-    border-inline-end-style: var(--tw-border-style);
-    border-inline-end-width: 1px;
-  }
-  .border-e-2 {
-    border-inline-end-style: var(--tw-border-style);
-    border-inline-end-width: 2px;
   }
   .border-t-0 {
     border-top-style: var(--tw-border-style);
@@ -1806,9 +1791,6 @@
   }
   .pb-14 {
     padding-bottom: calc(var(--spacing) * 14);
-  }
-  .pb-28 {
-    padding-bottom: calc(var(--spacing) * 28);
   }
   .pb-40 {
     padding-bottom: calc(var(--spacing) * 40);
@@ -2719,11 +2701,6 @@
       padding: calc(var(--spacing) * 0);
     }
   }
-  .md\:ps-2 {
-    @media (width >= 48rem) {
-      padding-inline-start: calc(var(--spacing) * 2);
-    }
-  }
   .md\:hover\:bg-transparent {
     @media (width >= 48rem) {
       &:hover {
@@ -2781,11 +2758,6 @@
   .lg\:order-none {
     @media (width >= 64rem) {
       order: 0;
-    }
-  }
-  .lg\:col-span-1 {
-    @media (width >= 64rem) {
-      grid-column: span 1 / span 1;
     }
   }
   .lg\:col-span-2 {
@@ -3574,6 +3546,36 @@
           color: var(--color-white);
         }
       }
+    }
+  }
+  .\[\&_\.swiper-pagination-bullet\]\:\!h-6 {
+    & .swiper-pagination-bullet {
+      height: calc(var(--spacing) * 6) !important;
+    }
+  }
+  .\[\&_\.swiper-pagination-bullet\]\:h-6 {
+    & .swiper-pagination-bullet {
+      height: calc(var(--spacing) * 6);
+    }
+  }
+  .\[\&_\.swiper-pagination-bullet\]\:\!w-6 {
+    & .swiper-pagination-bullet {
+      width: calc(var(--spacing) * 6) !important;
+    }
+  }
+  .\[\&_\.swiper-pagination-bullet\]\:w-6 {
+    & .swiper-pagination-bullet {
+      width: calc(var(--spacing) * 6);
+    }
+  }
+  .\[\&_\.swiper-pagination-bullet\]\:\!bg-main-green {
+    & .swiper-pagination-bullet {
+      background-color: var(--color-main-green) !important;
+    }
+  }
+  .\[\&_\.swiper-pagination-bullet\]\:bg-main-green {
+    & .swiper-pagination-bullet {
+      background-color: var(--color-main-green);
     }
   }
   .\[\&_a\]\:h-10 {

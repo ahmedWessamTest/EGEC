@@ -173,6 +173,14 @@
         margin-right: 8px !important;
         margin-left: 8px !important;
       }
+      .header-pagination .swiper-pagination-bullet{
+        opacity: 100;
+        background-color: var(--color-main-green);
+      }
+      .header-pagination .swiper-pagination-bullet-active{
+        background-color: transparent;
+        border: 2px solid var(--color-main-green);
+      }
     </style>
 
     <!-- Favicon -->
@@ -183,18 +191,11 @@
     />
     <link
       rel="preload"
-      href="../vendors/flowbite/flowbite.min.css"
-      as="style"
-      onload="this.rel='stylesheet'"
-    />
-    <link
-      rel="preload"
       href="../vendors/swiper/swiper-bundle.min.css"
       as="style"
       onload="this.rel='stylesheet'"
     />
     <noscript>
-      <link rel="stylesheet" href="../vendors/flowbite/flowbite.min.css" />
       <link rel="stylesheet" href="../vendors/swiper/swiper-bundle.min.css" />
     </noscript>
     <link
@@ -1036,17 +1037,10 @@
           </button>
         </div>
       </nav>
-      <div
-        id="indicators-carousel"
-        class="relative w-full h-full"
-        data-carousel="slide"
-      >
-        <!-- Carousel wrapper -->
-        <div class="relative h-screen lg:h-[80vh] overflow-hidden">
-          <!-- Item 1 -->
+      <div class="swiper h-screen lg:h-[80vh] headerSwiper">
+        <div class="  swiper-wrapper">
           <div
-            class="hidden duration-700 h-full ease-in-out"
-            data-carousel-item
+            class="swiper-slide"
           >
             <div class="bg-center bg-cover w-full h-full relative z-10">
               <picture>
@@ -1126,20 +1120,19 @@
               </div>
             </div>
           </div>
-          <!-- Item -2  -->
           <div
-            class="hidden duration-700 h-full ease-in-out"
-            data-carousel-item
+            
+          class="swiper-slide"
           >
-            <div class="bg-center bg-cover w-full h-full">
+            <div class="bg-center bg-cover w-full h-full relative z-10">
               <picture>
                 <source
                   type="image/avif"
-                  srcset="../assets/images/home/hero-image-2.avif"
+                  srcset="../assets/images/home/hero-image.avif"
                 />
                 <source
                   type="image/webp"
-                  srcset="../assets/images/home/hero-image-2.webp"
+                  srcset="../assets/images/home/hero-image.webp"
                 />
                 <img
                   src="../assets/images/home/hero-image.webp"
@@ -1154,8 +1147,8 @@
               <div
                 class="container-sm flex items-center h-full justify-center md:justify-start"
               >
-                <div class="w-full lg:w-3xl text-center lg:text-start">
-                  <div class="flex items-center content-center w-fit">
+                <div class="text-center w-fit lg:text-start">
+                  <div class="flex items-center content-center">
                     <picture class="self-start ms-4 lg:ms-3 hidden lg:block">
                       <source
                         media="(min-width: 1024px)"
@@ -1173,7 +1166,7 @@
                     <h1
                       class="text-5xl text-center lg:text-start w-full lg:w-auto font-bold text-main-white capitalize"
                     >
-                      حقق اهدافك الدراسة الان
+                      حقق اهدافك الدراسية الان
                     </h1>
                     <picture class="ms-3 hidden lg:block">
                       <source
@@ -1194,8 +1187,8 @@
                     src="../assets/icons/double-green-line.webp"
                     width="300"
                     height="24.22"
-                    class="m-auto mx-auto lg:-mt-2 lg:mb-1 my-4"
                     alt="line icon"
+                    class="m-auto mx-auto lg:-mt-2 lg:mb-1 my-4"
                     fetchpriority="high"
                   />
                   <p
@@ -1210,27 +1203,9 @@
             </div>
           </div>
         </div>
-        <!-- Slider indicators -->
-        <div
-          class="absolute z-30 mb-3 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3"
-        >
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full indicator-btn"
-            aria-current="true"
-            aria-label="Slide 1"
-            data-carousel-slide-to="0"
-          ></button>
-          <button
-            type="button"
-            class="w-3 h-3 rounded-full indicator-btn"
-            aria-current="false"
-            aria-label="Slide 2"
-            data-carousel-slide-to="1"
-          ></button>
-        </div>
-        <!-- Slider controls -->
+        <div class="swiper-pagination header-pagination relative mb-6" style="--swiper-pagination-bullet-width:12px;--swiper-pagination-bullet-height:12px"></div>
       </div>
+     
       <!-- search bar -->
       <nav
         class="w-fit p-2 text-xl lg:translate-y-3/4 block lg:absolute mx-auto bottom-0 rouned lg:rounded-full shadow-2xl mt-3 left-0 right-0 z-30 bg-main-white"
@@ -1248,7 +1223,7 @@
                 <button
                   id="PlaceSearchDropdown"
                   data-dropdown-toggle="PlaceSearchDropdownNavbar"
-                  class="flex lg:pe-14 flex-col items-center lg:items-start justify-between text-nowrap text-main-text w-full py-2 px-3 lg:hover:bg-transparent cursor-pointer lg:p-0 lg:w-auto"
+                  class="  flex lg:pe-14 flex-col items-center lg:items-start justify-between text-nowrap text-main-text w-full py-2 px-3 lg:hover:bg-transparent cursor-pointer lg:p-0 lg:w-auto"
                 >
                   المكان
                   <span class="text-sm text-gray-500">ابحث عن الدوله</span>
@@ -1256,7 +1231,7 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="PlaceSearchDropdownNavbar"
-                  class="z-40 hidden w-full font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="absolute top-full left-0 z-40 hidden w-full font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
                   <!-- search input -->
                   <div class="p-2 border-b border-gray-200">
@@ -1315,7 +1290,7 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="AcademicDegreesSearchDropdownNavbar"
-                  class="z-40 hidden w-full font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="absolute top-full left-0 z-40 hidden w-full font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
                   <!-- search input -->
                   <div class="p-2 border-b border-gray-200">
@@ -1373,7 +1348,7 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="TheUniversitySearchDropdownNavbar"
-                  class="z-40 w-full hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="absolute top-full left-0 z-40 w-full hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
                   <!-- search input -->
                   <div class="p-2 border-b border-gray-200">
@@ -1431,7 +1406,7 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="CostSearchDropdownNavbar"
-                  class="z-40 w-full hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="absolute top-full left-0 z-40 w-full hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
                   <!-- search input -->
                   <div class="p-2 border-b border-gray-200">
@@ -1489,7 +1464,7 @@
                 <!-- Study destinations Dropdown menu -->
                 <div
                   id="SpecializationDropdownSearchNavbar"
-                  class="z-40 w-full hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
+                  class="absolute top-full left-0 z-40 w-full hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm"
                 >
                   <!-- search input -->
                   <div class="p-2 border-b border-gray-200">
@@ -2993,7 +2968,6 @@
       </div>
     </footer>
     <script src="../vendors/swiper/swiper-bundle.min.js" defer></script>
-    <script src="../vendors/flowbite/flowbite.min.js" defer></script>
     <!-- Defer main JS to avoid blocking initial render -->
     <script src="../assets/js/main.js" defer></script>
     <script src="../assets/js/home.js" defer></script>

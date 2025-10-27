@@ -45,3 +45,40 @@ const initListers = () => {
 
 initTestimonialsCarousel();
 initListers();
+   new Swiper(".headerSwiper", {
+    slidesPerView:1,
+    loop: true,
+    spaceBetween: 20,
+    centeredSlides: false,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+document.addEventListener("click", function (e) {
+  // ---------------- Toggle dropdowns ----------------
+  const toggleBtn = e.target.closest("[data-dropdown-toggle]");
+  if (toggleBtn) {
+    const menuId = toggleBtn.getAttribute("data-dropdown-toggle");
+    const menu = document.getElementById(menuId);
+    
+    // اقفل أي dropdown مفتوح قبل ما أفتح اللي انت ضغطت عليه
+    document.querySelectorAll("[id$='Navbar']:not(#" + menuId + ")").forEach(m => {
+      m.classList.add("hidden");
+    });
+
+    menu.classList.toggle("hidden");
+  } 
+  // لو ضغطت برا أي dropdown → اقفل الكل
+  else {
+    if (!e.target.closest("[id$='Navbar']")) {
+      document.querySelectorAll("[id$='Navbar']").forEach(m => m.classList.add("hidden"));
+    }
+  }
+});
